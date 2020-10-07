@@ -1,18 +1,183 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 30;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Pristina";
+  src: local("Pristina"), url("../fonts/pristina.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 :root {
   --bg-color: #E4E4E4;
   --white: #FFF;
   --black: #000;
   --blue: #2980B9;
   --aqua-green: #1ABC9C;
+  --aqua-green-1: #DEF6F1;
   --yellow: #F9C80E;
-  --red-0: EA3546;
+  --red-0: #F499A2;
   --bg-color: #F5F5F5;
-  --logo: #2980b9;
   --space-5: 5px;
   --space-10: 10px;
   --space-20: 20px;
   --space-40: 40px;
   --space-80: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header, main, nav, img {
+  display: flex;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .alert {
+  background-color: var(--red-0);
+  padding: 0 var(--space-20);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  transition: all 0.5s;
+}
+header .alert p {
+  font-weight: 100;
+  font-size: 14px;
+  margin-left: 12px;
+  text-align: center;
+}
+header .alert:hover {
+  background-color: #F2808B;
+}
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: calc(var(--space-20) - calc(var(--space-20) * 2)) 0;
+}
+header .logo img {
+  height: 80px;
+}
+header .logo p {
+  font-family: "Pristina";
+  font-size: 50px;
+  color: var(--blue);
+  margin-left: var(--space-20);
+}
+header hr {
+  border: var(--blue) 1px solid;
+  width: 100%;
+}
+
+main {
+  flex-direction: column;
+}
+main nav {
+  height: 70px;
+  align-items: center;
+}
+main header {
+  flex-direction: row;
+  background-color: var(--aqua-green-1);
+  height: calc(var(--space-20) + var(--space-10));
+  padding: 0;
+}
+main header .language {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+}
+main header .language .dropdown {
+  display: none;
+}
+main header .language img {
+  margin: 0 var(--space-5) 0 var(--space-10);
+  height: 20px;
+}
+main header .language img:last-child {
+  height: 10px;
+}
+main header .language:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid var(--aqua-green);
+  top: 30px;
+  width: 100px;
+  cursor: initial;
+  margin-left: var(--space-10);
+  border-radius: 5px;
+}
+main header .language:hover .dropdown div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main header .language:hover .dropdown div img {
+  height: 15px;
+}
+main header .language:hover .dropdown div p {
+  font-size: 15px;
+}
+main header .language:hover .dropdown div:hover {
+  background-color: #E2EFF9;
+}
+main header .language:hover .dropdown div:hover:first-child {
+  border-radius: 5px 5px 0 0;
+}
+main header .language:hover .dropdown div:hover:last-child {
+  border-radius: 0 0 5px 5px;
+}
+main header .finance {
+  align-items: center;
+}
+main header .finance marquee p {
+  display: inline;
+  margin-right: 250px;
+  vertical-align: sub;
 }
 
 /*# sourceMappingURL=main.css.map */

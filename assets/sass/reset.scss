@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+//Definindo tags como display flex
+header, main, nav, img {
+	display: flex;
+}
