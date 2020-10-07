@@ -1,1 +1,12 @@
+//CSS de ativos para usar no projeto
+@import 'fonts.scss';
 @import 'variables.scss';
+
+//CSS de reset dos estilos padrões
+@import 'reset.scss';
+
+//CSS de elementos das páginas
+@import 'header.scss';
+
+//CSS do conteúdo das páginas
+@import 'index.scss';
