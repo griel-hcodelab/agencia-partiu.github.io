@@ -1,5 +1,96 @@
 main {
     flex-direction: column;
+    height: 100vh;
+    header {
+        flex-direction: row;
+        background-color: var(--aqua-green-1);
+        border-bottom: none;
+        .language {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            align-items: center;
+            .dropdown {
+                display: none;
+            }
+            img {
+                &:first-child {
+                    margin: 0 var(--space-5) 0 var(--space-10);
+                    height: 20px;
+                }
+                &:last-child {
+                    height: 10px;
+                }
+            }
+            &:hover {
+                .dropdown {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    border: 1px solid var(--aqua-green);
+                    top: 30px;
+                    width: 100px;
+                    cursor: initial;
+                    margin-left: var(--space-10);
+                    border-radius: 5px;
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        transition: 0.3s;
+                        cursor: pointer;
+                        img {
+                            height: 15px;
+                        }
+                        p {
+                            font-size: 15px;
+                        }
+                        &:hover {
+                            background-color: #E2EFF9;
+                            &:first-child {
+                                border-radius: 5px 5px 0 0;
+                            }
+                            &:last-child {
+                                border-radius: 0 0 5px 5px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .finance {
+            align-items: center;
+            marquee {
+                p {
+                    display: inline;
+                    margin-right: 100vw;
+                    vertical-align: sub;
+                    font-size: 13px;
+                    color: var(--dark-0);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        header {
+            .language {
+                height: inherit;
+            }
+        }
+    }
+}
+
+
+
+/*
+main {
+    flex-direction: column;
+    height: 100vh;
     nav {
         height: 70px;
         align-items: center;
@@ -75,3 +166,4 @@ main {
     }
 }
 
+*/

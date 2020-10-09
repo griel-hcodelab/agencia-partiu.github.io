@@ -23,7 +23,7 @@ header {
     //Caixa de alerta do Covid
 
     //Header com o logo e botão de conta
-    > div {
+    #wrap {
         display: flex;
         flex-direction: row;
         position: relative;
@@ -52,6 +52,7 @@ header {
         .conta {
             @include icon;
             height: 50px;
+            padding-top: 0;
             img {
                 height: 40px;
                 width: 40px;
@@ -63,15 +64,24 @@ header {
     }
     //header com logo e botão de conta
 
+    //Menu com os ícones
     nav {
         border: 2px solid var(--blue);
         border-left: 0;
         border-right: 0;
         padding: var(--space-10);
         overflow-x: scroll;
-        @include scrollbars(3px,#2980B9, transparent);
+		@include scrollbars(3px,#2980B9, transparent);
         a {
-            @include icon;
+			@include icon;
+            margin-left: 15px;
+            width: 80px;
+			&:nth-child(2) {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 15px;
+			}
             &.conta {
                 display: none;
 			}
@@ -80,10 +90,8 @@ header {
 				width: auto;
 			}
         }
-
-        
-
     }
+    //Menu com os ícones
 
 }
 
@@ -96,7 +104,7 @@ header {
 			align-items: center;
 			justify-content: center;
 		}
-        > div {
+        #wrap {
 			width: 114px;
     		height: 121px;
             .conta {
@@ -110,6 +118,9 @@ header {
 			right: 0;
 			top: calc(var(--space-10) * 5);
 			a {
+                &:nth-child(2) {
+                    margin-left: 15px;
+                }
 				&.conta {
 					display: flex;
 				}
