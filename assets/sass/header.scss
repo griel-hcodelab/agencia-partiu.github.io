@@ -1,6 +1,8 @@
 header {
     display: flex;
     flex-direction: column;
+
+    //Caixa de alerta do Covid
     .alert {
         background-color: var(--red-0);
         padding: 0 var(--space-20);
@@ -18,24 +20,65 @@ header {
             background-color: #F2808B;
         }
     }
-    .logo {
+    //Caixa de alerta do Covid
+
+    //Header com o logo e botão de conta
+    > div {
         display: flex;
         flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        padding: var(--space-10);
+        height: 92px;
         align-items: center;
-        justify-content: center;
-        margin: calc(var(--space-20) - calc(var(--space-20) * 2)) 0;
-        img {
-            height: 80px;
+        .logo {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            position: relative;
+            img {
+                height: 50px;
+            }
+            p {
+                font-family: 'Pristina';
+                font-size: 50px;
+                color: var(--blue);
+                position: absolute;
+                margin-left: 40%;
+                margin-right: 40%;
+            }
         }
-        p {
-            font-family: 'Pristina';
-            font-size: 50px;
-            color: var(--blue);
-            margin-left: var(--space-20);
+        .conta {
+            @include icon;
+            height: 50px;
+            img {
+                height: 40px;
+                width: 40px;
+            }
+            p {
+                display: none;
+            }
         }
     }
-    hr {
-        border: var(--blue) 1px solid;
-        width: 100%;
+    //header com logo e botão de conta
+
+    nav {
+        border: 2px solid var(--blue);
+        border-left: 0;
+        border-right: 0;
+        padding: var(--space-10);
+        overflow-x: scroll;
+        @include scrollbars(3px,#2980B9, transparent);
+        a {
+            @include icon;
+            &.conta {
+                display: none;
+            }
+        }
+
+        
+
     }
+
 }
