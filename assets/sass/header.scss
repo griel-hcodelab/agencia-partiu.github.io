@@ -17,7 +17,7 @@ header {
             text-align: center;
         }
         &:hover {
-            background-color: #F2808B;
+			background-color: var(--red-1);
         }
     }
     //Caixa de alerta do Covid
@@ -74,11 +74,48 @@ header {
             @include icon;
             &.conta {
                 display: none;
-            }
+			}
+			img {
+				height: 50px;
+				width: auto;
+			}
         }
 
         
 
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    header {
+		position: relative;
+		border-bottom: 2px solid var(--blue);
+		.alert {
+			align-items: center;
+			justify-content: center;
+		}
+        > div {
+			width: 114px;
+    		height: 121px;
+            .conta {
+                display: none;
+            }
+        }
+        
+        nav {
+            position: absolute;
+            border: none;
+			right: 0;
+			top: calc(var(--space-10) * 5);
+			a {
+				&.conta {
+					display: flex;
+				}
+			}
+
+        }
     }
 
 }

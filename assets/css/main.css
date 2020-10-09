@@ -38,7 +38,8 @@
   --aqua-green: #1ABC9C;
   --aqua-green-1: #DEF6F1;
   --yellow: #F9C80E;
-  --red-0:#EA3546;
+  --red-0: #F2808B;
+  --red-1: #EA3546;
   --bg-color: #F5F5F5;
   --space-5: 5px;
   --space-10: 10px;
@@ -87,7 +88,7 @@ header .alert p {
   text-align: center;
 }
 header .alert:hover {
-  background-color: #F2808B;
+  background-color: var(--red-1);
 }
 header > div {
   display: flex;
@@ -196,7 +197,37 @@ header nav a:active {
 header nav a.conta {
   display: none;
 }
+header nav a img {
+  height: 50px;
+  width: auto;
+}
 
+@media (min-width: 992px) {
+  header {
+    position: relative;
+    border-bottom: 2px solid var(--blue);
+  }
+  header .alert {
+    align-items: center;
+    justify-content: center;
+  }
+  header > div {
+    width: 114px;
+    height: 121px;
+  }
+  header > div .conta {
+    display: none;
+  }
+  header nav {
+    position: absolute;
+    border: none;
+    right: 0;
+    top: calc(var(--space-10) * 5);
+  }
+  header nav a.conta {
+    display: flex;
+  }
+}
 main {
   flex-direction: column;
 }
