@@ -61,7 +61,16 @@ header {
                 display: none;
             }
             &.logged {
-                display: none;
+                //display: none;
+            }
+        }
+        .logged {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 300px;
+            p {
+                display: flex;
+                margin-left: 10%;
             }
         }
     }

@@ -153,8 +153,14 @@ header #wrap .conta img {
 header #wrap .conta p {
   display: none;
 }
-header #wrap .conta.logged {
-  display: none;
+header #wrap .logged {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+}
+header #wrap .logged p {
+  display: flex;
+  margin-left: 10%;
 }
 header nav {
   border: 2px solid var(--blue);
