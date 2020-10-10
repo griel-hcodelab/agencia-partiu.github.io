@@ -1,21 +1,5 @@
-body {
-    background-color: var(--bg-color);
-}
-header {
-   
-
-
-}
-
-#access {
-    height: 0;
-    background-color: var(--white);
-
+#create-account {
     main {
-        height: 360px;
-        max-width: 520px;
-        margin-left: auto;
-        margin-right: auto;
         header {
             background-color: initial;
             justify-content: center;
@@ -30,6 +14,10 @@ header {
             margin: var(--space-20);
             border-radius: 5px;
             padding: var(--space-80) var(--space-20);
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 320px;
             h1 {
                 color: var(--blue);
                 text-align: center;
@@ -37,22 +25,22 @@ header {
             form {
                 flex-direction: column;
                 .label {
-                    display: flex;
                     flex-direction: row;
-                    border: 1px solid var(--dark-1);
-                    border-radius: 5px;
-                    height: 35px;
-                    margin-bottom: calc(var(--space-10) + var(--space-5));
-                    padding: var(--space-5);
-                    img {
-                        margin: 0 5px;
-                    }
-                    input {
-                        border: none;
-                        width: 100%;
-                        outline: none;
-                    }
-
+                    @include account-input; 
+                }
+                .labels {
+                    flex-direction: column;
+                    
+                }
+            }
+            #captcha {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: var(--space-10);
+            }
+            .alert {
+                &.danger {
+                    @include alert-danger;
                 }
             }
             footer {
@@ -87,6 +75,27 @@ header {
                 }
             }
         }
-        
+    }
+}
+
+@media (min-width: 992px) {
+    #create-account {
+        main {
+            main {
+                height: 520px;
+                width: 720px;
+                form {
+                    .labels {
+                        flex-direction: row;
+                        .label {
+                            width: 100%;
+                        }
+                        .label + .label {
+                            margin-left: var(--space-10);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

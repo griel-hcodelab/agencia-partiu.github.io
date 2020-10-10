@@ -42,6 +42,9 @@
   --yellow: #F9C80E;
   --red-0: #F2808B;
   --red-1: #EA3546;
+  --red-2: #F8D7DA;
+  --red-3: #F5C6CB;
+  --red-4: #721C24;
   --bg-color: #F5F5F5;
   --space-5: 5px;
   --space-10: 10px;
@@ -220,6 +223,25 @@ header nav a.conta.logged {
 header nav a img {
   height: 50px;
   width: auto;
+}
+header#login {
+  background-color: var(--white);
+}
+header#login a.logo {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: calc(var(--space-5) * 2);
+}
+header#login a.logo img {
+  height: 50px;
+}
+header#login a.logo p {
+  font-family: "Pristina";
+  font-size: 40px;
+  color: var(--blue);
+  margin: 0;
+  margin-left: 8px;
 }
 
 @media (min-width: 992px) {
@@ -412,59 +434,39 @@ body {
   background-color: var(--bg-color);
 }
 
-header {
-  background-color: var(--white);
-}
-header a.logo {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: calc(var(--space-5) * 2);
-}
-header a.logo img {
-  height: 50px;
-}
-header a.logo p {
-  font-family: "Pristina";
-  font-size: 40px;
-  color: var(--blue);
-  margin: 0;
-  margin-left: 8px;
-}
-
-#conta {
+#access {
   height: 0;
   background-color: var(--white);
 }
-#conta main {
+#access main {
   height: 360px;
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
 }
-#conta main header {
+#access main header {
   background-color: initial;
   justify-content: center;
   transform: translatey(74px);
   z-index: 1;
 }
-#conta main header img {
+#access main header img {
   height: 100px;
 }
-#conta main main {
+#access main main {
   background-color: var(--white);
   margin: var(--space-20);
   border-radius: 5px;
   padding: var(--space-80) var(--space-20);
 }
-#conta main main h1 {
+#access main main h1 {
   color: var(--blue);
   text-align: center;
 }
-#conta main main form {
+#access main main form {
   flex-direction: column;
 }
-#conta main main form .label {
+#access main main form .label {
   display: flex;
   flex-direction: row;
   border: 1px solid var(--dark-1);
@@ -473,24 +475,24 @@ header a.logo p {
   margin-bottom: calc(var(--space-10) + var(--space-5));
   padding: var(--space-5);
 }
-#conta main main form .label img {
+#access main main form .label img {
   margin: 0 5px;
 }
-#conta main main form .label input {
+#access main main form .label input {
   border: none;
   width: 100%;
   outline: none;
 }
-#conta main main footer {
+#access main main footer {
   flex-direction: column;
 }
-#conta main main footer div {
+#access main main footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: var(--space-20);
 }
-#conta main main footer .voltar {
+#access main main footer .voltar {
   width: 65px;
   height: 45px;
   background-color: var(--aqua-green);
@@ -499,7 +501,7 @@ header a.logo p {
   align-items: center;
   margin-right: var(--space-5);
 }
-#conta main main footer button {
+#access main main footer button {
   width: 100%;
   border: none;
   background-color: var(--blue);
@@ -508,9 +510,128 @@ header a.logo p {
   font-size: 16px;
   border-radius: 5px;
 }
-#conta main main footer a {
+#access main main footer a {
   font-size: 13px;
   text-align: center;
+}
+
+#create-account main header {
+  background-color: initial;
+  justify-content: center;
+  transform: translatey(74px);
+  z-index: 1;
+}
+#create-account main header img {
+  height: 100px;
+}
+#create-account main main {
+  background-color: var(--white);
+  margin: var(--space-20);
+  border-radius: 5px;
+  padding: var(--space-80) var(--space-20);
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+#create-account main main h1 {
+  color: var(--blue);
+  text-align: center;
+}
+#create-account main main form {
+  flex-direction: column;
+}
+#create-account main main form .label {
+  flex-direction: row;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+}
+#create-account main main form .label label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+}
+#create-account main main form .label div {
+  flex-direction: row;
+}
+#create-account main main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+}
+#create-account main main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+#create-account main main form .labels {
+  flex-direction: column;
+}
+#create-account main main #captcha {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-10);
+}
+#create-account main main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0;
+  color: var(--red-4);
+  justify-content: center;
+  padding: var(--space-10);
+}
+#create-account main main footer {
+  flex-direction: column;
+}
+#create-account main main footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--space-20);
+}
+#create-account main main footer .voltar {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+}
+#create-account main main footer button {
+  width: 100%;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#create-account main main footer a {
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #create-account main main {
+    height: 520px;
+    width: 720px;
+  }
+  #create-account main main form .labels {
+    flex-direction: row;
+  }
+  #create-account main main form .labels .label {
+    width: 100%;
+  }
+  #create-account main main form .labels .label + .label {
+    margin-left: var(--space-10);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

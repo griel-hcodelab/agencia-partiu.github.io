@@ -42,11 +42,49 @@
   }
 
 @mixin button {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  cursor: pointer;
-  background: transparent;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+@mixin account-input {
+	flex-direction: column;
+	border: 1px solid var(--dark-1);
+	border-radius: 5px;
+	padding: var(--space-5);
+	height: 60px;
+	margin-bottom: var(--space-20);
+	label {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: var(--space-5);
+	}
+	div {
+		flex-direction: row;
+		img {
+			height: 20px;
+			width: 20px;
+			justify-content: center;
+		}
+		input {
+			border: none;
+			width: 100%;
+			outline: none;
+			padding-left: var(--space-10);
+		}
+	}
+}
+
+@mixin alert-danger {
+	border: 1px solid var(--red-3);
+	background-color: var(--red-3);
+	border-radius: var(--space-5);
+	margin: var(--space-10) 0;
+	color: var(--red-4);
+	justify-content: center;
+	padding: var(--space-10);
 }

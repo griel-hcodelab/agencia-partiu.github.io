@@ -29,41 +29,58 @@
 </head>
 <body>
 
-    <header>
+    <header id="login">
         <a href="index.html" class="logo">
             <img src="assets/svg/logo.svg" alt="Agência de Turismo Partiu" />
             <p>Partiu</p>
         </a>
     </header>
 
-    <section id="conta">
+    <section id="create-account">
         <main>
                 <header>
-                    <img src="assets/svg/user-face.svg" alt="" />
+                    <img src="assets/svg/icon-criar-conta.svg" alt="Acesse sua conta" />
                 </header>
                 <main>
-                    <h1>Acesse sua conta</h1>
+                    <h1>Crie sua conta</h1>
                     <form>
                         <div class="label">
-                            <img src="assets/svg/icon-arroba.svg" alt="Seu e-mail" />
-                            <input type="email" name="email" id="email" placeholder="seu@email.com" />
+                            <label>Seu nome</label>
+                            <div>
+                                <img src="assets/svg/icon-name.svg" alt="Seu nome" />
+                                <input type="text" name="name" id="name" placeholder="seu@email.com" />
+                            </div>
                         </div>
-                        <div class="label">
-                            <img src="assets/svg/icon-senha.svg" alt="Sua senha" />
-                            <input type="password" name="password" id="password" placeholder="********" />
+                        <div class="labels">
+                            
+                        
+                            <div class="label">
+                                <label>Seu e-mail</label>
+                                <div>
+                                    <img src="assets/svg/icon-arroba.svg" alt="Seu e-mail" />
+                                    <input type="email" name="email" id="email" placeholder="seu@email.com" />
+                                </div>
+                            </div>
+                        
+                            <div class="label">
+                                <label>Sua senha</label>
+                                <div>
+                                    <img src="assets/svg/icon-senha.svg" alt="Sua senha" />
+                                    <input type="password" name="password" id="password" placeholder="********" />
+                                </div>
+                            </div>
+                        </div>
+                        <img src="assets/jpg/google-captcha.jpg" id="captcha" alt="Responda o captcha" height="auto" width="261px" />
+                        <div class="alert danger">
+                            Mensagem de alerta
                         </div>
                         <footer>
                             <div> 
-                                <a href="index.html" class="voltar">
+                                <a href="conta.html" class="voltar">
                                     <img src="assets/svg/voltar-branco.svg" alt="Voltar à home" />
                                 </a>
-                                <button type="submit">acessar</button>
+                                <button type="submit">criar conta</button>
                             </div>
-                            <div>
-                                <a href="criar-conta.html">Não é cadastrado?</a>
-                                <a href="recuperacao-de-senha.html">Esqueceu sua senha?</a>
-                            </div>
-                            
                         </footer>
                     </form>
                 </main>

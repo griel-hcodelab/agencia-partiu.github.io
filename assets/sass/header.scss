@@ -104,7 +104,28 @@ header {
         }
     }
     //Menu com os ícones
-
+    &#login {
+        background-color: var(--white);
+        a {
+            &.logo {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: calc(var(--space-5) * 2);
+                img {
+                    height: 50px;
+                }
+                p {
+                    font-family: 'Pristina';
+                    font-size: 40px;
+                    color: var(--blue);    
+                    margin: 0;
+                    margin-left: 8px;
+                }
+            }
+            
+        }
+    }
 }
 
 
