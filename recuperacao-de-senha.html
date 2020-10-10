@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acesse sua conta - Agência de Turismo Partiu</title>
+    <title>Recupere sua senha - Agência de Turismo Partiu</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/png/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="assets/png/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="assets/png/apple-icon-72x72.png" />
@@ -36,34 +36,33 @@
         </a>
     </header>
 
-    <section id="access">
+    <section id="password-recovery">
         <main>
                 <header>
-                    <img src="assets/svg/user-face.svg" alt="Acesse sua conta" />
+                    <img src="assets/svg/icon-recuperar-senha.svg" alt="Recupere sua senha" />
                 </header>
                 <main>
-                    <h1>Acesse sua conta</h1>
+                    <h1>Recuperação de senha</h1>
                     <form>
                         <div class="label">
-                            <img src="assets/svg/icon-arroba.svg" alt="Seu e-mail" />
-                            <input type="email" name="email" id="email" placeholder="seu@email.com" />
+                            <label>Digite seu e-mail:</label>
+                            <div>
+                                <img src="assets/svg/icon-arroba.svg" alt="Seu e-mail" />
+                                <input type="email" name="email" id="email" placeholder="seu@email.com" />
+                            </div>
                         </div>
-                        <div class="label">
-                            <img src="assets/svg/icon-senha.svg" alt="Sua senha" />
-                            <input type="password" name="password" id="password" placeholder="********" />
+                        <img src="assets/jpg/google-captcha.jpg" id="captcha" alt="Responda o captcha" height="auto" width="261px" />
+                        <div class="alert danger">
+                            O e-mail informado não consta em
+nossa base de dados.
                         </div>
                         <footer>
                             <div> 
-                                <a href="index.html" class="voltar">
+                                <a href="conta.html" class="voltar">
                                     <img src="assets/svg/voltar-branco.svg" alt="Voltar à home" />
                                 </a>
                                 <button type="submit">acessar</button>
                             </div>
-                            <div>
-                                <a href="criar-conta.html">Não é cadastrado?</a>
-                                <a href="recuperacao-de-senha.html">Esqueceu sua senha?</a>
-                            </div>
-                            
                         </footer>
                     </form>
                 </main>

@@ -439,8 +439,8 @@ body {
   background-color: var(--white);
 }
 #access main {
-  height: 360px;
-  max-width: 520px;
+  height: 380px;
+  max-width: 380px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -642,6 +642,123 @@ body {
     width: 100%;
   }
   #create-account main main form .labels .label + .label {
+    margin-left: var(--space-10);
+  }
+}
+#password-recovery main header {
+  background-color: initial;
+  justify-content: center;
+  transform: translatey(74px);
+  z-index: 1;
+}
+#password-recovery main header img {
+  height: 100px;
+}
+#password-recovery main main {
+  background-color: var(--white);
+  margin: var(--space-20);
+  border-radius: 5px;
+  padding: var(--space-80) var(--space-20);
+  height: 460px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#password-recovery main main h1 {
+  color: var(--blue);
+  text-align: center;
+}
+#password-recovery main main form {
+  flex-direction: column;
+}
+#password-recovery main main form .label {
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+}
+#password-recovery main main form .label label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+}
+#password-recovery main main form .label div {
+  flex-direction: row;
+}
+#password-recovery main main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+}
+#password-recovery main main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+#password-recovery main main form .labels {
+  flex-direction: column;
+}
+#password-recovery main main #captcha {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-10);
+}
+#password-recovery main main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0;
+  color: var(--red-4);
+  justify-content: center;
+  padding: var(--space-10);
+}
+#password-recovery main main footer {
+  flex-direction: column;
+}
+#password-recovery main main footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--space-20);
+}
+#password-recovery main main footer .voltar {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+}
+#password-recovery main main footer button {
+  width: 100%;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#password-recovery main main footer a {
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #password-recovery main main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #password-recovery main main form .labels {
+    flex-direction: row;
+  }
+  #password-recovery main main form .labels .label {
+    width: 100%;
+  }
+  #password-recovery main main form .labels .label + .label {
     margin-left: var(--space-10);
   }
 }
