@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon-senha" transform="translate(-45 -315)">
+    <rect id="Rectangle_144" data-name="Rectangle 144" width="24" height="24" transform="translate(45 315)" fill="#fff"/>
+    <g id="icon-senha-2" data-name="icon-senha" transform="translate(18.38 317)">
+      <path id="Path_3941" data-name="Path 3941" d="M43.639,7.194h-.325V4.825a4.825,4.825,0,0,0-9.65,0V7.194h-.325A1.721,1.721,0,0,0,31.62,8.913v9.318a1.721,1.721,0,0,0,1.719,1.719h10.3a1.721,1.721,0,0,0,1.719-1.719V8.913A1.721,1.721,0,0,0,43.639,7.194Zm-8.5-2.369a3.351,3.351,0,0,1,6.7,0V7.194h-6.7Zm8.747,13.406a.249.249,0,0,1-.246.246h-10.3a.249.249,0,0,1-.246-.246V8.913a.249.249,0,0,1,.246-.246h10.3a.249.249,0,0,1,.246.246Z" fill="#9f9f9f"/>
+      <path id="Path_3942" data-name="Path 3942" d="M94.784,116.309a.737.737,0,0,0-.737.737v2.821a.737.737,0,1,0,1.473,0v-2.821A.737.737,0,0,0,94.784,116.309Z" transform="translate(-56.295 -104.884)" fill="#9f9f9f"/>
+    </g>
+  </g>
+</svg>

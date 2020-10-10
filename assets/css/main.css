@@ -36,6 +36,7 @@
   --shadow: #A7A7A7;
   --black: #000;
   --dark-0: #333;
+  --dark-1: #707070;
   --aqua-green: #1ABC9C;
   --aqua-green-1: #DEF6F1;
   --yellow: #F9C80E;
@@ -66,7 +67,7 @@ a {
   color: inherit;
 }
 
-header, main, nav, img {
+header, main, nav, img, a, footer {
   display: flex;
 }
 
@@ -412,5 +413,106 @@ main {
 }
 
 */
+body {
+  background-color: var(--bg-color);
+}
+
+header {
+  background-color: var(--white);
+}
+header a {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: calc(var(--space-5) * 2);
+}
+header a img {
+  height: 50px;
+}
+header a p {
+  font-family: "Pristina";
+  font-size: 40px;
+  color: var(--blue);
+  margin: 0;
+  margin-left: 8px;
+}
+
+#conta {
+  height: 0;
+  background-color: var(--white);
+}
+#conta main {
+  height: 360px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#conta main header {
+  background-color: initial;
+  justify-content: center;
+  transform: translatey(74px);
+  z-index: 1;
+}
+#conta main header img {
+  height: 100px;
+}
+#conta main main {
+  background-color: var(--white);
+  margin: var(--space-20);
+  border-radius: 5px;
+  padding: var(--space-80) var(--space-20);
+}
+#conta main main h1 {
+  color: var(--blue);
+  text-align: center;
+}
+#conta main main form .label {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  height: 35px;
+  margin-bottom: calc(var(--space-10) + var(--space-5));
+  padding: var(--space-5);
+}
+#conta main main form .label img {
+  margin: 0 5px;
+}
+#conta main main form .label input {
+  border: none;
+  width: 100%;
+  outline: none;
+}
+#conta main main footer {
+  flex-direction: column;
+}
+#conta main main footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--space-20);
+}
+#conta main main footer .voltar {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+}
+#conta main main footer button {
+  width: 100%;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#conta main main footer a {
+  font-size: 13px;
+  text-align: center;
+}
 
 /*# sourceMappingURL=main.css.map */

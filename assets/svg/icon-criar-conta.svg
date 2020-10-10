@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91">
+  <g id="icon-criar-conta" transform="translate(-136 -86)">
+    <g id="Group_512" data-name="Group 512" transform="translate(-6000 -2181)">
+      <g id="Ellipse_92" data-name="Ellipse 92" transform="translate(6136 2267)" fill="#2980b9" stroke="#707070" stroke-width="1">
+        <circle cx="45.5" cy="45.5" r="45.5" stroke="none"/>
+        <circle cx="45.5" cy="45.5" r="45" fill="none"/>
+      </g>
+      <g id="User" transform="translate(6145 2280.024)">
+        <path id="Path_3938" data-name="Path 3938" d="M41.245,33.035a16,16,0,1,0-18.49,0A26.041,26.041,0,0,0,4,58a2,2,0,0,0,2,2H58a2,2,0,0,0,2-2A26.041,26.041,0,0,0,41.245,33.035ZM20,20A12,12,0,1,1,32,32,12,12,0,0,1,20,20ZM8.09,56A22.029,22.029,0,0,1,30,36h4A22.029,22.029,0,0,1,55.91,56Z" fill="#fff"/>
+      </g>
+    </g>
+    <text id="_" data-name="+" transform="translate(186 145)" fill="#fff" font-size="54" font-family="SegoeUIBlack, Segoe UI"><tspan x="0" y="0">+</tspan></text>
+  </g>
+</svg>
