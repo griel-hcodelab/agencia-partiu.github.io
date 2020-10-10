@@ -60,6 +60,9 @@ header {
             p {
                 display: none;
             }
+            &.logged {
+                display: none;
+            }
         }
     }
     //header com logo e botão de conta
@@ -76,7 +79,7 @@ header {
 			@include icon;
             margin-left: 15px;
             width: 80px;
-			&:nth-child(2) {
+			&:nth-child(1) {
 				margin-left: 0;
 			}
 			&:last-child {
@@ -84,6 +87,9 @@ header {
 			}
             &.conta {
                 display: none;
+                &.logged {
+                    display: none;
+                }
 			}
 			img {
 				height: 50px;
@@ -116,9 +122,11 @@ header {
             position: absolute;
             border: none;
 			right: 0;
-			top: calc(var(--space-10) * 5);
+            top: calc(var(--space-10) * 5);
+            overflow: hidden;
 			a {
-                &:nth-child(2) {
+                height: 100px;
+                &:nth-child(1) {
                     margin-left: 15px;
                 }
 				&.conta {

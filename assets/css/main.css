@@ -153,6 +153,9 @@ header #wrap .conta img {
 header #wrap .conta p {
   display: none;
 }
+header #wrap .conta.logged {
+  display: none;
+}
 header nav {
   border: 2px solid var(--blue);
   border-left: 0;
@@ -198,13 +201,16 @@ header nav a:hover {
 header nav a:active {
   box-shadow: inset 0 0 5px var(--shadow);
 }
-header nav a:nth-child(2) {
+header nav a:nth-child(1) {
   margin-left: 0;
 }
 header nav a:last-child {
   margin-right: 15px;
 }
 header nav a.conta {
+  display: none;
+}
+header nav a.conta.logged {
   display: none;
 }
 header nav a img {
@@ -233,8 +239,12 @@ header nav a img {
     border: none;
     right: 0;
     top: calc(var(--space-10) * 5);
+    overflow: hidden;
   }
-  header nav a:nth-child(2) {
+  header nav a {
+    height: 100px;
+  }
+  header nav a:nth-child(1) {
     margin-left: 15px;
   }
   header nav a.conta {
