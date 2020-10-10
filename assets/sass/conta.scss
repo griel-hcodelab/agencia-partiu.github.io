@@ -37,22 +37,9 @@ header {
             form {
                 flex-direction: column;
                 .label {
-                    display: flex;
                     flex-direction: row;
-                    border: 1px solid var(--dark-1);
-                    border-radius: 5px;
+                    @include account-input;
                     height: 35px;
-                    margin-bottom: calc(var(--space-10) + var(--space-5));
-                    padding: var(--space-5);
-                    img {
-                        margin: 0 5px;
-                    }
-                    input {
-                        border: none;
-                        width: 100%;
-                        outline: none;
-                    }
-
                 }
             }
             footer {
