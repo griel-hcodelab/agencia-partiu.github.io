@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recupere sua senha - Agência de Turismo Partiu</title>
+    <title>Crie uma nova senha - Agência de Turismo Partiu</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/png/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="assets/png/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="assets/png/apple-icon-72x72.png" />
@@ -36,29 +36,49 @@
         </a>
     </header>
 
-    <section id="password-recovery">
+    <section id="create-new-password">
         <main>
                 <header>
                     <img src="assets/svg/icon-recuperar-senha.svg" alt="Recupere sua senha" />
                 </header>
                 <main>
                     <h1>Recuperação de senha</h1>
-                    <form action="nova-senha.html">
+                    <div class="alert info">
+                        As instruções de recuperação foram enviadas para seu e-mail.
+                    </div>
+                    <form action="senha-criada.html">
                         <div class="label">
-                            <label>Digite seu e-mail:</label>
+                            <label>Digite o código enviado</label>
                             <div>
-                                <img src="assets/svg/icon-arroba.svg" alt="Seu e-mail" />
-                                <input type="email" name="email" id="email" placeholder="seu@email.com" />
+                                <img src="assets/svg/code-password.svg" alt="Código de recuperação" />
+                                <input type="text" name="code" id="code" placeholder="000-000-000-000" />
                             </div>
                         </div>
-                        <img src="assets/jpg/google-captcha.jpg" id="captcha" alt="Responda o captcha" height="auto" width="261px" />
+                        <div class="labels">
+                            
+                        
+                            <div class="label">
+                                <label>Digite sua nova senha</label>
+                                <div>
+                                    <img src="assets/svg/icon-senha.svg" alt="Digite sua nova senha" />
+                                    <input type="password" name="password" id="password" placeholder="********" />
+                                </div>
+                            </div>
+                        
+                            <div class="label">
+                                <label>Confirme sua nova senha</label>
+                                <div>
+                                    <img src="assets/svg/icon-senha.svg" alt="Confirme sua nova senha" />
+                                    <input type="password" name="password" id="password" placeholder="********" />
+                                </div>
+                            </div>
+                        </div>
                         <div class="alert danger">
-                            O e-mail informado não consta em
-nossa base de dados.
+                            O código informado é inválido; As senhas não são iguais
                         </div>
                         <footer>
                             <div> 
-                                <a href="conta.html" class="voltar">
+                                <a href="recuperacao-de-senha.html" class="voltar">
                                     <img src="assets/svg/voltar-branco.svg" alt="Voltar à home" />
                                 </a>
                                 <button type="submit">enviar</button>

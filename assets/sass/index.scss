@@ -76,6 +76,18 @@ main {
     }  
 }
 
+.alert {
+    &.info {
+        @include alert-info;
+    }
+    &.danger {
+        @include alert-danger;
+    }
+    &.success {
+        @include alert-success;
+    }
+}
+
 #filter {
     .background {
         padding: 15px;

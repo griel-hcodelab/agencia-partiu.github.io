@@ -33,6 +33,9 @@
   --white: #FFF;
   --blue: #2980B9;
   --blue-1: #483BA8;
+  --blue-2: #D1ECF1;
+  --blue-3: #BEE5EB;
+  --blue-4: #0C5460;
   --shadow: #A7A7A7;
   --black: #000;
   --dark-0: #333;
@@ -350,6 +353,34 @@ main header .finance marquee p {
   color: var(--dark-0);
 }
 
+.alert.info {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
+  justify-content: center;
+  padding: var(--space-10);
+}
+.alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  justify-content: center;
+  padding: var(--space-10);
+}
+.alert.success {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
+  justify-content: center;
+  padding: var(--space-10);
+}
+
 #filter .background {
   padding: 15px;
   background-image: url("../jpg/maldives-3220702_640.jpg");
@@ -593,7 +624,7 @@ body {
   border: 1px solid var(--red-3);
   background-color: var(--red-3);
   border-radius: var(--space-5);
-  margin: var(--space-10) 0;
+  margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--red-4);
   justify-content: center;
   padding: var(--space-10);
@@ -706,11 +737,20 @@ body {
   margin-right: auto;
   margin-bottom: var(--space-10);
 }
+#password-recovery main main .alert.info {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
+  justify-content: center;
+  padding: var(--space-10);
+}
 #password-recovery main main .alert.danger {
   border: 1px solid var(--red-3);
   background-color: var(--red-3);
   border-radius: var(--space-5);
-  margin: var(--space-10) 0;
+  margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--red-4);
   justify-content: center;
   padding: var(--space-10);
@@ -759,6 +799,115 @@ body {
     width: 100%;
   }
   #password-recovery main main form .labels .label + .label {
+    margin-left: var(--space-10);
+  }
+}
+#create-new-password main header {
+  background-color: initial;
+  justify-content: center;
+  transform: translatey(74px);
+  z-index: 1;
+}
+#create-new-password main header img {
+  height: 100px;
+}
+#create-new-password main main {
+  background-color: var(--white);
+  margin: var(--space-20);
+  border-radius: 5px;
+  padding: var(--space-80) var(--space-20);
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+#create-new-password main main h1 {
+  color: var(--blue);
+  text-align: center;
+}
+#create-new-password main main form {
+  flex-direction: column;
+}
+#create-new-password main main form .label {
+  flex-direction: row;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+}
+#create-new-password main main form .label label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+}
+#create-new-password main main form .label div {
+  flex-direction: row;
+}
+#create-new-password main main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+}
+#create-new-password main main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+#create-new-password main main form .labels {
+  flex-direction: column;
+}
+#create-new-password main main #captcha {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-10);
+}
+#create-new-password main main footer {
+  flex-direction: column;
+}
+#create-new-password main main footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--space-20);
+}
+#create-new-password main main footer .voltar {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+}
+#create-new-password main main footer button {
+  width: 100%;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#create-new-password main main footer a {
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #create-new-password main main {
+    height: 520px;
+    width: 720px;
+  }
+  #create-new-password main main form .labels {
+    flex-direction: row;
+  }
+  #create-new-password main main form .labels .label {
+    width: 100%;
+  }
+  #create-new-password main main form .labels .label + .label {
     margin-left: var(--space-10);
   }
 }

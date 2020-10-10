@@ -83,8 +83,26 @@
 	border: 1px solid var(--red-3);
 	background-color: var(--red-3);
 	border-radius: var(--space-5);
-	margin: var(--space-10) 0;
+	margin: var(--space-10) 0 var(--space-20) 0;
 	color: var(--red-4);
+	justify-content: center;
+	padding: var(--space-10);
+}
+@mixin alert-info {
+	border: 1px solid var(--blue-3);
+	background-color: var(--blue-2);
+	border-radius: var(--space-5);
+	margin: var(--space-10) 0 var(--space-20) 0;
+	color: var(--blue-4);
+	justify-content: center;
+	padding: var(--space-10);
+}
+@mixin alert-success {
+	border: 1px solid var(--blue-3);
+	background-color: var(--blue-2);
+	border-radius: var(--space-5);
+	margin: var(--space-10) 0 var(--space-20) 0;
+	color: var(--blue-4);
 	justify-content: center;
 	padding: var(--space-10);
 }
