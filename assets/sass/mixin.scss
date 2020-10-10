@@ -85,6 +85,7 @@
 	border-radius: var(--space-5);
 	margin: var(--space-10) 0 var(--space-20) 0;
 	color: var(--red-4);
+	text-align: center;
 	justify-content: center;
 	padding: var(--space-10);
 }
@@ -94,15 +95,17 @@
 	border-radius: var(--space-5);
 	margin: var(--space-10) 0 var(--space-20) 0;
 	color: var(--blue-4);
+	text-align: center;
 	justify-content: center;
 	padding: var(--space-10);
 }
 @mixin alert-success {
-	border: 1px solid var(--blue-3);
-	background-color: var(--blue-2);
+	border: 1px solid var(--green-3);
+	background-color: var(--green-2);
 	border-radius: var(--space-5);
 	margin: var(--space-10) 0 var(--space-20) 0;
-	color: var(--blue-4);
+	color: var(--green-4);
+	text-align: center;
 	justify-content: center;
 	padding: var(--space-10);
 }

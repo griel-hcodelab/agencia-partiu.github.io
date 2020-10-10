@@ -42,6 +42,10 @@
   --dark-1: #707070;
   --aqua-green: #1ABC9C;
   --aqua-green-1: #DEF6F1;
+  --green-2: #D4EDDA;
+  --green-3: #C3E6CB;
+  --green-4: #155724 //Alerta de Sucesso: Texto
+  //Amarelo
   --yellow: #F9C80E;
   --red-0: #F2808B;
   --red-1: #EA3546;
@@ -75,6 +79,10 @@ a {
 
 header, main, nav, img, a, footer, div, form, label, input {
   display: flex;
+}
+
+button {
+  cursor: pointer;
 }
 
 header {
@@ -359,6 +367,7 @@ main header .finance marquee p {
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--blue-4);
+  text-align: center;
   justify-content: center;
   padding: var(--space-10);
 }
@@ -368,15 +377,17 @@ main header .finance marquee p {
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--red-4);
+  text-align: center;
   justify-content: center;
   padding: var(--space-10);
 }
 .alert.success {
-  border: 1px solid var(--blue-3);
-  background-color: var(--blue-2);
+  border: 1px solid var(--green-3);
+  background-color: var(--green-2);
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
-  color: var(--blue-4);
+  color: var(--green-4);
+  text-align: center;
   justify-content: center;
   padding: var(--space-10);
 }
@@ -626,6 +637,7 @@ body {
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--red-4);
+  text-align: center;
   justify-content: center;
   padding: var(--space-10);
 }
@@ -743,6 +755,7 @@ body {
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--blue-4);
+  text-align: center;
   justify-content: center;
   padding: var(--space-10);
 }
@@ -752,6 +765,7 @@ body {
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--red-4);
+  text-align: center;
   justify-content: center;
   padding: var(--space-10);
 }
@@ -910,6 +924,42 @@ body {
   #create-new-password main main form .labels .label + .label {
     margin-left: var(--space-10);
   }
+}
+#password-created main header {
+  background-color: initial;
+  justify-content: center;
+  transform: translatey(74px);
+  z-index: 1;
+}
+#password-created main header img {
+  height: 100px;
+}
+#password-created main main {
+  background-color: var(--white);
+  margin: var(--space-20);
+  border-radius: 5px;
+  padding: var(--space-80) var(--space-20);
+  height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+#password-created main main h1 {
+  color: var(--blue);
+  text-align: center;
+}
+#password-created main main footer {
+  flex-direction: column;
+}
+#password-created main main footer a button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
