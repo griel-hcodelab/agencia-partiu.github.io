@@ -32,6 +32,7 @@
   --bg-color: #E4E4E4;
   --white: #FFF;
   --blue: #2980B9;
+  --blue-0: #35a9f5;
   --blue-1: #483BA8;
   --blue-2: #D1ECF1;
   --blue-3: #BEE5EB;
@@ -516,7 +517,6 @@ body {
   padding: var(--space-5);
   height: 60px;
   margin-bottom: var(--space-20);
-  height: 35px;
 }
 #access main main form .label label {
   font-size: 16px;
@@ -558,8 +558,8 @@ body {
 #access main main footer button {
   width: 100%;
   border: none;
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--blue-0);
+  color: var(--black);
   text-transform: uppercase;
   font-size: 16px;
   border-radius: 5px;
