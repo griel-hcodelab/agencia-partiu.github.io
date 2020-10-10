@@ -67,7 +67,7 @@ a {
   color: inherit;
 }
 
-header, main, nav, img, a, footer {
+header, main, nav, img, a, footer, div, form, label, input {
   display: flex;
 }
 
@@ -76,6 +76,7 @@ header {
   flex-direction: column;
 }
 header .alert {
+  width: 100%;
   background-color: var(--red-0);
   padding: 0 var(--space-20);
   display: flex;
@@ -102,11 +103,10 @@ header #wrap {
   align-items: center;
 }
 header #wrap .logo {
-  display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
-  position: relative;
+  justify-content: start;
 }
 header #wrap .logo img {
   height: 50px;
@@ -115,9 +115,6 @@ header #wrap .logo p {
   font-family: "Pristina";
   font-size: 50px;
   color: var(--blue);
-  position: absolute;
-  margin-left: 40%;
-  margin-right: 40%;
 }
 header #wrap .conta {
   display: flex;
@@ -320,6 +317,9 @@ main header .language:hover .dropdown div:hover:last-child {
 main header .finance {
   align-items: center;
 }
+main header .finance marquee {
+  height: 30px;
+}
 main header .finance marquee p {
   display: inline;
   margin-right: 100vw;
@@ -328,91 +328,86 @@ main header .finance marquee p {
   color: var(--dark-0);
 }
 
+#filter .background {
+  padding: 15px;
+  background-image: url("../jpg/maldives-3220702_640.jpg");
+}
+#filter .background form {
+  width: 100%;
+  height: 100%;
+  background-color: var(--aqua-green);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  opacity: 0.9;
+  flex-direction: column;
+  padding: var(--space-20) var(--space-10);
+}
+#filter .background form .row {
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+#filter .background form .row .column {
+  flex-direction: row;
+}
+#filter .background form .row .column > div {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+#filter .background form .row label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#filter .background form .row .wrap {
+  position: relative;
+  width: 100%;
+}
+#filter .background form .row .wrap svg {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+#filter .background form .row .wrap svg:hover {
+  color: #fff;
+}
+#filter .background form .row input {
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--white);
+  height: 35px;
+  width: 100%;
+  padding-left: 33px;
+  padding-right: 10px;
+}
+#filter .background form .row input::placeholder {
+  font-style: italic;
+  font-size: 19px;
+  color: var(--dark-0);
+}
+#filter .background form button[type=submit] {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  height: 35px;
+  background-color: var(--blue);
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 19px;
+}
+
 @media (min-width: 992px) {
   main header .language {
     height: inherit;
   }
 }
-/*
-main {
-    flex-direction: column;
-    height: 100vh;
-    nav {
-        height: 70px;
-        align-items: center;
-    }
-    header {
-        flex-direction: row;
-        background-color: var(--aqua-green-1);
-        height: calc(var(--space-20) + var(--space-10));
-        padding: 0;
-        .language {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            cursor: pointer;
-            align-items: center;
-            .dropdown {
-                display: none;
-            }
-            img {
-                margin: 0 var(--space-5) 0 var(--space-10);
-                height: 20px;
-                &:last-child {
-                    height: 10px;
-                }
-            }
-            &:hover {
-                .dropdown {
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    border: 1px solid var(--aqua-green);
-                    top: 30px;
-                    width: 100px;
-                    cursor: initial;
-                    margin-left: var(--space-10);
-                    border-radius: 5px;
-                    div {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        transition: 0.3s;
-                        cursor: pointer;
-                        img {
-                            height: 15px;
-                        }
-                        p {
-                            font-size: 15px;
-                        }
-                        &:hover {
-                            background-color: #E2EFF9;
-                            &:first-child {
-                                border-radius: 5px 5px 0 0;
-                            }
-                            &:last-child {
-                                border-radius: 0 0 5px 5px;
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-        .finance {
-            align-items: center;
-            marquee {
-                p {
-                display: inline;
-                margin-right: 250px;
-                vertical-align: sub;
-                }
-            }
-        }
-    }
-}
-
-*/
 body {
   background-color: var(--bg-color);
 }
@@ -420,16 +415,16 @@ body {
 header {
   background-color: var(--white);
 }
-header a {
+header a.logo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: calc(var(--space-5) * 2);
 }
-header a img {
+header a.logo img {
   height: 50px;
 }
-header a p {
+header a.logo p {
   font-family: "Pristina";
   font-size: 40px;
   color: var(--blue);
@@ -465,6 +460,9 @@ header a p {
 #conta main main h1 {
   color: var(--blue);
   text-align: center;
+}
+#conta main main form {
+  flex-direction: column;
 }
 #conta main main form .label {
   display: flex;

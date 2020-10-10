@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
+
     <header>
         <a href="covid.html">
             <div class="alert">
@@ -100,29 +101,79 @@
 
 
         <!-- Formulário de origem e destino-->
-        <section>
-            <div>
+        <section id="filter">
+            <div class="background">
                 <form>
-                    <div>
-                        <div>
+                    
+                    <div class="row">
+                        <label for="origin">Selecione</label>
+                        <div class="wrap">
                             <input type="text" name="origin" id="origin" placeholder="Selecione..."/>
-                            <label for="origin">Selecione</label>
-                        </div>
-
-                        <div>
-                            <input type="text" name="destiny" id="destiny" placeholder="Selecione..."/>
-                            <label for="destiny">Destino</label>
-                        </div>
-                        
-                        <div>
-                            <input type="date" name="date" id="date"/>
-                            <label for="date">Data</label>
-                        </div>
-
-                        <div class="actions">
-                            <button type="submit">Pesquisar</button>
+                            <svg fill="#9F9F9F" xmlns="http://www.w3.org/2000/svg" width="19" height="18.612" viewBox="0 0 19 18.612">
+                                <g id="marca-de-localizacao" transform="translate(0 -0.468)">
+                                  <g id="Grupo_69" data-name="Grupo 69" transform="translate(0 0.468)">
+                                    <path id="Caminho_1770" data-name="Caminho 1770" d="M13.871,28.334q-.445.717-.97,1.493c2.947.441,4.455,1.385,4.455,1.854,0,.625-2.673,2.091-7.856,2.091s-7.857-1.466-7.857-2.091c0-.47,1.508-1.414,4.456-1.854q-.526-.776-.97-1.493C2.22,28.883,0,30.01,0,31.682c0,2.452,4.78,3.734,9.5,3.734S19,34.133,19,31.682C19,30.01,16.78,28.883,13.871,28.334Z" transform="translate(0 -16.803)" fill="#9f9f9f"/>
+                                    <path id="Caminho_1771" data-name="Caminho 1771" d="M15.088,15.19a1.339,1.339,0,0,0,1.081-.548c1.616-2.206,4.474-6.417,4.474-8.618a5.556,5.556,0,1,0-11.112,0c0,2.2,2.858,6.413,4.474,8.618A1.343,1.343,0,0,0,15.088,15.19ZM12.777,5.914a2.311,2.311,0,1,1,2.311,2.311A2.311,2.311,0,0,1,12.777,5.914Z" transform="translate(-5.588 -0.468)" fill="#9f9f9f"/>
+                                  </g>
+                                </g>
+                              </svg>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <label for="destiny">Destino</label>
+                        <div class="wrap">
+                            <input type="text" name="destiny" id="destiny" placeholder="Selecione..."/> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14.793" height="18.08" viewBox="0 0 14.793 18.08">
+                                <g id="localizacao-favorita" transform="translate(-12.21 -35.7)">
+                                  <g id="Layer_1_4_" transform="translate(12.21 35.7)">
+                                    <g id="Grupo_68" data-name="Grupo 68" transform="translate(0 0)">
+                                      <path id="Caminho_1766" data-name="Caminho 1766" d="M302.184,35.7a5.109,5.109,0,0,0-5.109,5.109c0,2.354,3.6,8.44,4.753,10.351a.4.4,0,0,0,.355.178.548.548,0,0,0,.355-.178c1.155-1.91,4.753-8,4.753-10.351A5.109,5.109,0,0,0,302.184,35.7Zm1.955,4.709-.844.8a.138.138,0,0,0-.044.089l.178,1.155a.163.163,0,0,1-.044.133.083.083,0,0,1-.133,0l-1.022-.533h-.133l-1.022.533h-.133a.163.163,0,0,1-.044-.133l.178-1.155c0-.044,0-.089-.044-.089l-.755-.8a.163.163,0,0,1-.044-.133.1.1,0,0,1,.089-.089l1.155-.178a.1.1,0,0,0,.089-.089l.533-1.066c0-.044.044-.089.133-.089s.089.044.133.089l.533,1.066c0,.044.044.044.089.089l1.155.178a.1.1,0,0,1,.089.089C304.183,40.32,304.183,40.364,304.138,40.409Z" transform="translate(-292.499 -35.7)" fill="#9f9f9f"/>
+                                      <path id="Caminho_1768" data-name="Caminho 1768" d="M169.082,516.375h-2.665a.666.666,0,1,0,0,1.333h2.665a.666.666,0,1,0,0-1.333Z" transform="translate(-165.75 -499.627)" fill="#9f9f9f"/>
+                                      <path id="Caminho_1769" data-name="Caminho 1769" d="M334.832,516.375h-2.665a.666.666,0,1,0,0,1.333h2.665a.666.666,0,1,0,0-1.333Z" transform="translate(-325.725 -499.627)" fill="#9f9f9f"/>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                        </div>               
+                    </div>
+                    
+                    <div class="row">
+                        <div class="column">
+                            <div>
+                                <label for="date">Data</label>
+                                <div class="wrap">
+                                    <input type="date" name="date" id="date"/>
+                                    <svg id="calendario" xmlns="http://www.w3.org/2000/svg" width="16.539" height="16.539" viewBox="0 0 16.539 16.539">
+                                        <g id="Grupo_73" data-name="Grupo 73">
+                                          <g id="Grupo_72" data-name="Grupo 72">
+                                            <circle id="Elipse_3" data-name="Elipse 3" cx="1" cy="1" r="1" transform="translate(8.539 8.539)" fill="#9f9f9f"/>
+                                            <ellipse id="Elipse_4" data-name="Elipse 4" cx="1" cy="0.5" rx="1" ry="0.5" transform="translate(8.539 6.539)" fill="#9f9f9f"/>
+                                            <ellipse id="Elipse_5" data-name="Elipse 5" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(6.539 8.539)" fill="#9f9f9f"/>
+                                            <circle id="Elipse_6" data-name="Elipse 6" cx="0.5" cy="0.5" r="0.5" transform="translate(6.539 6.539)" fill="#9f9f9f"/>
+                                            <circle id="Elipse_7" data-name="Elipse 7" cx="0.5" cy="0.5" r="0.5" transform="translate(6.539 11.539)" fill="#9f9f9f"/>
+                                            <circle id="Elipse_8" data-name="Elipse 8" cx="0.5" cy="0.5" r="0.5" transform="translate(11.539 6.539)" fill="#9f9f9f"/>
+                                            <circle id="Elipse_9" data-name="Elipse 9" cx="0.5" cy="0.5" r="0.5" transform="translate(3.539 6.539)" fill="#9f9f9f"/>
+                                            <path id="Caminho_1772" data-name="Caminho 1772" d="M295.231,294a2.906,2.906,0,0,0-2.5,4.394l-1.545,1.545a.646.646,0,1,0,.914.914l1.523-1.523a2.907,2.907,0,1,0,1.606-5.33Zm0,4.523a1.615,1.615,0,1,1,1.615-1.615A1.617,1.617,0,0,1,295.231,298.523Z" transform="translate(-281.599 -284.503)" fill="#9f9f9f"/>
+                                            <circle id="Elipse_10" data-name="Elipse 10" cx="0.5" cy="0.5" r="0.5" transform="translate(3.539 11.539)" fill="#9f9f9f"/>
+                                            <path id="Caminho_1773" data-name="Caminho 1773" d="M13.955,1.292h-.84V.646a.646.646,0,0,0-1.292,0v.646H8.883V.646a.646.646,0,1,0-1.292,0v.646H4.684V.646a.646.646,0,0,0-1.292,0v.646H2.584A2.587,2.587,0,0,0,0,3.876V13.955a2.587,2.587,0,0,0,2.584,2.584H6.816a.646.646,0,0,0,0-1.292H2.584a1.294,1.294,0,0,1-1.292-1.292V3.876A1.294,1.294,0,0,1,2.584,2.584h.808V3.23a.646.646,0,0,0,1.292,0V2.584H7.591V3.23a.646.646,0,1,0,1.292,0V2.584h2.94V3.23a.646.646,0,0,0,1.292,0V2.584h.84a1.294,1.294,0,0,1,1.292,1.292V7.753a.646.646,0,0,0,1.292,0V3.876A2.587,2.587,0,0,0,13.955,1.292Z" fill="#9f9f9f"/>
+                                            <ellipse id="Elipse_11" data-name="Elipse 11" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(3.539 8.539)" fill="#9f9f9f"/>
+                                          </g>
+                                        </g>
+                                      </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit">Pesquisar</button>
+
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    
+                    
                 </form>
             </div>
         </section>
