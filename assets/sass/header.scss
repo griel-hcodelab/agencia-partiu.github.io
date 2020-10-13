@@ -5,25 +5,29 @@ header {
     //Caixa de alerta do Covid
     .alert {
         width: 100%;
-        background-color: var(--red-0);
-        padding: 0 var(--space-20);
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        transition: all 0.5s; 
+        align-items: center;
+        transition: all 0.5s;
+        margin: 0!important;
+        border-radius: 0!important;
+        img {
+            height: 40px;
+            width: auto;
+        } 
         p {
             font-weight: 100;
             font-size: 14px;
             margin-left: 12px;
             text-align: center;
         }
-        &:hover {
-			background-color: var(--red-1);
+        &.close {
+            display: none;
         }
     }
     //Caixa de alerta do Covid
 
-    //Header com o logo e botão de conta
+    //Header com o logo
     #wrap {
         display: flex;
         flex-direction: row;
@@ -36,9 +40,11 @@ header {
             flex-direction: row;
             width: 100%;
             align-items: center;
-            justify-content: start;
+            justify-content: center;
             img {
                 height: 50px;
+                width: auto;
+                margin-right: var(--space-20);
             }
             p {
                 font-family: 'Pristina';
@@ -46,32 +52,90 @@ header {
                 color: var(--blue);
             }
         }
-        .conta {
-            @include icon;
-            height: 50px;
-            padding-top: 0;
-            img {
-                height: 40px;
-                width: 40px;
+
+        .close-menu {
+            display: none;
+            &.open {
+                display: flex;
+                @include back-button;
+                animation: zoom 0.5s;
+                transition: transform 1s ease-in-out;
+                position: fixed;
+                right: 20%;
+                img {
+                    height: 25px;
+                    width: auto;
+                }
             }
-            p {
-                display: none;
-            }
-            &.logged {
-                //display: none;
+            @keyframes zoom {
+                0% {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                10% {
+                    transform: scale(0.1);
+                    opacity: 0.1;
+                }
+                20% {
+                    transform: scale(0.2);
+                    opacity: 0.2;
+                }
+                30% {
+                    transform: scale(0.3);
+                    opacity: 0.3;
+                }
+                40% {
+                    transform: scale(0.4);
+                    opacity: 0.4;
+                }
+                50% {
+                    transform: scale(0.5);
+                    opacity: 0.5;
+                }
+                60% {
+                    transform: scale(0.6);
+                    opacity: 0.6;
+                }
+                70% {
+                    transform: scale(0.7);
+                    opacity: 0.7;
+                }
+                80% {
+                    transform: scale(1);
+                    opacity: 0.8;
+                }
+                90% {
+                    transform: scale(1.2);
+                    opacity: 0.9;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
             }
         }
-        .logged {
-            flex-direction: row;
-            justify-content: space-between;
-            width: 300px;
-            p {
-                display: flex;
-                margin-left: 10%;
-            }
+
+    }
+    //Header com o logo
+
+    //Menu dropdown do ícone de conta
+    .dropdown {
+        display: none;
+        width: 88vh;
+        position: fixed;
+        justify-content: flex-end;
+        z-index: 2;
+        top: 23%;
+        background-color: var(--white);
+        padding: var(--space-20);
+        border: 1px solid var(--aqua-green);
+        overflow-y: auto;
+        height: 100vh;
+        &.open {
+            display: flex;
         }
     }
-    //header com logo e botão de conta
+    //Menu dropdown do ícone de conta
 
     //Menu com os ícones
     nav {
@@ -80,6 +144,8 @@ header {
         border-right: 0;
         padding: var(--space-10);
         overflow-x: scroll;
+        justify-content: flex-end;
+        position: relative;
 		@include scrollbars(3px,#2980B9, transparent);
         a {
 			@include icon;
@@ -92,14 +158,36 @@ header {
 				margin-right: 15px;
 			}
             &.conta {
-                display: none;
+                display: flex;
                 &.logged {
-                    display: none;
+                    display: flex;
+                    flex-direction: row;
+                    width: 170px;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        height: 63px;
+                    }
+                    div {
+                        flex-direction: column;
+                        align-items: flex-end;
+                        text-align: right;
+                        p {
+                            margin: 0;
+                            margin-bottom: var(--space-10);
+                        }
+                        img {
+                            margin: 0;
+                            transform: rotate(269deg) rotatex(180deg);
+                            height: 25px;
+                        }
+                    }
                 }
 			}
 			img {
 				height: 50px;
-				width: auto;
+                width: auto;
+                border-radius: 50%;
 			}
         }
     }
@@ -114,6 +202,7 @@ header {
                 margin: calc(var(--space-5) * 2);
                 img {
                     height: 50px;
+                    width: auto;
                 }
                 p {
                     font-family: 'Pristina';

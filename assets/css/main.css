@@ -46,13 +46,13 @@
   --green-2: #D4EDDA;
   --green-3: #C3E6CB;
   --green-4: #155724 //Alerta de Sucesso: Texto
-  //Amarelo
-  --yellow: #F9C80E;
+  //Vermelho
   --red-0: #F2808B;
   --red-1: #EA3546;
   --red-2: #F8D7DA;
   --red-3: #F5C6CB;
   --red-4: #721C24;
+  --orange-0: #F86624;
   --bg-color: #F5F5F5;
   --space-5: 5px;
   --space-10: 10px;
@@ -78,12 +78,19 @@ a {
   color: inherit;
 }
 
-header, main, nav, img, a, footer, div, form, label, input {
+header, main, nav, img, a, footer, div, form, label, input, h1, h2, h3, h4, h5, h6, section, article {
   display: flex;
 }
 
 button {
   cursor: pointer;
+}
+
+hr {
+  border: var(--space-5) solid var(--orange-0);
+  width: 80%;
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
 }
 
 header {
@@ -92,12 +99,16 @@ header {
 }
 header .alert {
   width: 100%;
-  background-color: var(--red-0);
-  padding: 0 var(--space-20);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
   transition: all 0.5s;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+header .alert img {
+  height: 40px;
+  width: auto;
 }
 header .alert p {
   font-weight: 100;
@@ -105,8 +116,8 @@ header .alert p {
   margin-left: 12px;
   text-align: center;
 }
-header .alert:hover {
-  background-color: var(--red-1);
+header .alert.close {
+  display: none;
 }
 header #wrap {
   display: flex;
@@ -121,59 +132,107 @@ header #wrap .logo {
   flex-direction: row;
   width: 100%;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 }
 header #wrap .logo img {
   height: 50px;
+  width: auto;
+  margin-right: var(--space-20);
 }
 header #wrap .logo p {
   font-family: "Pristina";
   font-size: 50px;
   color: var(--blue);
 }
-header #wrap .conta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--aqua-green);
-  border-radius: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 0 5px var(--shadow);
-  outline: none;
-  background: transparent;
-  font-size: 12px;
-  color: var(--blue-1);
-  padding-top: 5px;
-  padding-left: 7px;
-  padding-right: 7px;
-  transition: all 0.5s;
-  height: 50px;
-  padding-top: 0;
-}
-header #wrap .conta:hover {
-  box-shadow: 0 0 5px #757575;
-  background-color: #1abc9c1c;
-}
-header #wrap .conta:active {
-  box-shadow: inset 0 0 5px var(--shadow);
-}
-header #wrap .conta img {
-  height: 40px;
-  width: 40px;
-}
-header #wrap .conta p {
+header #wrap .close-menu {
   display: none;
 }
-header #wrap .logged {
-  flex-direction: row;
-  justify-content: space-between;
-  width: 300px;
-}
-header #wrap .logged p {
+header #wrap .close-menu.open {
   display: flex;
-  margin-left: 10%;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  animation: zoom 0.5s;
+  transition: transform 1s ease-in-out;
+  position: fixed;
+  right: 20%;
+}
+header #wrap .close-menu.open:hover {
+  background-color: #17AC8F;
+}
+header #wrap .close-menu.open:active {
+  background-color: #179E83;
+}
+header #wrap .close-menu.open img {
+  height: 25px;
+  width: auto;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  20% {
+    transform: scale(0.2);
+    opacity: 0.2;
+  }
+  30% {
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scale(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  90% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+header .dropdown {
+  display: none;
+  width: 88vh;
+  position: fixed;
+  justify-content: flex-end;
+  z-index: 2;
+  top: 23%;
+  background-color: var(--white);
+  padding: var(--space-20);
+  border: 1px solid var(--aqua-green);
+  overflow-y: auto;
+  height: 100vh;
+}
+header .dropdown.open {
+  display: flex;
 }
 header nav {
   border: 2px solid var(--blue);
@@ -181,6 +240,8 @@ header nav {
   border-right: 0;
   padding: var(--space-10);
   overflow-x: scroll;
+  justify-content: flex-end;
+  position: relative;
 }
 header nav::-webkit-scrollbar {
   width: 3px;
@@ -227,14 +288,36 @@ header nav a:last-child {
   margin-right: 15px;
 }
 header nav a.conta {
-  display: none;
+  display: flex;
 }
 header nav a.conta.logged {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  width: 170px;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a.conta.logged img {
+  height: 63px;
+}
+header nav a.conta.logged div {
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+header nav a.conta.logged div p {
+  margin: 0;
+  margin-bottom: var(--space-10);
+}
+header nav a.conta.logged div img {
+  margin: 0;
+  transform: rotate(269deg) rotatex(180deg);
+  height: 25px;
 }
 header nav a img {
   height: 50px;
   width: auto;
+  border-radius: 50%;
 }
 header#login {
   background-color: var(--white);
@@ -247,6 +330,7 @@ header#login a.logo {
 }
 header#login a.logo img {
   height: 50px;
+  width: auto;
 }
 header#login a.logo p {
   font-family: "Pristina";
@@ -305,7 +389,7 @@ main header .language {
   cursor: pointer;
   align-items: center;
 }
-main header .language .dropdown {
+main header .language .dropdown-language {
   display: none;
 }
 main header .language img:first-child {
@@ -315,7 +399,7 @@ main header .language img:first-child {
 main header .language img:last-child {
   height: 10px;
 }
-main header .language:hover .dropdown {
+main header .language:hover .dropdown-language {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -325,27 +409,29 @@ main header .language:hover .dropdown {
   cursor: initial;
   margin-left: var(--space-10);
   border-radius: 5px;
+  z-index: 2;
+  background-color: var(--white);
 }
-main header .language:hover .dropdown div {
+main header .language:hover .dropdown-language div {
   display: flex;
   flex-direction: row;
   align-items: center;
   transition: 0.3s;
   cursor: pointer;
 }
-main header .language:hover .dropdown div img {
+main header .language:hover .dropdown-language div img {
   height: 15px;
 }
-main header .language:hover .dropdown div p {
+main header .language:hover .dropdown-language div p {
   font-size: 15px;
 }
-main header .language:hover .dropdown div:hover {
+main header .language:hover .dropdown-language div:hover {
   background-color: #E2EFF9;
 }
-main header .language:hover .dropdown div:hover:first-child {
+main header .language:hover .dropdown-language div:hover:first-child {
   border-radius: 5px 5px 0 0;
 }
-main header .language:hover .dropdown div:hover:last-child {
+main header .language:hover .dropdown-language div:hover:last-child {
   border-radius: 0 0 5px 5px;
 }
 main header .finance {
@@ -359,6 +445,154 @@ main header .finance marquee p {
   margin-right: 100vw;
   vertical-align: sub;
   font-size: 13px;
+  color: var(--dark-0);
+}
+main #filter {
+  width: 100%;
+}
+main #filter .background {
+  padding: 15px;
+  background-image: url("../jpg/maldives-3220702_640.jpg");
+  background-size: cover;
+  width: 100%;
+}
+main #filter .background form {
+  width: 100%;
+  height: 100%;
+  background-color: var(--aqua-green);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  opacity: 0.9;
+  flex-direction: column;
+  padding: var(--space-20) var(--space-10);
+}
+main #filter .background form .row {
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+main #filter .background form .row .column {
+  flex-direction: row;
+}
+main #filter .background form .row .column > div {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+main #filter .background form .row label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main #filter .background form .row .wrap {
+  position: relative;
+  width: 100%;
+}
+main #filter .background form .row .wrap svg {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+main #filter .background form .row .wrap svg:hover {
+  color: #fff;
+}
+main #filter .background form .row input {
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--white);
+  height: 35px;
+  width: 100%;
+  padding-left: 33px;
+  padding-right: 10px;
+}
+main #filter .background form .row input::placeholder {
+  font-style: italic;
+  font-size: 19px;
+  color: var(--dark-0);
+}
+main #filter .background form .row input[type=date] {
+  margin-right: 10px;
+}
+main #filter .background form button[type=submit] {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  height: 35px;
+  background-color: var(--blue);
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 17px;
+  margin-left: 10px;
+}
+main #featured {
+  flex-direction: column;
+}
+main #featured header {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-bottom: var(--space-20);
+}
+main #featured header img {
+  height: 45px;
+  width: auto;
+  margin-right: var(--space-5);
+}
+main #featured header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--red-1);
+  text-transform: uppercase;
+}
+main #featured article {
+  background-image: url(../jpg/foz-do-iguacu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  height: 180px;
+  padding-top: var(--space-5);
+  flex-direction: column;
+}
+main #featured article h2, main #featured article p {
+  padding: var(--space-10);
+}
+main #featured article h2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+main #featured article p {
+  background-color: rgba(41, 128, 185, 0.8);
+  width: 50%;
+  font-size: 13px;
+  color: var(--white);
+}
+main #featured article button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-color: #F9C500;
+  border-radius: 5px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: bold;
+  width: 225px;
+}
+main #featured article button:hover {
   color: var(--dark-0);
 }
 
@@ -391,81 +625,6 @@ main header .finance marquee p {
   text-align: center;
   justify-content: center;
   padding: var(--space-10);
-}
-
-#filter .background {
-  padding: 15px;
-  background-image: url("../jpg/maldives-3220702_640.jpg");
-}
-#filter .background form {
-  width: 100%;
-  height: 100%;
-  background-color: var(--aqua-green);
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
-  opacity: 0.9;
-  flex-direction: column;
-  padding: var(--space-20) var(--space-10);
-}
-#filter .background form .row {
-  width: 100%;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-#filter .background form .row .column {
-  flex-direction: row;
-}
-#filter .background form .row .column > div {
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-}
-#filter .background form .row label {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-#filter .background form .row .wrap {
-  position: relative;
-  width: 100%;
-}
-#filter .background form .row .wrap svg {
-  position: absolute;
-  top: 8px;
-  left: 5px;
-}
-#filter .background form .row .wrap svg:hover {
-  color: #fff;
-}
-#filter .background form .row input {
-  border: 0;
-  border-radius: 5px;
-  background-color: var(--white);
-  height: 35px;
-  width: 100%;
-  padding-left: 33px;
-  padding-right: 10px;
-}
-#filter .background form .row input::placeholder {
-  font-style: italic;
-  font-size: 19px;
-  color: var(--dark-0);
-}
-#filter .background form button[type=submit] {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  cursor: pointer;
-  background: transparent;
-  height: 35px;
-  background-color: var(--blue);
-  border-radius: 5px;
-  color: var(--white);
-  font-weight: bold;
-  font-size: 19px;
 }
 
 @media (min-width: 992px) {
@@ -554,6 +713,17 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: var(--space-5);
+  cursor: pointer;
+}
+#access main main footer .voltar:hover {
+  background-color: #17AC8F;
+}
+#access main main footer .voltar:active {
+  background-color: #179E83;
+}
+#access main main footer .voltar img {
+  height: 13px;
+  width: auto;
 }
 #access main main footer button {
   width: 100%;
@@ -786,6 +956,17 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: var(--space-5);
+  cursor: pointer;
+}
+#password-recovery main main footer .voltar:hover {
+  background-color: #17AC8F;
+}
+#password-recovery main main footer .voltar:active {
+  background-color: #179E83;
+}
+#password-recovery main main footer .voltar img {
+  height: 13px;
+  width: auto;
 }
 #password-recovery main main footer button {
   width: 100%;
@@ -895,6 +1076,17 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: var(--space-5);
+  cursor: pointer;
+}
+#create-new-password main main footer .voltar:hover {
+  background-color: #17AC8F;
+}
+#create-new-password main main footer .voltar:active {
+  background-color: #179E83;
+}
+#create-new-password main main footer .voltar img {
+  height: 13px;
+  width: auto;
 }
 #create-new-password main main footer button {
   width: 100%;

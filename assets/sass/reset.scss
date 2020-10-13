@@ -14,9 +14,15 @@ a {
 }
 
 //Definindo tags como display flex
-header, main, nav, img, a, footer, div, form, label, input  {
+header, main, nav, img, a, footer, div, form, label, input, h1, h2, h3, h4, h5, h6, section, article  {
 	display: flex;
 }
 button {
 	cursor: pointer;
+}
+hr {
+	border: var(--space-5) solid var(--orange-0);
+	width: 80%;
+    margin-top: var(--space-20);
+    margin-bottom: var(--space-20);
 }

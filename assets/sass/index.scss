@@ -11,7 +11,7 @@ main {
             flex-direction: row;
             cursor: pointer;
             align-items: center;
-            .dropdown {
+            .dropdown-language {
                 display: none;
             }
             img {
@@ -24,7 +24,7 @@ main {
                 }
             }
             &:hover {
-                .dropdown {
+                .dropdown-language {
                     display: flex;
                     flex-direction: column;
                     position: absolute;
@@ -34,6 +34,8 @@ main {
                     cursor: initial;
                     margin-left: var(--space-10);
                     border-radius: 5px;
+                    z-index: 2;
+                    background-color: var(--white);
                     div {
                         display: flex;
                         flex-direction: row;
@@ -74,6 +76,142 @@ main {
             }
         }
     }  
+    #filter {
+        width: 100%;
+        .background {
+            padding: 15px;
+            background-image: url('../jpg/maldives-3220702_640.jpg');
+            background-size: cover;
+            width: 100%;
+            form {
+                width: 100%;
+                height: 100%;
+                background-color: var(--aqua-green);
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, .4);
+                backdrop-filter: blur(5px);
+                opacity: .9;
+                flex-direction: column;
+                padding: var(--space-20) var(--space-10);
+                .row {
+                    width: 100%;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                    .column {
+                        flex-direction: row;
+                        > div {
+                            flex: 1;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                    }
+                    label {
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                    .wrap {
+                        position: relative;
+                        width: 100%;
+                        svg {
+                            position: absolute;
+                            top: 8px;
+                            left: 5px;
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    input {
+                        border: 0;
+                        border-radius: 5px;
+                        background-color: var(--white);
+                        height: 35px;
+                        width: 100%;
+                        padding-left: 33px;
+                        padding-right: 10px;
+                        &::placeholder {
+                            font-style: italic;
+                            font-size: 19px;
+                            color: var(--dark-0);
+                        }
+                        &[type="date"] {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                button[type="submit"] {
+                    @include button;
+                    height: 35px;
+                    background-color: var(--blue);
+                    border-radius: 5px;
+                    color: var(--white);
+                    font-weight: bold;
+                    font-size: 19px;
+                    margin-top: 17px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    #featured {
+        flex-direction: column;
+        header {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            margin-bottom: var(--space-20);
+            img {
+                height: 45px;
+                width: auto;
+                margin-right: var(--space-5);
+            }
+            h1 {
+                font-size: 20px;
+                font-weight: bold;
+                color: var(--red-1);
+                text-transform: uppercase;
+            }
+        }
+        article {
+            background-image: url(../jpg/foz-do-iguacu.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: center;
+            height: 180px;
+            padding-top: var(--space-5);
+            flex-direction: column;
+            h2, p {
+                padding: var(--space-10);
+            }
+            h2 {
+                background-color: rgba(255,255,255,0.8);
+                width: 50%;
+                font-size: 15px;
+                font-weight: 600;
+                margin: 0;
+            }
+            p {
+                background-color: rgba(41, 128, 185, 0.8);
+                width: 50%;
+                font-size: 13px;
+                color: var(--white);
+            }
+            button {
+                @include button;
+                background-color: #F9C500;
+                border-radius: 5px;
+                color: var(--black);
+                font-size: 20px;
+                font-weight: bold;
+                width: 225px;
+                &:hover {
+                    color: var(--dark-0);
+                }
+            }
+        }
+    }
 }
 
 .alert {
@@ -88,76 +226,7 @@ main {
     }
 }
 
-#filter {
-    .background {
-        padding: 15px;
-        background-image: url('../jpg/maldives-3220702_640.jpg');
-        form {
-            width: 100%;
-            height: 100%;
-            background-color: var(--aqua-green);
-            border-radius: 20px;
-            box-shadow: rgba(0, 0, 0, .4);
-            backdrop-filter: blur(5px);
-            opacity: .9;
-            flex-direction: column;
-            padding: var(--space-20) var(--space-10);
-            .row {
-                width: 100%;
-                flex-direction: column;
-                margin-bottom: 10px;
-                .column {
-                    flex-direction: row;
-                    > div {
-                        flex: 1;
-                        flex-direction: column;
-                        justify-content: center;
-                    }
-                }
-                label {
-                    font-size: 12px;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                }
-                .wrap {
-                    position: relative;
-                    width: 100%;
-                    svg {
-                        position: absolute;
-                        top: 8px;
-                        left: 5px;
-                        &:hover {
-                            color: #fff;
-                        }
-                    }
-                }
-                input {
-                    border: 0;
-                    border-radius: 5px;
-                    background-color: var(--white);
-                    height: 35px;
-                    width: 100%;
-                    padding-left: 33px;
-                    padding-right: 10px;
-                    &::placeholder {
-                        font-style: italic;
-                        font-size: 19px;
-                        color: var(--dark-0);
-                    }
-                }
-            }
-            button[type="submit"] {
-                @include button;
-                height: 35px;
-                background-color: var(--blue);
-                border-radius: 5px;
-                color: var(--white);
-                font-weight: bold;
-                font-size: 19px;
-            }
-        }
-    }
-}
+
 
 @media (min-width: 992px) {
     main {

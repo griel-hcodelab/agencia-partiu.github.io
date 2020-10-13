@@ -48,7 +48,23 @@
 	align-items: center;
 	outline: none;
 	cursor: pointer;
-	background: transparent;
+	background-color: transparent;
+}
+@mixin back-button {
+	width: 65px;
+	height: 45px;
+	background-color: var(--aqua-green);
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	margin-right: var(--space-5);
+	cursor: pointer;
+	&:hover {
+		background-color: #17AC8F;
+	}
+	&:active {
+		background-color: #179E83;
+	}
 }
 
 @mixin account-input {

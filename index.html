@@ -29,26 +29,23 @@
 <body>
 
     <header>
-        <a href="covid.html">
-            <div class="alert">
+        
+        <div id="alert-covid" class="alert danger open">
+            <a href="covid.html">
                 <img src="assets/svg/alert.svg" alt="Alerta de COVID-19" />
                 <p>COVID-19: Instruções de segurança para uma viagem tranquila</p>
-            </div>
-		</a>
+            </a>
+            <button type="button" onclick="hide(['#alert-covid'])">X</button>
+        </div>
+		
 		<div id="wrap">
 			<a href="index.html" class="logo">
 				<img src="assets/svg/logo.svg" alt="Agência de Turismo Partiu" />
 				<p>Partiu</p>
-			</a>
-			<a href="/conta.html" class="conta">
-				<img src="assets/svg/menu-conta.svg" alt="Acesse sua conta" />
-				<p>acessar</p>
             </a>
-            <a href="/conta.html" class="conta logged">
-				<img src="assets/jpg/gabriel.jpg" alt="Sua Conta" />
-                <p>gabriel bispo</p>
-                <img src="assets/svg/voltar.svg" alt="Mais opções" />
-			</a>
+            <div class="close-menu" onclick="hide(['.close-menu','.dropdown']);">
+                <img src="assets/svg/close.svg" alt="Fechar">
+            </div>
 		</div>
 		<nav>
 			<a href="/pacotes.html">
@@ -63,12 +60,17 @@
 				<img src="assets/svg/menu-conta.svg" alt="Acesse sua conta" />
 				<p>acessar</p>
             </a>
-            <a href="#" class="conta logged">
-				<img src="assets/jpg/gabriel.jpg" alt="Sua Conta" />
-                <p>gabriel bispo</p>
-                <img src="assets/svg/voltar.svg" alt="Mais opções" />
-			</a>
-		</nav>
+            <a href="#" class="conta logged" onclick="show(['.dropdown','.close-menu']);">
+                <img src="assets/jpg/gabriel.jpg" alt="Sua Conta" />
+                <div>
+                    <p>gabriel bispo</p>
+                    <img src="assets/svg/voltar.svg" alt="Mais opções" />
+                </div>
+            </a>
+        </nav>
+        <div class="dropdown">
+            conteudo do drop
+        </div>
     </header>
 
     <main>
@@ -76,7 +78,7 @@
             <div class="language">
                 <img src="assets/svg/brazil.svg" alt="Idioma escolhido: Brasil" />
                 <img src="assets/svg/arrow-down.svg" alt="Escolha outro idioma" />
-                <div class="dropdown">
+                <div class="dropdown-language">
                     <div>
                         <img src="assets/svg/espanha.svg" alt="Alterar idioma" />
                         <p>Español</p>
@@ -104,7 +106,6 @@
         <section id="filter">
             <div class="background">
                 <form>
-                    
                     <div class="row">
                         <label for="origin">Selecione</label>
                         <div class="wrap">
@@ -178,24 +179,26 @@
             </div>
         </section>
 
+        <hr />
+
         <!-- Sessão Conheça o Mundo -->
-        <section>
+        <section id="featured">
             <header> 
+                <img src="assets/svg/017-travel.svg" alt="Conheça o mundo!">
                 <h1>Conheça o Mundo</h1>
-                <img src="assets/svg/" alt="Icone">
             </header>
 
-            <hr />
+            
 
             <article>
-                <h2>Conheça o Rio de Janeiro</h2>
-                <p>Aproveite a baixa temporada e venha conhecer a cidade maravilhosa, em até 24x sem juros.</p>
+                <h2>Cataratas do Iguaçú</h2>
+                <p>Venha conhecer esse paraíso dentro do Brasil com pacote especial e em 24x sem juros</p>
 
                 <button type="button">Confira os Pacotes</button>
             </article>
         </section>
 
-        <!-- Sessão Praias Paradisíacas -->
+        <!-- Sessão Praias Paradisíacas 
         <section>
 
             <hr />
@@ -225,9 +228,9 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
 
-        <!-- Sessão Patrimônios da Humanidade -->
+        <!-- Sessão Patrimônios da Humanidade 
         <section>
 
             <hr />
@@ -257,9 +260,9 @@
                 </div>
             </div>
 
-        </section>
+        </section>-->
 
-        <!-- Sessão Grandes Metrópoles -->
+        <!-- Sessão Grandes Metrópoles
         <section>
 
             <hr />
@@ -289,11 +292,11 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
 
         <hr />
 
-        <!-- Sobre a Agência -->
+        <!-- Sobre a Agência 
         <section>
             <div>
                 <div>
@@ -306,11 +309,11 @@
                     <a href="#">#Partiu</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <hr />
 
-        <section>
+       <!-- <section>
             <div>
                 <div>
                     <ul>
@@ -345,12 +348,12 @@
             </div>
         </section>
 
-    </main>
+    </main>-->
 
-    <footer>
+    <!-- <footer>
         <p>Desenvolvido por Red Hand Soluções em Sistemas</p>
         Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a>
-    </footer>
+    </footer> -->
 
     <script src="assets/js/showHide.js" async></script>
 </body>
