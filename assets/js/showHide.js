@@ -7,6 +7,6 @@ function show(element = Array()) {
 function hide(element = Array()) {
     element.forEach(item => {
         console.log(item);
-        document.querySelector(item).classList.toggle('hide');
+        document.querySelector(item).classList.toggle('close');
     });
 }
