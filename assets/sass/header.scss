@@ -1,256 +1,27 @@
 header {
-    display: flex;
-    flex-direction: column;
-
-    //Caixa de alerta do Covid
-    .alert {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        transition: all 0.5s;
-        margin: 0!important;
-        border-radius: 0!important;
-        img {
-            height: 40px;
-            width: auto;
-        } 
-        p {
-            font-weight: 100;
-            font-size: 14px;
-            margin-left: 12px;
-            text-align: center;
-        }
-        &.close {
-            display: none;
-        }
+    flex-direction: row;
+    height: 68px;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-10);
+    background-color: var(--white-50);
+    width: 100%;
+    img {
+        height: 50px;
+        width: auto;
     }
-    //Caixa de alerta do Covid
-
-    //Header com o logo
-    #wrap {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        justify-content: space-between;
-        padding: var(--space-10);
-        height: 92px;
-        align-items: center;
-        .logo {
-            flex-direction: row;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            img {
-                height: 50px;
-                width: auto;
-                margin-right: var(--space-20);
-            }
-            p {
-                font-family: 'Pristina';
-                font-size: 50px;
-                color: var(--blue);
-            }
-        }
-
-        .close-menu {
-            display: none;
-            &.open {
-                display: flex;
-                @include back-button;
-                animation: zoom 0.5s;
-                transition: transform 1s ease-in-out;
-                position: fixed;
-                right: 20%;
-                img {
-                    height: 25px;
-                    width: auto;
-                }
-            }
-            @keyframes zoom {
-                0% {
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                10% {
-                    transform: scale(0.1);
-                    opacity: 0.1;
-                }
-                20% {
-                    transform: scale(0.2);
-                    opacity: 0.2;
-                }
-                30% {
-                    transform: scale(0.3);
-                    opacity: 0.3;
-                }
-                40% {
-                    transform: scale(0.4);
-                    opacity: 0.4;
-                }
-                50% {
-                    transform: scale(0.5);
-                    opacity: 0.5;
-                }
-                60% {
-                    transform: scale(0.6);
-                    opacity: 0.6;
-                }
-                70% {
-                    transform: scale(0.7);
-                    opacity: 0.7;
-                }
-                80% {
-                    transform: scale(1);
-                    opacity: 0.8;
-                }
-                90% {
-                    transform: scale(1.2);
-                    opacity: 0.9;
-                }
-                100% {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-        }
-
-    }
-    //Header com o logo
-
-    //Menu dropdown do ícone de conta
-    .dropdown {
-        display: none;
-        width: 88vh;
-        position: fixed;
-        justify-content: flex-end;
-        z-index: 2;
-        top: 23%;
-        background-color: var(--white);
-        padding: var(--space-20);
-        border: 1px solid var(--aqua-green);
-        overflow-y: auto;
-        height: 100vh;
-        &.open {
-            display: flex;
-        }
-    }
-    //Menu dropdown do ícone de conta
-
-    //Menu com os ícones
-    nav {
-        border: 2px solid var(--blue);
-        border-left: 0;
-        border-right: 0;
-        padding: var(--space-10);
-        overflow-x: scroll;
-        justify-content: flex-end;
-        position: relative;
-		@include scrollbars(3px,#2980B9, transparent);
-        a {
-			@include icon;
-            margin-left: 15px;
-            width: 80px;
-			&:nth-child(1) {
-				margin-left: 0;
-			}
-			&:last-child {
-				margin-right: 15px;
-			}
-            &.conta {
-                display: flex;
-                &.logged {
-                    display: flex;
-                    flex-direction: row;
-                    width: 170px;
-                    justify-content: space-between;
-                    align-items: center;
-                    img {
-                        height: 63px;
-                    }
-                    div {
-                        flex-direction: column;
-                        align-items: flex-end;
-                        text-align: right;
-                        p {
-                            margin: 0;
-                            margin-bottom: var(--space-10);
-                        }
-                        img {
-                            margin: 0;
-                            transform: rotate(269deg) rotatex(180deg);
-                            height: 25px;
-                        }
-                    }
-                }
-			}
-			img {
-				height: 50px;
-                width: auto;
-                border-radius: 50%;
-			}
-        }
-    }
-    //Menu com os ícones
-    &#login {
-        background-color: var(--white);
-        a {
-            &.logo {
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin: calc(var(--space-5) * 2);
-                img {
-                    height: 50px;
-                    width: auto;
-                }
-                p {
-                    font-family: 'Pristina';
-                    font-size: 40px;
-                    color: var(--blue);    
-                    margin: 0;
-                    margin-left: 8px;
-                }
-            }
-            
-        }
+    button {
+        @include menu;
+        transition: 0.5s ease-in-out;
     }
 }
 
-
-@media (min-width: 992px) {
+@media (min-width: 1280px) {
     header {
-		position: relative;
-		border-bottom: 2px solid var(--blue);
-		.alert {
-			align-items: center;
-			justify-content: center;
-		}
-        #wrap {
-			width: 114px;
-    		height: 121px;
-            .conta {
-                display: none;
-            }
-        }
-        
-        nav {
-            position: absolute;
-            border: none;
-			right: 0;
-            top: calc(var(--space-10) * 5);
-            overflow: hidden;
-			a {
-                height: 100px;
-                &:nth-child(1) {
-                    margin-left: 15px;
-                }
-				&.conta {
-					display: flex;
-				}
-			}
-
+        height: 100px;
+        img {
+            height: 75px;
+            width: auto;
         }
     }
-
 }

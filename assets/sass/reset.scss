@@ -6,15 +6,28 @@
 	font-weight: 400;
 }
 body {
-    margin: 0;
+	margin: 0;
+	background-color: var(--bg-color);
+	color: var(--dark-0);
 }
 a {
     text-decoration: none;
     color: inherit;
 }
+h3 {
+	color: var(--red-0);
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+@media (min-width: 1280px) {
+	h3 {
+		font-size: 30px;
+	}
+}
 
 //Definindo tags como display flex
-header, main, nav, img, a, footer, div, form, label, input, h1, h2, h3, h4, h5, h6, section, article  {
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article  {
 	display: flex;
 }
 button {

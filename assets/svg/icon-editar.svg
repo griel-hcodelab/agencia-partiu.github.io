@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="45" viewBox="0 0 44 45">
+  <g id="icon-editar" transform="translate(-158 -496)">
+    <g id="Elipse_92" data-name="Elipse 92" transform="translate(158 496)" fill="#2980b9" stroke="#707070" stroke-width="1">
+      <ellipse cx="22" cy="22.5" rx="22" ry="22.5" stroke="none"/>
+      <ellipse cx="22" cy="22.5" rx="21.5" ry="22" fill="none"/>
+    </g>
+    <g id="edit" transform="translate(167 505)">
+      <g id="Grupo_1814" data-name="Grupo 1814" transform="translate(0 4.044)">
+        <g id="Grupo_1813" data-name="Grupo 1813">
+          <path id="Caminho_5403" data-name="Caminho 5403" d="M16.13,78.008,1.671,92.467.032,99.142a1.1,1.1,0,0,0,1.331,1.331l6.674-1.639L22.5,84.374ZM2.119,98.385l.563-2.295,1.731,1.731Z" transform="translate(0 -78.008)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Grupo_1816" data-name="Grupo 1816" transform="translate(18.088)">
+        <g id="Grupo_1815" data-name="Grupo 1815">
+          <path id="Caminho_5404" data-name="Caminho 5404" d="M356.925,4.5,352.912.487a1.664,1.664,0,0,0-2.353,0l-1.6,1.6,6.366,6.366,1.6-1.6A1.664,1.664,0,0,0,356.925,4.5Z" transform="translate(-348.961 0)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

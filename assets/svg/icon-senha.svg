@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g id="icon-senha" transform="translate(-45 -315)">
-    <rect id="Rectangle_144" data-name="Rectangle 144" width="24" height="24" transform="translate(45 315)" fill="#fff"/>
-    <g id="icon-senha-2" data-name="icon-senha" transform="translate(18.38 317)">
-      <path id="Path_3941" data-name="Path 3941" d="M43.639,7.194h-.325V4.825a4.825,4.825,0,0,0-9.65,0V7.194h-.325A1.721,1.721,0,0,0,31.62,8.913v9.318a1.721,1.721,0,0,0,1.719,1.719h10.3a1.721,1.721,0,0,0,1.719-1.719V8.913A1.721,1.721,0,0,0,43.639,7.194Zm-8.5-2.369a3.351,3.351,0,0,1,6.7,0V7.194h-6.7Zm8.747,13.406a.249.249,0,0,1-.246.246h-10.3a.249.249,0,0,1-.246-.246V8.913a.249.249,0,0,1,.246-.246h10.3a.249.249,0,0,1,.246.246Z" fill="#9f9f9f"/>
-      <path id="Path_3942" data-name="Path 3942" d="M94.784,116.309a.737.737,0,0,0-.737.737v2.821a.737.737,0,1,0,1.473,0v-2.821A.737.737,0,0,0,94.784,116.309Z" transform="translate(-56.295 -104.884)" fill="#9f9f9f"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="45" viewBox="0 0 44 45">
+  <g id="icon-senha" transform="translate(-158 -278)">
+    <g id="Elipse_92" data-name="Elipse 92" transform="translate(158 278)" fill="#2980b9" stroke="#707070" stroke-width="1">
+      <ellipse cx="22" cy="22.5" rx="22" ry="22.5" stroke="none"/>
+      <ellipse cx="22" cy="22.5" rx="21.5" ry="22" fill="none"/>
     </g>
+    <path id="Caminho_3941" data-name="Caminho 3941" d="M48.188,9.916H47.74V6.65a6.651,6.651,0,0,0-13.3,0V9.916H33.99a2.372,2.372,0,0,0-2.37,2.37V25.13a2.372,2.372,0,0,0,2.37,2.37h14.2a2.372,2.372,0,0,0,2.37-2.37V12.286A2.372,2.372,0,0,0,48.188,9.916ZM36.469,6.65a4.62,4.62,0,0,1,9.24,0V9.916h-9.24Zm12.057,18.48a.343.343,0,0,1-.339.339H33.99a.343.343,0,0,1-.339-.339V12.286a.343.343,0,0,1,.339-.339h14.2a.343.343,0,0,1,.339.339Z" transform="translate(139.38 286)" fill="#fff"/>
   </g>
 </svg>
