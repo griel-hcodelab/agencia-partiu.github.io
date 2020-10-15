@@ -46,6 +46,7 @@
   --orange: #F86624;
   --yellow: #FFC400;
   --white-50: rgba(255,255,255,0.5);
+  --black-50: rgba(0,0,0,0.5);
   --space-5: 5px;
   --space-10: 10px;
   --space-20: 20px;
@@ -68,23 +69,10 @@ body {
   color: var(--dark-0);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
-h3 {
-  color: var(--red-0);
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-@media (min-width: 1280px) {
-  h3 {
-    font-size: 30px;
-  }
-}
 header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article {
   display: flex;
 }
@@ -100,7 +88,56 @@ hr {
   margin-bottom: var(--space-20);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: var(--space-20);
+  border-radius: var(--space-5);
+  flex-direction: column;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+section header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+}
+section main > img {
+  transform: translateX(-20px);
+  width: 100vw;
+  box-shadow: 0 0 10px var(--black-50);
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+section footer {
+  border-radius: 0 0 var(--space-5) var(--space-5);
+}
+
+h3 {
+  color: var(--red-0);
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media (min-width: 1280px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 header {
+  position: fixed;
+  z-index: 3;
   flex-direction: row;
   height: 68px;
   justify-content: space-between;
@@ -108,6 +145,7 @@ header {
   padding: var(--space-10);
   background-color: var(--white-50);
   width: 100%;
+  margin-bottom: var(--space-50);
 }
 header img {
   height: 50px;
@@ -142,6 +180,47 @@ header button:active {
     height: 75px;
     width: auto;
   }
+}
+main {
+  flex-direction: column;
+}
+main section header, main section main, main section footer {
+  background-color: var(--white);
+  flex-direction: column;
+}
+main section header {
+  position: relative;
+  height: inherit;
+  padding-bottom: var(--space-20);
+}
+main section header h3, main section header h2 {
+  text-align: center;
+}
+main section header > div {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: var(--space-20);
+}
+main section header > div img {
+  margin-right: var(--space-20);
+  height: 50px;
+  width: auto;
+}
+main section header .avaliacao {
+  padding-top: var(--space-10);
+}
+main section header .avaliacao img {
+  height: var(--space-20);
+  width: auto;
+}
+main section main {
+  flex-direction: column;
+}
+main section footer {
+  padding: var(--space-20);
+}
+main section footer p + p {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */

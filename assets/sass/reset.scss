@@ -10,13 +10,60 @@ body {
 	background-color: var(--bg-color);
 	color: var(--dark-0);
 }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+//Definindo tags como display flex
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article  {
+	display: flex;
+}
+
+button {
+	cursor: pointer;
+}
+
+hr {
+	border: var(--space-5) solid var(--orange-0);
+	width: 80%;
+    margin-top: var(--space-20);
+    margin-bottom: var(--space-20);
+}
 a {
     text-decoration: none;
     color: inherit;
 }
+section {
+	padding: var(--space-20);
+	border-radius: var(--space-5);
+	flex-direction: column;
+	width: 100%;
+	max-width: 1180px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	header {
+		border-radius: var(--space-5) var(--space-5) 0 0;
+	}
+	main {
+		> img {
+			transform: translateX(-20px);
+			width: 100vw;
+			box-shadow: 0 0 10px var(--black-50);
+			margin-top: var(--space-20);
+			margin-bottom: var(--space-20);
+		}
+	}
+	footer {
+		border-radius: 0 0 var(--space-5) var(--space-5);
+	}
+
+}
+
 h3 {
 	color: var(--red-0);
-	font-size: 20px;
+	font-size: 25px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -25,17 +72,8 @@ h3 {
 		font-size: 30px;
 	}
 }
-
-//Definindo tags como display flex
-header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article  {
-	display: flex;
-}
-button {
-	cursor: pointer;
-}
-hr {
-	border: var(--space-5) solid var(--orange-0);
-	width: 80%;
-    margin-top: var(--space-20);
-    margin-bottom: var(--space-20);
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: capitalize;
 }

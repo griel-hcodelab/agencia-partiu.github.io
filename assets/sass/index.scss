@@ -1,0 +1,44 @@
+main {
+    flex-direction: column;
+    section {
+        header, main, footer {
+            background-color: var(--white);
+            flex-direction: column;;
+        }
+        header {
+            position: relative;
+            height: inherit;
+            padding-bottom: var(--space-20);
+            h3, h2 {
+                text-align: center;
+            }
+            > div {
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: var(--space-20);
+                img {
+                    margin-right: var(--space-20);
+                    height: 50px;
+                    width: auto;
+                }
+            }
+            .avaliacao {
+                padding-top: var(--space-10);
+                img {
+                    height: var(--space-20);
+                    width: auto;
+                }
+            }
+        }
+        main {
+            flex-direction: column;
+        }
+        footer {
+            padding: var(--space-20);
+            p + p {
+                font-weight: 600;
+            }
+        }   
+    }
+    
+}

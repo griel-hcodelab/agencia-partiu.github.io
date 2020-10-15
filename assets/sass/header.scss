@@ -1,4 +1,6 @@
 header {
+    position: fixed;
+    z-index: 3;
     flex-direction: row;
     height: 68px;
     justify-content: space-between;
@@ -6,6 +8,7 @@ header {
     padding: var(--space-10);
     background-color: var(--white-50);
     width: 100%;
+    margin-bottom: var(--space-50);
     img {
         height: 50px;
         width: auto;
