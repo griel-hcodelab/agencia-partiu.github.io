@@ -43,6 +43,7 @@
   --dark-1: #707070;
   --dark-2: #333333;
   --red-0: #EA3546;
+  --green: #1ABC9C;
   --orange: #F86624;
   --yellow: #FFC400;
   --white-50: rgba(255,255,255,0.5);
@@ -175,14 +176,13 @@ header#topo button:active {
   box-shadow: inset 1px 1px 5px var(--dark-1);
 }
 header#topo .menu {
-  display: none;
   position: absolute;
   top: 70px;
   right: -315px;
   width: 315px;
   flex-direction: column;
   background-color: var(--white);
-  transition: all 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
   z-index: 1;
   height: 100vh;
 }

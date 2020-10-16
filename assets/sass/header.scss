@@ -22,14 +22,13 @@ header {
             transition: 0.5s ease-in-out;
         }
         .menu {
-            display: none;
             position: absolute;
             top: 70px;
             right: -315px;
             width: 315px;
             flex-direction: column;
             background-color: var(--white);
-            transition: all .3s ease-in-out;
+            transition: right .3s ease-in-out;
             z-index: 1;
             height: 100vh;
             &.open {
