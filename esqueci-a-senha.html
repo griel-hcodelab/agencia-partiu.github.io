@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crie sua Conta - Agência de Turismo Partiu</title>
+    <title>Esqueci a Senha - Agência de Turismo Partiu</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/png/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="assets/png/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="assets/png/apple-icon-72x72.png" />
@@ -28,53 +28,37 @@
 </head>
 <body>
 
-    <header class="create-account">
+    <header class="password-forget">
         <a href="index.html">
             <img src="assets/svg/logo-horizontal.svg" alt="Agência de Turismo Partiu" />
         </a>
     </header>
 
-    <section id="create-account">
+    <section id="password-forget">
         <header>
-            <img src="assets/svg/icon-create-account.svg" alt="Crie sua conta" />
-            <h1>Crie sua conta</h1>
+            <img src="assets/svg/icon-cadeado.svg" alt="Esqueceu sua senha?" />
+            <h1>Recuperação de senha</h1>
         </header>
         <main>
-            <form action="conta.html">
+            <form action="nova-senha.html">
                 <div class="label">
-                    <label for="name">Seu nome</label>
+                    <label for="email">Digite seu e-mail</label>
                     <div>
-                        <img src="assets/svg/user-profile.svg" alt="Seu nome" >
-                        <input type="text" id="name" name="name" aria-label="Seu nome" placeholder="seu nome">
+                        <img src="assets/svg/input-arroba.svg" alt="Seu e-mail" >
+                        <input type="email" id="email" name="email" aria-label="Seu e-mail" placeholder="seu@email.com">
                     </div>
                 </div>
-                <div class="labels">
-                    <div class="label">
-                        <label for="email">Seu e-mail</label>
-                        <div>
-                            <img src="assets/svg/input-arroba.svg" alt="Seu e-mail" >
-                            <input type="email" id="email" name="email" aria-label="Seu e-mail" placeholder="seu@email.com">
-                        </div>
-                    </div>
-                    <div class="label">
-                        <label for="password">Sua senha</label>
-                        <div>
-                            <img src="assets/svg/input-cadeado.svg" alt="Sua senha" >
-                            <input type="password" id="password" name="password" aria-label="Sua senha" placeholder="********">
-                        </div>
-                    </div>
-                </div>
+
                 <img src="assets/jpg/google-captcha.jpg" alt="Google Recaptcha" />
                 <div class="alert danger">
-                    Mensagem de Alerta
+                    O e-mail informado não consta em nossa base de dados.
                 </div>
                 <div class="button">
                     <a href="acessar.html">
                         <img src="assets/svg/icon-voltar.svg" alt="Voltar" />
                     </a>
-                    <button type="submit">criar sua conta</button>
+                    <button type="submit">Acessar</button>
                 </div>
-                
             </form>
         </main>
     </section>

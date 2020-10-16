@@ -498,7 +498,7 @@ section#account footer a:hover {
   color: var(--black);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 992px) {
   header.account {
     height: var(--space-100);
     margin-bottom: var(--space-100);
@@ -673,6 +673,161 @@ section#create-account footer a:hover {
   }
   section#create-account main form .labels .label + .label {
     margin-left: var(--space-20);
+  }
+}
+header.password-forget {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.password-forget img {
+  height: 40px;
+  width: auto;
+}
+
+section#password-forget {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#password-forget header, section#password-forget main, section#password-forget footer {
+  background-color: var(--white);
+}
+section#password-forget header {
+  flex-direction: column;
+}
+section#password-forget header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#password-forget header h1 {
+  font-size: 25px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#password-forget main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#password-forget main form {
+  flex-direction: column;
+}
+section#password-forget main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+section#password-forget main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#password-forget main form .label div {
+  flex-direction: row;
+}
+section#password-forget main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#password-forget main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#password-forget main form .button {
+  flex-direction: row;
+}
+section#password-forget main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#password-forget main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#password-forget main form .button a:active {
+  background-color: #179E83;
+}
+section#password-forget main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#password-forget main form .button button {
+  width: 100%;
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+section#password-forget main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#password-forget main form .button button:active {
+  background-color: var(--blue);
+}
+section#password-forget main form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+section#password-forget main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#password-forget footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#password-forget footer a {
+  font-size: 13px;
+}
+section#password-forget footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.password-forget {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.password-forget img {
+    height: 80px;
   }
 }
 
