@@ -48,12 +48,13 @@ section {
                     height: 35px;   
                 }
                 .button {
-                    flex-direction: row;
+                    justify-content: center;
                     a {
                         @include back-button;
                     }
                     button {
                         @include next-button;
+                        width: 230px;
                     }
                 }
             }

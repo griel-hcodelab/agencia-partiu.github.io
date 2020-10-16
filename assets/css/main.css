@@ -444,7 +444,7 @@ section#account main form .label div input {
   padding-left: var(--space-10);
 }
 section#account main form .button {
-  flex-direction: row;
+  justify-content: center;
 }
 section#account main form .button a {
   width: 65px;
@@ -480,6 +480,7 @@ section#account main form .button button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   text-transform: uppercase;
+  width: 230px;
 }
 section#account main form .button button:hover {
   background-color: #2d8ece;
@@ -587,7 +588,7 @@ section#create-account main form .labels {
   flex-direction: column;
 }
 section#create-account main form .button {
-  flex-direction: row;
+  justify-content: center;
 }
 section#create-account main form .button a {
   width: 65px;
@@ -623,6 +624,7 @@ section#create-account main form .button button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   text-transform: uppercase;
+  width: 230px;
 }
 section#create-account main form .button button:hover {
   background-color: #2d8ece;
@@ -641,6 +643,16 @@ section#create-account main .alert.danger {
   border-radius: var(--space-5);
   margin: var(--space-10) 0 var(--space-20) 0;
   color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#create-account main .alert.info {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
   text-align: center;
   justify-content: center;
   padding: var(--space-10);
@@ -752,7 +764,7 @@ section#password-forget main form .label div input {
   padding-left: var(--space-10);
 }
 section#password-forget main form .button {
-  flex-direction: row;
+  justify-content: center;
 }
 section#password-forget main form .button a {
   width: 65px;
@@ -788,6 +800,7 @@ section#password-forget main form .button button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   text-transform: uppercase;
+  width: 230px;
 }
 section#password-forget main form .button button:hover {
   background-color: #2d8ece;
@@ -828,6 +841,185 @@ section#password-forget footer a:hover {
   }
   header.password-forget img {
     height: 80px;
+  }
+}
+header.new-password {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.new-password img {
+  height: 40px;
+  width: auto;
+}
+
+section#new-password {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#new-password header, section#new-password main, section#new-password footer {
+  background-color: var(--white);
+}
+section#new-password header {
+  flex-direction: column;
+}
+section#new-password header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#new-password header h1 {
+  font-size: 25px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#new-password main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#new-password main form {
+  flex-direction: column;
+}
+section#new-password main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+section#new-password main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#new-password main form .label div {
+  flex-direction: row;
+}
+section#new-password main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#new-password main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#new-password main form .labels {
+  flex-direction: column;
+}
+section#new-password main form .button {
+  justify-content: center;
+}
+section#new-password main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#new-password main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#new-password main form .button a:active {
+  background-color: #179E83;
+}
+section#new-password main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#new-password main form .button button {
+  width: 100%;
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  width: 230px;
+}
+section#new-password main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#new-password main form .button button:active {
+  background-color: var(--blue);
+}
+section#new-password main form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+section#new-password main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#new-password main .alert.info {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#new-password footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#new-password footer a {
+  font-size: 13px;
+}
+section#new-password footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.new-password {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.new-password img {
+    height: 80px;
+  }
+
+  section#new-password {
+    max-width: 720px;
+  }
+  section#new-password main form .labels {
+    flex-direction: row;
+  }
+  section#new-password main form .labels .label + .label {
+    margin-left: var(--space-20);
   }
 }
 

@@ -50,12 +50,13 @@ section {
                     flex-direction: column;
                 }
                 .button {
-                    flex-direction: row;
+                    justify-content: center;
                     a {
                         @include back-button;
                     }
                     button {
                         @include next-button;
+                        width: 230px;
                     }
                 }
                 > img {
@@ -67,6 +68,9 @@ section {
             .alert {
                 &.danger {
                     @include alert-danger;
+                }
+                &.info {
+                    @include alert-info;
                 }
             }
 
