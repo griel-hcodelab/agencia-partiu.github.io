@@ -44,6 +44,8 @@
   --dark-1: #707070;
   --dark-2: #333333;
   --red-0: #EA3546;
+  --green: #1ABC9C;
+  --green-1: #11806A;
   --orange: #F86624;
   --yellow: #FFC400;
   --white-50: rgba(255,255,255,0.5);
@@ -74,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article {
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p {
   display: flex;
 }
 
@@ -176,14 +178,13 @@ header#topo button:active {
   box-shadow: inset 1px 1px 5px var(--dark-1);
 }
 header#topo .menu {
-  display: flex;
   position: absolute;
-  top: 70px;
+  top: 68px;
   right: -315px;
   width: 315px;
   flex-direction: column;
   background-color: var(--white);
-  transition: all 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
   z-index: 1;
   height: 100vh;
 }
@@ -235,21 +236,67 @@ header#topo .menu nav ul hr {
 }
 
 @media (min-width: 1280px) {
-  header {
+  header#topo {
     height: 100px;
   }
-  header img {
+  header#topo img {
     height: 75px;
     width: auto;
   }
-  header .menu {
+  header#topo .menu {
     top: 100px;
   }
 }
-filter {
-  width: 100vh;
+#landing {
+  padding: 0;
+  width: 100%;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
   background-image: url("../jpg/beach-1761410_640.jpg");
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  max-width: initial;
+}
+#landing div {
+  background-color: var(--green);
+  border: 1px solid var(--green-1);
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+}
+#landing div form {
+  width: 100%;
+  height: 100%;
+}
+#landing div form > div {
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+}
+#landing div form > div label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+}
+#landing div form > div div {
+  flex-direction: row;
+}
+#landing div form > div div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#landing div form > div div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
 }
 
 main {
@@ -263,43 +310,47 @@ main > section {
 }
 main > section header, main > section main, main > section footer {
   background-color: var(--white);
-  flex-direction: column;
 }
 main > section header {
-  position: relative;
-  height: inherit;
-  padding-bottom: var(--space-20);
-}
-main > section header h3, main > section header h2 {
-  text-align: center;
-}
-main > section header > div {
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: var(--space-20);
+  padding: var(--space-20);
 }
 main > section header > div img {
-  margin-right: var(--space-20);
-  height: 50px;
-  width: auto;
+  width: 52px;
+  height: 52px;
+  margin-right: var(--space-10);
 }
 main > section header .avaliacao {
-  padding-top: var(--space-10);
+  margin-top: var(--space-10);
 }
 main > section header .avaliacao img {
-  height: var(--space-20);
-  width: auto;
+  width: 12px;
+  height: 12px;
 }
 main > section main {
   flex-direction: column;
 }
 main > section footer {
   padding: var(--space-20);
+  flex-direction: column;
+  align-items: center;
 }
-main > section footer p + p {
+main > section footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+}
+main > section footer p.title {
   font-weight: 600;
+  margin-bottom: var(--space-50);
 }
 
+@media (min-width: 850px) {
+  #landing {
+    background-image: url("../jpg/beach-1761410_1280.jpg");
+  }
+}
 header.account {
   flex-direction: row;
   justify-content: center;

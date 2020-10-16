@@ -22,14 +22,13 @@ header {
             transition: 0.5s ease-in-out;
         }
         .menu {
-            display: flex;
             position: absolute;
-            top: 70px;
+            top: 68px;
             right: -315px;
             width: 315px;
             flex-direction: column;
             background-color: var(--white);
-            transition: all .3s ease-in-out;
+            transition: right .3s ease-in-out;
             z-index: 1;
             height: 100vh;
             &.open {
@@ -86,7 +85,7 @@ header {
 }
 
 @media (min-width: 1280px) {
-    header {
+    header#topo {
         height: 100px;
         img {
             height: 75px;
