@@ -23,8 +23,8 @@
   font-weight: bold;
 }
 @font-face {
-  font-family: "Pristina";
-  src: local("Pristina"), url("../fonts/pristina.ttf") format("truetype");
+  font-family: "Sweet Buttermilk";
+  src: local("Sweet Buttermilk Script Free"), url("../fonts/Sweet-Buttermilk-Script-Free.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
@@ -38,6 +38,7 @@
   --blue-2: #D1ECF1;
   --blue-3: #BEE5EB;
   --blue-4: #0C5460;
+  --aqua-green: #1ABC9C;
   --shadow: #A7A7A7;
   --dark-0: #333;
   --dark-1: #707070;
@@ -175,7 +176,7 @@ header#topo button:active {
   box-shadow: inset 1px 1px 5px var(--dark-1);
 }
 header#topo .menu {
-  display: none;
+  display: flex;
   position: absolute;
   top: 70px;
   right: -315px;
@@ -297,6 +298,133 @@ main > section footer {
 }
 main > section footer p + p {
   font-weight: 600;
+}
+
+header.account {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-5) 0;
+}
+header.account img {
+  height: 40px;
+  width: auto;
+}
+
+section {
+  margin-top: calc(var(--space-50) + 30px);
+  padding-top: var(--space-50);
+}
+section#account header, section#account main, section#account footer {
+  background-color: var(--white);
+}
+section#account header {
+  flex-direction: column;
+}
+section#account header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#account header h1 {
+  font-size: 30px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+section#account main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#account main form {
+  flex-direction: column;
+}
+section#account main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  height: 35px;
+}
+section#account main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+}
+section#account main form .label div {
+  flex-direction: row;
+}
+section#account main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#account main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#account main form .button {
+  flex-direction: row;
+}
+section#account main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#account main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#account main form .button a:active {
+  background-color: #179E83;
+}
+section#account main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#account main form .button button {
+  width: 100%;
+  background-color: var(--blue-0);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+section#account main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#account main form .button button:active {
+  background-color: var(--blue);
+}
+section#account footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#account footer a {
+  font-size: 13px;
+}
+section#account footer a:hover {
+  color: var(--black);
 }
 
 /*# sourceMappingURL=main.css.map */

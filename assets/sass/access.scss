@@ -1,0 +1,72 @@
+header {
+    &.account {
+        flex-direction: row;
+        justify-content: center;
+        height: var(--space-50);
+        width: 100%;
+        background-color: var(--white);
+        padding: var(--space-5) 0;
+        img {
+            height: 40px;
+            width: auto;
+        }
+    }
+}
+
+section {
+    margin-top: calc(var(--space-50) + 30px);
+    padding-top: var(--space-50);
+    &#account {
+        header, main, footer {
+            background-color: var(--white);
+        }
+        header {
+            flex-direction: column;
+            img {
+                height: 100px;
+                width: auto;
+                transform: translateY(-50px);
+            }
+            h1 {
+                font-size: 30px;
+                color: var(--blue);
+                justify-content: center;
+                margin-top: var(--space-20);
+                margin-bottom: var(--space-20);
+            }
+        }
+        main {
+            flex-direction: column;
+            padding: var(--space-20);
+            form {
+                flex-direction: column;
+                .label {
+                    flex-direction: column;
+                    @include account-input;
+                    height: 35px;   
+                }
+                .button {
+                    flex-direction: row;
+                    a {
+                        @include back-button;
+                    }
+                    button {
+                        @include next-button;
+                    }
+                }
+            }
+
+        }
+        footer {
+            justify-content: space-evenly;
+            padding-bottom: var(--space-20);
+            a {
+                font-size: 13px;
+                &:hover {
+                    color: var(--black);
+                }
+            }
+
+        }
+    }
+}
