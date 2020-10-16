@@ -174,6 +174,64 @@ header#topo button:hover {
 header#topo button:active {
   box-shadow: inset 1px 1px 5px var(--dark-1);
 }
+header#topo .menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: -315px;
+  width: 315px;
+  flex-direction: column;
+  background-color: var(--white);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  height: 100vh;
+}
+header#topo .menu.open {
+  display: flex;
+  right: 0;
+}
+header#topo .menu nav ul {
+  margin: 0;
+  padding: 10px 20px;
+  list-style-type: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+header#topo .menu nav ul li {
+  width: 100%;
+  height: 90px;
+  border: 1px solid var(--blue);
+  margin-bottom: var(--space-20);
+}
+header#topo .menu nav ul li:last-child {
+  margin-bottom: 0;
+}
+header#topo .menu nav ul li.green {
+  border-color: var(--green);
+}
+header#topo .menu nav ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header#topo .menu nav ul li a svg {
+  width: 45px;
+  height: 45px;
+}
+header#topo .menu nav ul li a span {
+  font-size: 18px;
+  color: var(--dark-0);
+}
+header#topo .menu nav ul hr {
+  border: 0;
+  height: 1px;
+  width: 150px;
+  background-color: var(--dark-1);
+}
 
 @media (min-width: 1280px) {
   header {
@@ -182,6 +240,9 @@ header#topo button:active {
   header img {
     height: 75px;
     width: auto;
+  }
+  header .menu {
+    top: 100px;
   }
 }
 filter {
@@ -196,42 +257,45 @@ main {
 main#content {
   margin-top: 50px;
 }
-main section header, main section main, main section footer {
+main > section {
+  margin: 0 auto;
+}
+main > section header, main > section main, main > section footer {
   background-color: var(--white);
   flex-direction: column;
 }
-main section header {
+main > section header {
   position: relative;
   height: inherit;
   padding-bottom: var(--space-20);
 }
-main section header h3, main section header h2 {
+main > section header h3, main > section header h2 {
   text-align: center;
 }
-main section header > div {
+main > section header > div {
   flex-direction: row;
   align-items: center;
   margin-bottom: var(--space-20);
 }
-main section header > div img {
+main > section header > div img {
   margin-right: var(--space-20);
   height: 50px;
   width: auto;
 }
-main section header .avaliacao {
+main > section header .avaliacao {
   padding-top: var(--space-10);
 }
-main section header .avaliacao img {
+main > section header .avaliacao img {
   height: var(--space-20);
   width: auto;
 }
-main section main {
+main > section main {
   flex-direction: column;
 }
-main section footer {
+main > section footer {
   padding: var(--space-20);
 }
-main section footer p + p {
+main > section footer p + p {
   font-weight: 600;
 }
 
