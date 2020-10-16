@@ -39,11 +39,19 @@
   --blue-3: #BEE5EB;
   --blue-4: #0C5460;
   --aqua-green: #1ABC9C;
+  --green-2: #D4EDDA;
+  --green-3: #C3E6CB;
+  --green-4: #155724 //Alerta de Sucesso: Texto
+  //Preto
   --shadow: #A7A7A7;
   --dark-0: #333;
   --dark-1: #707070;
   --dark-2: #333333;
   --red-0: #EA3546;
+  --red-1: #EA3546;
+  --red-2: #F8D7DA;
+  --red-3: #F5C6CB;
+  --red-4: #721C24;
   --green: #1ABC9C;
   --green-1: #11806A;
   --orange: #F86624;
@@ -281,11 +289,14 @@ header#topo .menu nav ul hr {
   padding: var(--space-5);
   height: 60px;
   margin-bottom: var(--space-20);
+  width: 100%;
 }
 #landing div form > div label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
 }
 #landing div form > div div {
   flex-direction: row;
@@ -407,12 +418,15 @@ section#account main form .label {
   padding: var(--space-5);
   height: 60px;
   margin-bottom: var(--space-20);
+  width: 100%;
   height: 35px;
 }
 section#account main form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
 }
 section#account main form .label div {
   flex-direction: row;
@@ -491,6 +505,174 @@ section#account footer a:hover {
   }
   header.account img {
     height: 80px;
+  }
+}
+header.create-account {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.create-account img {
+  height: 40px;
+  width: auto;
+}
+
+section#create-account {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#create-account header, section#create-account main, section#create-account footer {
+  background-color: var(--white);
+}
+section#create-account header {
+  flex-direction: column;
+}
+section#create-account header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#create-account header h1 {
+  font-size: 30px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#create-account main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#create-account main form {
+  flex-direction: column;
+}
+section#create-account main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+section#create-account main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#create-account main form .label div {
+  flex-direction: row;
+}
+section#create-account main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#create-account main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#create-account main form .labels {
+  flex-direction: column;
+}
+section#create-account main form .button {
+  flex-direction: row;
+}
+section#create-account main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#create-account main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#create-account main form .button a:active {
+  background-color: #179E83;
+}
+section#create-account main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#create-account main form .button button {
+  width: 100%;
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+section#create-account main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#create-account main form .button button:active {
+  background-color: var(--blue);
+}
+section#create-account main form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+section#create-account main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#create-account footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#create-account footer a {
+  font-size: 13px;
+}
+section#create-account footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.create-account {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.create-account img {
+    height: 80px;
+  }
+
+  section#create-account {
+    max-width: 720px;
+  }
+  section#create-account main form .labels {
+    flex-direction: row;
+  }
+  section#create-account main form .labels .label + .label {
+    margin-left: var(--space-20);
   }
 }
 
