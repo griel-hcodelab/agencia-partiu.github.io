@@ -56,6 +56,7 @@
   --space-40: 40px;
   --space-50: 50px;
   --space-80: 80px;
+  --space-100: 100px;
 }
 
 * {
@@ -360,16 +361,19 @@ header.account {
   height: var(--space-50);
   width: 100%;
   background-color: var(--white);
-  padding: var(--space-5) 0;
+  padding: var(--space-10) 0;
 }
 header.account img {
   height: 40px;
   width: auto;
 }
 
-section {
-  margin-top: calc(var(--space-50) + 30px);
+section#account {
+  margin-top: var(--space-50);
   padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
 }
 section#account header, section#account main, section#account footer {
   background-color: var(--white);
@@ -386,8 +390,7 @@ section#account header h1 {
   font-size: 30px;
   color: var(--blue);
   justify-content: center;
-  margin-top: var(--space-20);
-  margin-bottom: var(--space-20);
+  margin-top: -20px;
 }
 section#account main {
   flex-direction: column;
@@ -452,7 +455,7 @@ section#account main form .button a > img {
 }
 section#account main form .button button {
   width: 100%;
-  background-color: var(--blue-0);
+  background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
   font-size: var(--space-20);
@@ -479,6 +482,16 @@ section#account footer a {
 }
 section#account footer a:hover {
   color: var(--black);
+}
+
+@media (min-width: 1280px) {
+  header.account {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.account img {
+    height: 80px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
