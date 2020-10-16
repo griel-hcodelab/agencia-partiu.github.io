@@ -1,4 +1,13 @@
+filter {
+    width: 100vh;
+    height: 100vh;
+    background-image: url("../jpg/beach-1761410_640.jpg");
+}
+
 main {
+    &#content {
+        margin-top: 50px;
+    }
     flex-direction: column;
     section {
         header, main, footer {

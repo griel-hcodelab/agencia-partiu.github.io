@@ -135,8 +135,10 @@ h2 {
   text-transform: capitalize;
 }
 
-header {
+header#topo {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 3;
   flex-direction: row;
   height: 68px;
@@ -145,13 +147,14 @@ header {
   padding: var(--space-10);
   background-color: var(--white-50);
   width: 100%;
-  margin-bottom: var(--space-50);
+  backdrop-filter: blur(5px);
+  margin-bottom: 50px;
 }
-header img {
+header#topo img {
   height: 50px;
   width: auto;
 }
-header button {
+header#topo button {
   background-color: transparent;
   border: 1px solid var(--shadow);
   width: var(--space-50);
@@ -161,14 +164,14 @@ header button {
   outline: none;
   transition: 0.5s ease-in-out;
 }
-header button img {
+header#topo button img {
   height: var(--space-20);
   width: auto;
 }
-header button:hover {
+header#topo button:hover {
   border: 1px solid var(--blue);
 }
-header button:active {
+header#topo button:active {
   box-shadow: inset 1px 1px 5px var(--dark-1);
 }
 
@@ -181,8 +184,17 @@ header button:active {
     width: auto;
   }
 }
+filter {
+  width: 100vh;
+  height: 100vh;
+  background-image: url("../jpg/beach-1761410_640.jpg");
+}
+
 main {
   flex-direction: column;
+}
+main#content {
+  margin-top: 50px;
 }
 main section header, main section main, main section footer {
   background-color: var(--white);
