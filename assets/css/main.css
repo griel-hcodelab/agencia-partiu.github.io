@@ -469,6 +469,7 @@ section#account main form .button a > img {
 }
 section#account main form .button button {
   width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -613,6 +614,7 @@ section#create-account main form .button a > img {
 }
 section#create-account main form .button button {
   width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -789,6 +791,7 @@ section#password-forget main form .button a > img {
 }
 section#password-forget main form .button button {
   width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -948,6 +951,7 @@ section#new-password main form .button a > img {
 }
 section#new-password main form .button button {
   width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -1020,6 +1024,93 @@ section#new-password footer a:hover {
   }
   section#new-password main form .labels .label + .label {
     margin-left: var(--space-20);
+  }
+}
+header.password-created {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.password-created img {
+  height: 40px;
+  width: auto;
+}
+
+section#password-created {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#password-created header, section#password-created main, section#password-created footer {
+  background-color: var(--white);
+}
+section#password-created header {
+  flex-direction: column;
+}
+section#password-created header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#password-created header h1 {
+  font-size: 30px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#password-created main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#password-created main .alert.success {
+  border: 1px solid var(--green-3);
+  background-color: var(--green-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--green-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#password-created footer {
+  justify-content: center;
+  padding: var(--space-20);
+  padding-top: 0;
+}
+section#password-created footer button {
+  width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+section#password-created footer button:hover {
+  background-color: #2d8ece;
+}
+section#password-created footer button:active {
+  background-color: var(--blue);
+}
+
+@media (min-width: 992px) {
+  header.password-created {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.password-created img {
+    height: 80px;
   }
 }
 

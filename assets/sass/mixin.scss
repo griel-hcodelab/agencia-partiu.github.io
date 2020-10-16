@@ -62,6 +62,7 @@
 }
 @mixin next-button {
 	width: 100%;
+	height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
 	background-color: var(--blue);
 	border: none;
 	border-radius: var(--space-5);
