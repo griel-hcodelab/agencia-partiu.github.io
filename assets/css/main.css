@@ -391,6 +391,7 @@ main > section footer .icons {
 main > section footer .icons ul {
   flex-direction: column;
   justify-content: space-between;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
