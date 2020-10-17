@@ -31,8 +31,17 @@
 main {
     &#content {
         margin-top: 50px;
+        align-items: center;
     }
     flex-direction: column;
+    .divider {
+        border: 0;
+        background-color: var(--aqua-green);
+        margin: 50px 0;
+        width: 50%;
+        max-width: 300px;
+        height: 1px;
+    }    
     > section {
         margin: 0 auto; 
         header, main, footer {
@@ -47,6 +56,10 @@ main {
                     width: 52px;
                     height: 52px;
                     margin-right: var(--space-10);
+                    &.agency-logo {
+                        width: 170px;
+                        height: 67px;
+                    }
                 }
             }
             .avaliacao {
@@ -59,6 +72,9 @@ main {
         }
         main {
             flex-direction: column;
+            .agency {
+                box-shadow: initial;
+            }
         }
         footer {
             padding: var(--space-20);
@@ -72,11 +88,107 @@ main {
                     font-weight: 600;
                     margin-bottom: var(--space-50);
                 }
+                &.block {
+                    display: block;
+                    b {
+                        font-weight: 600;
+                    }
+                }
             }
-        
+            .icons {
+                width: 100%;
+                margin-top: var(--space-20);
+                justify-content: center;
+                ul {
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        margin-top: var(--space-10);
+                        span {
+                            color: var(--dark-0);
+                            font-size: 18px;
+                            text-align: center;
+                        }
+                        svg {
+                            width: 30px;
+                            margin-right: 10px;
+                            height: auto;
+                        }
+                    }
+                    
+                }
+            }   
+            .pricing {
+                flex-direction: column;
+                margin-top: var(--space-20);
+                p {
+                    color: var(--dark-0);
+                    font-size: 20px;
+                    font-weight: 600;
+                    &:first-child {
+                        font-weight: 300;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .call-to-action {
+                width: 100%;
+                margin-top: var(--space-20);
+                justify-content: center;
+                align-items: center;
+                &.blue {
+                    a {
+                        background-color: var(--blue);
+                        max-width: 250px;
+                        &:hover {
+                            background-color: var(--blue-0);
+                        }
+                    }
+                }
+                a {
+                    border-radius: 25px;
+                    width: 100%;
+                    max-width: 600px;
+                    height: 45px;
+                    background-color: var(--orange);
+                    color: var(--white);
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        background-color: var(--orange-1);
+                    }
+                }
+            }
         }   
     }
     
+}
+
+@media (min-width: 500px) {
+    main {
+        > section {
+            footer {
+                .icons {
+                    ul {
+                        flex-direction: row;
+                        width: 100%;
+                    }
+                }
+                .call-to-action {
+                    &.blue {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 850px) {
