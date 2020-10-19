@@ -1,5 +1,5 @@
 header {
-    &.account {
+    &.access {
         flex-direction: row;
         justify-content: center;
         height: var(--space-50);
@@ -14,7 +14,7 @@ header {
 }
 
 section {
-    &#account {
+    &#access {
         margin-top: var(--space-50);
         padding-top: var(--space-50);
         max-width: 360px;
@@ -76,7 +76,7 @@ section {
 
 @media (min-width: 992px) {
     header {
-        &.account {
+        &.access {
             height: var(--space-100);
             margin-bottom: var(--space-100);
             img {
