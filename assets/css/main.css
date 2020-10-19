@@ -1056,27 +1056,27 @@ main > section footer .call-to-action a:hover {
   font-size: 20px;
 }
 
-.foldFive header h2 {
+.foldFour header h2 {
   font-size: 27px;
   text-transform: uppercase;
   font-weight: 600;
   align-items: center;
   justify-content: center;
 }
-.foldFive main > div > p {
+.foldFour main > div > p {
   font-size: 20px;
   margin: 0;
   margin-left: var(--space-20);
   margin-bottom: var(--space-20);
 }
-.foldFive main div.form {
+.foldFour main div.form {
   justify-content: center;
 }
-.foldFive main div.form form {
+.foldFour main div.form form {
   flex-direction: column;
   width: 290px;
 }
-.foldFive main div.form form .label {
+.foldFour main div.form form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -1092,29 +1092,29 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   border-color: var(--green);
 }
-.foldFive main div.form form .label label {
+.foldFour main div.form form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
   font-size: 16px;
   font-weight: 600;
 }
-.foldFive main div.form form .label div {
+.foldFour main div.form form .label div {
   flex-direction: row;
 }
-.foldFive main div.form form .label div img {
+.foldFour main div.form form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldFive main div.form form .label div input {
+.foldFour main div.form form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldFive main div.form form .labelRed {
+.foldFour main div.form form .labelRed {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -1130,45 +1130,45 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   border-color: var(--red-0);
 }
-.foldFive main div.form form .labelRed label {
+.foldFour main div.form form .labelRed label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
   font-size: 16px;
   font-weight: 600;
 }
-.foldFive main div.form form .labelRed div {
+.foldFour main div.form form .labelRed div {
   flex-direction: row;
 }
-.foldFive main div.form form .labelRed div img {
+.foldFour main div.form form .labelRed div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldFive main div.form form .labelRed div input {
+.foldFour main div.form form .labelRed div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldFive main div.form form input::placeholder {
+.foldFour main div.form form input::placeholder {
   font-size: 20px;
 }
-.foldFive main div.form form .labels {
+.foldFour main div.form form .labels {
   flex-direction: column;
 }
-.foldFive main div.form form > img {
+.foldFour main div.form form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
-.foldFive main div.form form .buttons {
+.foldFour main div.form form .buttons {
   flex-direction: column;
   margin: 0;
   margin-top: var(--space-20);
 }
-.foldFive main div.form form .buttons .back {
+.foldFour main div.form form .buttons .back {
   border: none;
   display: flex;
   justify-content: center;
@@ -1189,11 +1189,11 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-.foldFive main div.form form .buttons .back img {
+.foldFour main div.form form .buttons .back img {
   width: 25px;
   margin-right: var(--space-10);
 }
-.foldFive main div.form form .buttons .check {
+.foldFour main div.form form .buttons .check {
   border: none;
   display: flex;
   justify-content: center;
@@ -1212,18 +1212,18 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-.foldFive main div.number {
+.foldFour main div.number {
   justify-content: flex-end;
 }
-.foldFive main div.number span {
+.foldFour main div.number span {
   background-color: var(--gray);
   font-size: 20px;
 }
-.foldFive main div.previewNext {
+.foldFour main div.previewNext {
   justify-content: space-between;
   margin: var(--space-10) 0;
 }
-.foldFive main div.previewNext button {
+.foldFour main div.previewNext button {
   border: none;
   display: flex;
   justify-content: center;
@@ -1241,23 +1241,23 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 15px;
 }
-.foldFive main div.previewNext img {
+.foldFour main div.previewNext img {
   width: 120px;
   margin-top: -46px;
 }
-.foldFive main div.wrap {
+.foldFour main div.wrap {
   flex-direction: column;
   background-color: rgba(26, 188, 156, 0.1);
   margin: 0;
   padding: 0;
   height: 300px;
 }
-.foldFive main div.wrap .panel {
+.foldFour main div.wrap .panel {
   margin: 0;
   flex-direction: row;
   justify-content: space-between;
 }
-.foldFive main div.wrap .panel p.go {
+.foldFour main div.wrap .panel p.go {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1269,7 +1269,7 @@ main > section footer .call-to-action a:hover {
   border-radius: 0 5px 5px 0;
   background-color: var(--blue);
 }
-.foldFive main div.wrap .panel p.date {
+.foldFour main div.wrap .panel p.date {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1279,7 +1279,7 @@ main > section footer .call-to-action a:hover {
   width: 85px;
   height: 35px;
 }
-.foldFive main div.wrap .panel p.value {
+.foldFour main div.wrap .panel p.value {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1291,9 +1291,26 @@ main > section footer .call-to-action a:hover {
   border-radius: 5px 0px 0px 5px;
   background-color: var(--blue);
 }
-.foldFive main div.wrap .panel div.panelIsnt {
+.foldFour main div.wrap .panel div.panelIsnt {
   flex-direction: row;
   border: 1px solid #000;
+}
+.foldFour main div.wrap .panelInst {
+  justify-content: space-between;
+}
+.foldFour main div.wrap .panelInst div {
+  flex-direction: column;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.foldFour main div.wrap .panelInst div p {
+  justify-content: center;
+  margin: 0;
+}
+.foldFour main div.wrap .panelInst div + div {
+  border-left: 1px solid;
 }
 
 header.access {
