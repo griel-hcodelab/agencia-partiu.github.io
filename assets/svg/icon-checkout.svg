@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91">
+  <g id="icon-checkout" transform="translate(-136 -86)">
+    <g id="Grupo_512" data-name="Grupo 512" transform="translate(-6000 -2181)">
+      <g id="Elipse_92" data-name="Elipse 92" transform="translate(6136 2267)" fill="#2980b9" stroke="#707070" stroke-width="1">
+        <circle cx="45.5" cy="45.5" r="45.5" stroke="none"/>
+        <circle cx="45.5" cy="45.5" r="45" fill="none"/>
+      </g>
+    </g>
+    <g id="cheked" transform="translate(157 106.831)">
+      <g id="Grupo_1648" data-name="Grupo 1648">
+        <path id="Caminho_5261" data-name="Caminho 5261" d="M34.564,40.07H5.762V11.276h28.8v1.512L40.326,8.04V5.516H0V45.831H40.326V20.854l-5.762,6.911Z" fill="#fff"/>
+        <path id="Caminho_5262" data-name="Caminho 5262" d="M13.255,17.135,11.031,19.56,25.245,35.943,50,6.248,48.049,4.169l-22.8,18.763Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

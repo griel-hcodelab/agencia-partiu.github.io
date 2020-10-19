@@ -1,0 +1,2150 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 30;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Sweet Buttermilk";
+  src: local("Sweet Buttermilk Script Free"), url("../fonts/Sweet-Buttermilk-Script-Free.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --bg-color: #F6F6F6;
+  --white: #FFF;
+  --black: #000;
+  --blue: #2980B9;
+  --blue-0: #35a9f5;
+  --blue-1: #483BA8;
+  --blue-2: #D1ECF1;
+  --blue-3: #BEE5EB;
+  --blue-4: #0C5460;
+  --aqua-green: #1ABC9C;
+  --green-2: #D4EDDA;
+  --green-3: #C3E6CB;
+  --green-4: #155724 //Alerta de Sucesso: Texto
+  //Preto
+  --shadow: #A7A7A7;
+  --dark-0: #333;
+  --dark-1: #707070;
+  --dark-2: #333333;
+  --red-0: #EA3546;
+  --red-1: #EA3546;
+  --red-2: #F8D7DA;
+  --red-3: #F5C6CB;
+  --red-4: #721C24;
+  --green: #1ABC9C;
+  --green-1: #11806A;
+  --orange: #F86624;
+  --yellow: #FFC400;
+  --gray: #e4e4e4;
+  --white-50: rgba(255,255,255,0.5);
+  --black-50: rgba(0,0,0,0.5);
+  --space-5: 5px;
+  --space-10: 10px;
+  --space-20: 20px;
+  --space-40: 40px;
+  --space-50: 50px;
+  --space-80: 80px;
+  --space-100: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--dark-0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li, span, p {
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+hr {
+  border: var(--space-5) solid var(--orange-0);
+  width: 80%;
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: var(--space-20);
+  border-radius: var(--space-5);
+  flex-direction: column;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+section header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+}
+section main > img {
+  transform: translateX(-20px);
+  width: 100vw;
+  box-shadow: 0 0 10px var(--black-50);
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+  max-height: 1200px;
+}
+section footer {
+  border-radius: 0 0 var(--space-5) var(--space-5);
+}
+
+h3 {
+  color: var(--red-0);
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media (min-width: 1280px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+header#topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  flex-direction: row;
+  height: 68px;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-10);
+  background-color: var(--white-50);
+  width: 100%;
+  backdrop-filter: blur(5px);
+  margin-bottom: 50px;
+}
+header#topo img {
+  height: 50px;
+  width: auto;
+}
+header#topo button {
+  background-color: transparent;
+  border: 1px solid var(--shadow);
+  width: var(--space-50);
+  height: var(--space-50);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: 0.5s ease-in-out;
+}
+header#topo button img {
+  height: var(--space-20);
+  width: auto;
+}
+header#topo button:hover {
+  border: 1px solid var(--blue);
+}
+header#topo button:active {
+  box-shadow: inset 1px 1px 5px var(--dark-1);
+}
+header#topo .menu {
+  position: absolute;
+  top: 68px;
+  right: -315px;
+  width: 315px;
+  flex-direction: column;
+  background-color: var(--white);
+  transition: right 0.3s ease-in-out;
+  z-index: 1;
+  height: 100vh;
+}
+header#topo .menu.open {
+  display: flex;
+  right: 0;
+}
+header#topo .menu nav ul {
+  margin: 0;
+  padding: 10px 20px;
+  list-style-type: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+header#topo .menu nav ul li {
+  width: 100%;
+  height: 90px;
+  border: 1px solid var(--blue);
+  margin-bottom: var(--space-20);
+}
+header#topo .menu nav ul li:last-child {
+  margin-bottom: 0;
+}
+header#topo .menu nav ul li.green {
+  border-color: var(--green);
+}
+header#topo .menu nav ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header#topo .menu nav ul li a svg {
+  width: 45px;
+  height: 45px;
+}
+header#topo .menu nav ul li a span {
+  font-size: 18px;
+  color: var(--dark-0);
+}
+header#topo .menu nav ul hr {
+  border: 0;
+  height: 1px;
+  width: 150px;
+  background-color: var(--dark-1);
+}
+
+@media (min-width: 1280px) {
+  header#topo {
+    height: 100px;
+  }
+  header#topo img {
+    height: 75px;
+    width: auto;
+  }
+  header#topo .menu {
+    top: 100px;
+  }
+}
+#landing {
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../jpg/beach-1761410_640.jpg");
+  background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  max-width: initial;
+  position: relative;
+  margin-top: 0;
+  border-radius: 0;
+}
+#landing div {
+  background-color: var(--green);
+  border: 1px solid var(--green-1);
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+}
+#landing div form {
+  width: 100%;
+  height: 100%;
+}
+#landing div form > div {
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+#landing div form > div label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+#landing div form > div div {
+  flex-direction: row;
+}
+#landing div form > div div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#landing div form > div div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+
+main {
+  flex-direction: column;
+}
+main#content {
+  margin-top: 50px;
+  align-items: center;
+}
+main .divider {
+  border: 0;
+  background-color: var(--aqua-green);
+  margin: 50px 0;
+  width: 50%;
+  max-width: 300px;
+  height: 1px;
+}
+main > section {
+  margin: 0 auto;
+}
+main > section header, main > section main, main > section footer {
+  background-color: var(--white);
+}
+main > section header {
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-20);
+}
+main > section header > div img {
+  width: 52px;
+  height: 52px;
+  margin-right: var(--space-10);
+}
+main > section header > div img.agency-logo {
+  width: 170px;
+  height: 67px;
+}
+main > section header .avaliacao {
+  margin-top: var(--space-10);
+}
+main > section header .avaliacao img {
+  width: 12px;
+  height: 12px;
+}
+main > section main {
+  flex-direction: column;
+}
+main > section main .agency {
+  box-shadow: initial;
+}
+main > section footer {
+  padding: var(--space-20);
+  flex-direction: column;
+  align-items: center;
+}
+main > section footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+}
+main > section footer p.title {
+  font-weight: 600;
+  margin-bottom: var(--space-50);
+}
+main > section footer p.block {
+  display: block;
+}
+main > section footer p.block b {
+  font-weight: 600;
+}
+main > section footer .icons {
+  width: 100%;
+  margin-top: var(--space-20);
+  justify-content: center;
+}
+main > section footer .icons ul {
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+main > section footer .icons ul li {
+  margin-top: var(--space-10);
+}
+main > section footer .icons ul li span {
+  color: var(--dark-0);
+  font-size: 18px;
+  text-align: center;
+}
+main > section footer .icons ul li svg {
+  width: 30px;
+  margin-right: 10px;
+  height: auto;
+}
+main > section footer .pricing {
+  flex-direction: column;
+  margin-top: var(--space-20);
+}
+main > section footer .pricing p {
+  color: var(--dark-0);
+  font-size: 20px;
+  font-weight: 600;
+}
+main > section footer .pricing p:first-child {
+  font-weight: 300;
+  font-size: 15px;
+}
+main > section footer .call-to-action {
+  width: 100%;
+  margin-top: var(--space-20);
+  justify-content: center;
+  align-items: center;
+}
+main > section footer .call-to-action.blue a {
+  background-color: var(--blue);
+  max-width: 250px;
+}
+main > section footer .call-to-action.blue a:hover {
+  background-color: var(--blue-0);
+}
+main > section footer .call-to-action a {
+  border-radius: 25px;
+  width: 100%;
+  max-width: 600px;
+  height: 45px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+main > section footer .call-to-action a:hover {
+  background-color: var(--orange-1);
+}
+
+@media (min-width: 500px) {
+  main > section footer .icons ul {
+    flex-direction: row;
+    width: 100%;
+  }
+  main > section footer .call-to-action.blue {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 850px) {
+  #landing {
+    background-image: url("../jpg/beach-1761410_1280.jpg");
+  }
+}
+.foldOne #bread {
+  margin: var(--space-20);
+  margin-bottom: 0;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.foldOne #bread ul {
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.foldOne #bread ul li {
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  list-style: none;
+  font-size: 14px;
+}
+.foldOne #bread ul li a {
+  text-decoration: none;
+}
+.foldOne footer.destinyOne {
+  margin: 0;
+  margin-top: -50px;
+  padding-top: 0;
+}
+.foldOne footer.destinyOne header {
+  margin: 0;
+  padding: 0;
+}
+.foldOne footer.destinyOne header h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+.foldOne footer.destinyOne .avaliacao img {
+  width: 15px;
+  margin: 0;
+  margin-left: var(--space-5);
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+  padding: 0;
+}
+.foldOne footer.destinyOne p.title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: var(--space-20) 0;
+  padding: 0;
+}
+.foldOne footer.destinyOne p.content {
+  font-size: 15px;
+  margin-top: var(--space-20);
+}
+.foldOne footer.destinyOne div.icons {
+  margin: var(--space-20) 0;
+  width: 100%;
+}
+.foldOne footer.destinyOne div.icons ul {
+  margin: var(--space-20) 0;
+  padding: 0;
+  align-items: center;
+  flex-direction: row;
+}
+.foldOne footer.destinyOne div.icons ul li {
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100px;
+}
+.foldOne footer.destinyOne div button {
+  align-items: center;
+}
+.foldOne footer.destinyOne div .menor {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+}
+.foldOne footer.destinyOne div .menor:hover {
+  background-color: #17AC8F;
+}
+.foldOne footer.destinyOne div .menor:active {
+  background-color: #179E83;
+}
+.foldOne footer.destinyOne div .menor > img {
+  height: 13px;
+  width: auto;
+}
+.foldOne footer.destinyOne div .maior {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 230px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.foldTwo header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldTwo main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+.foldTwo main .step {
+  margin-bottom: var(--space-20);
+}
+.foldTwo main .step p {
+  flex-direction: row;
+  font-size: 20px;
+}
+.foldTwo main div {
+  justify-content: center;
+}
+.foldTwo main div form {
+  flex-direction: column;
+  width: 100%;
+}
+.foldTwo main div form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--gray);
+}
+.foldTwo main div form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldTwo main div form .label div {
+  flex-direction: row;
+}
+.foldTwo main div form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldTwo main div form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldTwo main div form input::placeholder {
+  font-size: 16px;
+}
+.foldTwo main div form .labels {
+  flex-direction: column;
+}
+.foldTwo main div form .filter {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.foldTwo main div form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+
+.foldThree header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldThree main div p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: -45px;
+  margin-bottom: var(--space-20);
+}
+.foldThree main div {
+  justify-content: center;
+}
+.foldThree main div form {
+  flex-direction: column;
+  width: 290px;
+}
+.foldThree main div form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--gray);
+}
+.foldThree main div form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldThree main div form .label div {
+  flex-direction: row;
+}
+.foldThree main div form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldThree main div form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldThree main div form input::placeholder {
+  font-size: 16px;
+}
+.foldThree main div form .labels {
+  flex-direction: column;
+}
+.foldThree main div form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+.foldThree main div.number {
+  justify-content: flex-end;
+}
+.foldThree main div.number span {
+  background-color: var(--gray);
+  font-size: 20px;
+}
+.foldThree main div.previewNext {
+  justify-content: space-between;
+  margin: var(--space-10) 0;
+}
+.foldThree main div.previewNext button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.foldThree main div.avaliacao img {
+  width: 15px;
+  margin: 0;
+  margin-left: var(--space-5);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+  padding: 0;
+}
+.foldThree main h2 {
+  font-size: 27px;
+  font-weight: 600;
+  justify-content: center;
+}
+.foldThree footer div.svgServices img {
+  width: 40px;
+  margin: 0;
+  margin-top: var(--space-10);
+  margin-left: var(--space-10);
+  margin-bottom: var(--space-10);
+}
+.foldThree footer .adress {
+  font-size: 20px;
+  font-weight: 600;
+  margin: var(--space-20);
+}
+.foldThree footer .info {
+  font-size: 20px;
+}
+.foldThree footer .buttons {
+  flex-direction: column;
+  margin: 0;
+  margin-top: var(--space-20);
+}
+.foldThree footer .buttons .back {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  margin-bottom: var(--space-20);
+  justify-content: center;
+  padding: 0;
+  width: 285px;
+  height: 45px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  color: var(--dark-1);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldThree footer .buttons .back img {
+  width: 25px;
+  margin-right: var(--space-10);
+}
+.foldThree footer .buttons .check {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.foldFour header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldFour main > div > p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+.foldFour main div.form {
+  justify-content: center;
+}
+.foldFour main div.form form {
+  flex-direction: column;
+  width: 290px;
+}
+.foldFour main div.form form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--gray);
+}
+.foldFour main div.form form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldFour main div.form form .label div {
+  flex-direction: row;
+}
+.foldFour main div.form form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldFour main div.form form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldFour main div.form form input::placeholder {
+  font-size: 16px;
+}
+.foldFour main div.form form .labels {
+  flex-direction: column;
+}
+.foldFour main div.form form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+.foldFour main div.number {
+  justify-content: flex-end;
+}
+.foldFour main div.number span {
+  background-color: var(--gray);
+  font-size: 20px;
+}
+.foldFour main div.previewNext {
+  justify-content: space-between;
+  margin: var(--space-10) 0;
+}
+.foldFour main div.previewNext button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.foldFour main div.previewNext img {
+  width: 120px;
+  margin-top: -46px;
+}
+.foldFour main div.wrap {
+  flex-direction: column;
+  background-color: rgba(26, 188, 156, 0.1);
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+.foldFour main div.wrap .panel {
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.foldFour main div.wrap .panel p.go {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bold;
+  width: 85px;
+  height: 35px;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--blue);
+}
+.foldFour main div.wrap .panel p.date {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--dark);
+  width: 85px;
+  height: 35px;
+}
+.foldFour main div.wrap .panel p.value {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--white);
+  width: 95px;
+  height: 35px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: var(--blue);
+}
+.foldFour main div.wrap .panel div.panelIsnt {
+  flex-direction: row;
+  border: 1px solid #000;
+}
+.foldFour footer .buttons {
+  flex-direction: column;
+  margin: 0;
+  margin-top: var(--space-20);
+}
+.foldFour footer .buttons .back {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  margin-bottom: var(--space-20);
+  justify-content: center;
+  padding: 0;
+  width: 285px;
+  height: 45px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  color: var(--dark-1);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldFour footer .buttons .back img {
+  width: 25px;
+  margin-right: var(--space-10);
+}
+.foldFour footer .buttons .check {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.foldFive header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldFive main > div > p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+.foldFive main div.form {
+  justify-content: center;
+}
+.foldFive main div.form form {
+  flex-direction: column;
+  width: 290px;
+}
+.foldFive main div.form form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--green);
+}
+.foldFive main div.form form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldFive main div.form form .label div {
+  flex-direction: row;
+}
+.foldFive main div.form form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldFive main div.form form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldFive main div.form form .labelRed {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--red-0);
+  text-transform: uppercase;
+  border-color: var(--red-0);
+}
+.foldFive main div.form form .labelRed label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldFive main div.form form .labelRed div {
+  flex-direction: row;
+}
+.foldFive main div.form form .labelRed div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldFive main div.form form .labelRed div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldFive main div.form form input::placeholder {
+  font-size: 20px;
+}
+.foldFive main div.form form .labels {
+  flex-direction: column;
+}
+.foldFive main div.form form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+.foldFive main div.form form .buttons {
+  flex-direction: column;
+  margin: 0;
+  margin-top: var(--space-20);
+}
+.foldFive main div.form form .buttons .back {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  margin-bottom: var(--space-20);
+  justify-content: center;
+  padding: 0;
+  width: 285px;
+  height: 45px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  color: var(--dark-1);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldFive main div.form form .buttons .back img {
+  width: 25px;
+  margin-right: var(--space-10);
+}
+.foldFive main div.form form .buttons .check {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldFive main div.number {
+  justify-content: flex-end;
+}
+.foldFive main div.number span {
+  background-color: var(--gray);
+  font-size: 20px;
+}
+.foldFive main div.previewNext {
+  justify-content: space-between;
+  margin: var(--space-10) 0;
+}
+.foldFive main div.previewNext button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.foldFive main div.previewNext img {
+  width: 120px;
+  margin-top: -46px;
+}
+.foldFive main div.wrap {
+  flex-direction: column;
+  background-color: rgba(26, 188, 156, 0.1);
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+.foldFive main div.wrap .panel {
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.foldFive main div.wrap .panel p.go {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bold;
+  width: 85px;
+  height: 35px;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--blue);
+}
+.foldFive main div.wrap .panel p.date {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--dark);
+  width: 85px;
+  height: 35px;
+}
+.foldFive main div.wrap .panel p.value {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--white);
+  width: 95px;
+  height: 35px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: var(--blue);
+}
+.foldFive main div.wrap .panel div.panelIsnt {
+  flex-direction: row;
+  border: 1px solid #000;
+}
+
+header.account {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.account img {
+  height: 40px;
+  width: auto;
+}
+
+section#account {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#account header, section#account main, section#account footer {
+  background-color: var(--white);
+}
+section#account header {
+  flex-direction: column;
+}
+section#account header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#account header h1 {
+  font-size: 30px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#account main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#account main form {
+  flex-direction: column;
+}
+section#account main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 35px;
+}
+section#account main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#account main form .label div {
+  flex-direction: row;
+}
+section#account main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#account main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#account main form .button {
+  justify-content: center;
+}
+section#account main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#account main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#account main form .button a:active {
+  background-color: #179E83;
+}
+section#account main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#account main form .button button {
+  width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  width: 230px;
+}
+section#account main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#account main form .button button:active {
+  background-color: var(--blue);
+}
+section#account footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#account footer a {
+  font-size: 13px;
+}
+section#account footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.account {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.account img {
+    height: 80px;
+  }
+}
+header.create-account {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.create-account img {
+  height: 40px;
+  width: auto;
+}
+
+section#create-account {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#create-account header, section#create-account main, section#create-account footer {
+  background-color: var(--white);
+}
+section#create-account header {
+  flex-direction: column;
+}
+section#create-account header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#create-account header h1 {
+  font-size: 30px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#create-account main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#create-account main form {
+  flex-direction: column;
+}
+section#create-account main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+section#create-account main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#create-account main form .label div {
+  flex-direction: row;
+}
+section#create-account main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#create-account main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#create-account main form .labels {
+  flex-direction: column;
+}
+section#create-account main form .button {
+  justify-content: center;
+}
+section#create-account main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#create-account main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#create-account main form .button a:active {
+  background-color: #179E83;
+}
+section#create-account main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#create-account main form .button button {
+  width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  width: 230px;
+}
+section#create-account main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#create-account main form .button button:active {
+  background-color: var(--blue);
+}
+section#create-account main form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+section#create-account main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#create-account main .alert.info {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#create-account footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#create-account footer a {
+  font-size: 13px;
+}
+section#create-account footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.create-account {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.create-account img {
+    height: 80px;
+  }
+
+  section#create-account {
+    max-width: 720px;
+  }
+  section#create-account main form .labels {
+    flex-direction: row;
+  }
+  section#create-account main form .labels .label + .label {
+    margin-left: var(--space-20);
+  }
+}
+header.password-forget {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.password-forget img {
+  height: 40px;
+  width: auto;
+}
+
+section#password-forget {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#password-forget header, section#password-forget main, section#password-forget footer {
+  background-color: var(--white);
+}
+section#password-forget header {
+  flex-direction: column;
+}
+section#password-forget header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#password-forget header h1 {
+  font-size: 25px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#password-forget main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#password-forget main form {
+  flex-direction: column;
+}
+section#password-forget main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+section#password-forget main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#password-forget main form .label div {
+  flex-direction: row;
+}
+section#password-forget main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#password-forget main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#password-forget main form .button {
+  justify-content: center;
+}
+section#password-forget main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#password-forget main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#password-forget main form .button a:active {
+  background-color: #179E83;
+}
+section#password-forget main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#password-forget main form .button button {
+  width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  width: 230px;
+}
+section#password-forget main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#password-forget main form .button button:active {
+  background-color: var(--blue);
+}
+section#password-forget main form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+section#password-forget main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#password-forget footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#password-forget footer a {
+  font-size: 13px;
+}
+section#password-forget footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.password-forget {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.password-forget img {
+    height: 80px;
+  }
+}
+header.new-password {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.new-password img {
+  height: 40px;
+  width: auto;
+}
+
+section#new-password {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#new-password header, section#new-password main, section#new-password footer {
+  background-color: var(--white);
+}
+section#new-password header {
+  flex-direction: column;
+}
+section#new-password header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#new-password header h1 {
+  font-size: 25px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#new-password main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#new-password main form {
+  flex-direction: column;
+}
+section#new-password main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+}
+section#new-password main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+section#new-password main form .label div {
+  flex-direction: row;
+}
+section#new-password main form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+section#new-password main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+section#new-password main form .labels {
+  flex-direction: column;
+}
+section#new-password main form .button {
+  justify-content: center;
+}
+section#new-password main form .button a {
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+section#new-password main form .button a:hover {
+  background-color: #17AC8F;
+}
+section#new-password main form .button a:active {
+  background-color: #179E83;
+}
+section#new-password main form .button a > img {
+  height: 13px;
+  width: auto;
+}
+section#new-password main form .button button {
+  width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  width: 230px;
+}
+section#new-password main form .button button:hover {
+  background-color: #2d8ece;
+}
+section#new-password main form .button button:active {
+  background-color: var(--blue);
+}
+section#new-password main form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+section#new-password main .alert.danger {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#new-password main .alert.info {
+  border: 1px solid var(--blue-3);
+  background-color: var(--blue-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--blue-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#new-password footer {
+  justify-content: space-evenly;
+  padding-bottom: var(--space-20);
+}
+section#new-password footer a {
+  font-size: 13px;
+}
+section#new-password footer a:hover {
+  color: var(--black);
+}
+
+@media (min-width: 992px) {
+  header.new-password {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.new-password img {
+    height: 80px;
+  }
+
+  section#new-password {
+    max-width: 720px;
+  }
+  section#new-password main form .labels {
+    flex-direction: row;
+  }
+  section#new-password main form .labels .label + .label {
+    margin-left: var(--space-20);
+  }
+}
+header.password-created {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-10) 0;
+}
+header.password-created img {
+  height: 40px;
+  width: auto;
+}
+
+section#password-created {
+  margin-top: var(--space-50);
+  padding-top: var(--space-50);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#password-created header, section#password-created main, section#password-created footer {
+  background-color: var(--white);
+}
+section#password-created header {
+  flex-direction: column;
+}
+section#password-created header img {
+  height: 100px;
+  width: auto;
+  transform: translateY(-50px);
+}
+section#password-created header h1 {
+  font-size: 30px;
+  color: var(--blue);
+  justify-content: center;
+  margin-top: -20px;
+}
+section#password-created main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+section#password-created main .alert.success {
+  border: 1px solid var(--green-3);
+  background-color: var(--green-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--green-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+section#password-created footer {
+  justify-content: center;
+  padding: var(--space-20);
+  padding-top: 0;
+}
+section#password-created footer button {
+  width: 100%;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+section#password-created footer button:hover {
+  background-color: #2d8ece;
+}
+section#password-created footer button:active {
+  background-color: var(--blue);
+}
+
+@media (min-width: 992px) {
+  header.password-created {
+    height: var(--space-100);
+    margin-bottom: var(--space-100);
+  }
+  header.password-created img {
+    height: 80px;
+  }
+}
+#footer {
+  width: 100%;
+  background-color: var(--dark-0);
+  flex-direction: column;
+  color: var(--white);
+  align-items: center;
+}
+#footer > div {
+  flex-direction: column;
+  padding: 0 var(--space-20);
+  width: 100%;
+  max-width: 1180px;
+}
+#footer > div header {
+  justify-content: center;
+}
+#footer > div header img {
+  width: 200px;
+  height: 93px;
+}
+#footer > div .mail {
+  margin: 0;
+  padding: 0;
+}
+#footer > div .mail p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+#footer > div .main {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#footer > div .main h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+#footer > div .main .contact {
+  flex-direction: column;
+}
+#footer > div .main .contact .media {
+  width: 100%;
+  justify-content: center;
+}
+#footer > div .main .contact .media a {
+  cursor: pointer;
+}
+#footer > div .main .contact .media a svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+#footer > div .main .contact p {
+  margin-bottom: 0;
+  margin-top: var(--space-10);
+  font-size: 20px;
+}
+#footer > div .main .app {
+  flex-direction: column;
+  margin-top: var(--space-20);
+}
+#footer > div .main .app > div {
+  margin: var(--space-10) 0;
+}
+#footer > div .main .app > div a img {
+  width: 125px;
+  height: 37px;
+  margin-right: 10px;
+}
+#footer > div .main .app small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer .team {
+  background-color: var(--white);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-10) var(--space-20);
+  margin-top: var(--space-10);
+  width: 100%;
+}
+#footer .team p {
+  color: var(--dark-0);
+  font-size: 14px;
+  font-weight: 600;
+}
+#footer .team a img {
+  width: 131px;
+  height: 37px;
+}
+
+@media (min-width: 800px) {
+  #footer > div .main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: initial;
+  }
+  #footer > div .main .app {
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

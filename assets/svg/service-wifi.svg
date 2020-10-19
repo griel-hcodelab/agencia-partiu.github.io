@@ -1,0 +1,14 @@
+<svg id="service-wifi" xmlns="http://www.w3.org/2000/svg" width="32.473" height="32.473" viewBox="0 0 32.473 32.473">
+  <circle id="Elipse_151" data-name="Elipse 151" cx="16.114" cy="16.114" r="16.114" transform="translate(0 0.246)" fill="#78caef"/>
+  <g id="Grupo_605" data-name="Grupo 605" transform="translate(0 0)">
+    <path id="Caminho_4297" data-name="Caminho 4297" d="M145.645,209.188a1.612,1.612,0,0,1-1.14-2.752,9.375,9.375,0,0,1,13.258,0,1.612,1.612,0,0,1-2.28,2.28,6.151,6.151,0,0,0-8.7,0A1.607,1.607,0,0,1,145.645,209.188Z" transform="translate(-134.897 -190.771)" fill="#ff525d"/>
+    <path id="Caminho_4298" data-name="Caminho 4298" d="M93.438,108.863a1.607,1.607,0,0,1-1.14-.472,12.656,12.656,0,0,0-17.878,0,1.612,1.612,0,1,1-2.28-2.28,15.884,15.884,0,0,1,22.437,0,1.612,1.612,0,0,1-1.14,2.752Z" transform="translate(-67.123 -95.035)" fill="#ff525d"/>
+    <path id="Caminho_4299" data-name="Caminho 4299" d="M30.86,9.283a1.607,1.607,0,0,1-1.14-.472,19.07,19.07,0,0,0-26.969,0,1.612,1.612,0,0,1-2.28-2.28A22.294,22.294,0,0,1,32,6.531a1.612,1.612,0,0,1-1.14,2.752Z" transform="translate(0 -0.001)" fill="#ff525d"/>
+    <circle id="Elipse_152" data-name="Elipse 152" cx="2.545" cy="2.545" r="2.545" transform="translate(13.691 19.749)" fill="#ff525d"/>
+  </g>
+  <g id="Grupo_606" data-name="Grupo 606" transform="translate(2.628 18.611)">
+    <path id="Caminho_4300" data-name="Caminho 4300" d="M105.365,445.125a16.235,16.235,0,0,1-21.884,0Z" transform="translate(-80.814 -435.505)" fill="#5c5e70"/>
+    <path id="Caminho_4301" data-name="Caminho 4301" d="M273.378,294.037h0a2.009,2.009,0,0,0-2.841,0l-9.3,9.3a2.009,2.009,0,0,0,0,2.841h0a2.009,2.009,0,0,0,2.841,0l9.3-9.3A2.009,2.009,0,0,0,273.378,294.037Z" transform="translate(-246.749 -293.448)" fill="#5c5e70"/>
+    <path id="Caminho_4302" data-name="Caminho 4302" d="M42.025,294.037h0a2.009,2.009,0,0,1,2.841,0l9.3,9.3a2.009,2.009,0,0,1,0,2.841h0a2.009,2.009,0,0,1-2.841,0l-9.3-9.3A2.009,2.009,0,0,1,42.025,294.037Z" transform="translate(-41.437 -293.448)" fill="#5c5e70"/>
+  </g>
+</svg>

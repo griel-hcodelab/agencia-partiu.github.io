@@ -1,0 +1,57 @@
+:root {
+    --bg-color: #F6F6F6; //Fundo das páginas
+    --white: #FFF;
+    --black: #000;
+
+    //Azul
+    --blue: #2980B9; //Borda do nav, Texto do Logo, Botão de continuar
+    --blue-0: #35a9f5; //Fundo dos botões para nota do Lighthouse
+    --blue-1: #483BA8; //Texto dos botões
+    --blue-2: #D1ECF1; //Alerta de Info: Fundo
+    --blue-3: #BEE5EB; //Alerta de Info: Borda
+    --blue-4: #0C5460; //Alerta de Info: Texto
+
+    //Verde
+    --aqua-green: #1ABC9C; //Fundo do botão voltar
+    --green-2: #D4EDDA; //Alerta de Sucesso: Fundo
+    --green-3: #C3E6CB; //Alerta de Sucesso: Borda
+    --green-4: #155724 //Alerta de Sucesso: Texto
+
+    //Preto
+    --shadow: #A7A7A7; //Sombra dos botões e Borda do Menu
+    --dark-0: #333; //Cor padrão da fonte
+    --dark-1: #707070;
+    --dark-2: #333333; //Cor do Footer
+
+    //Vermelho
+    --red-0: #EA3546; //Cor do H3
+    --red-1: #EA3546; //Alerta de Covid:hover
+    --red-2: #F8D7DA; //Alerta de erro: Fundo
+    --red-3: #F5C6CB; //Alerta de erro: Borda
+    --red-4: #721C24; //Alerta de Erro: Texto
+
+    //Verde
+    --green: #1ABC9C;
+    --green-1: #11806A;
+   
+    //Laranja
+    --orange: #F86624; //Cor do Call to Action da Index
+
+    //Amarelo
+    --yellow: #FFC400; //Cor do botões Call to Action
+
+    //Cinza
+    --gray: #e4e4e4;
+
+    //Transparencias
+    --white-50: rgba(255,255,255,0.5);
+    --black-50: rgba(0,0,0,0.5);
+
+    --space-5: 5px;
+    --space-10: 10px;
+    --space-20: 20px;
+    --space-40: 40px;
+    --space-50: 50px;
+    --space-80: 80px;
+    --space-100: 100px;
+}

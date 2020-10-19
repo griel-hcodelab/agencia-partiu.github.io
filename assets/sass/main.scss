@@ -1,0 +1,26 @@
+//CSS de ativos para usar no projeto
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixin.scss';
+
+//CSS de reset dos estilos padrões
+@import 'reset.scss';
+
+//CSS de elementos das páginas
+@import 'header.scss';
+
+//CSS do conteúdo das páginas
+@import 'index.scss';
+
+//CSS da página destino
+@import 'destiny.scss';
+
+//CSS das páginas de conta
+@import 'access.scss';
+@import 'create-account.scss';
+@import 'password-forget.scss';
+@import 'new-password.scss';
+@import 'password-created.scss';
+
+//CSS do footer
+@import 'footer.scss';
