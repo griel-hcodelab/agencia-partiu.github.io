@@ -12,12 +12,18 @@
 //CSS do conteúdo das páginas
 @import 'index.scss';
 
+//CSS da página destino
+@import 'destiny.scss';
+
 //CSS das páginas de conta
 @import 'access.scss';
 @import 'create-account.scss';
 @import 'password-forget.scss';
 @import 'new-password.scss';
 @import 'password-created.scss';
+
+//CSS das páginas de perfil
+@import 'account.scss';
 
 //CSS do footer
 @import 'footer.scss';

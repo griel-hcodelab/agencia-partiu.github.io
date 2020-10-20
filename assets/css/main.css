@@ -47,6 +47,7 @@
   --dark-0: #333;
   --dark-1: #707070;
   --dark-2: #333333;
+  --dark-3: #E4E4E4;
   --red-0: #EA3546;
   --red-1: #EA3546;
   --red-2: #F8D7DA;
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li {
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li, span, p {
   display: flex;
 }
 
@@ -467,7 +468,852 @@ main > section footer .call-to-action a:hover {
     background-image: url("../jpg/beach-1761410_1280.jpg");
   }
 }
-header.account {
+.foldOne #bread {
+  margin: var(--space-20);
+  margin-bottom: 0;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.foldOne #bread ul {
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.foldOne #bread ul li {
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  list-style: none;
+  font-size: 14px;
+}
+.foldOne #bread ul li a {
+  text-decoration: none;
+}
+.foldOne footer.destinyOne {
+  margin: 0;
+  margin-top: -50px;
+  padding-top: 0;
+}
+.foldOne footer.destinyOne header {
+  margin: 0;
+  padding: 0;
+}
+.foldOne footer.destinyOne header h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+.foldOne footer.destinyOne .avaliacao img {
+  width: 15px;
+  margin: 0;
+  margin-left: var(--space-5);
+  margin-top: var(--space-20);
+  margin-bottom: var(--space-20);
+  padding: 0;
+}
+.foldOne footer.destinyOne p.title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: var(--space-20) 0;
+  padding: 0;
+}
+.foldOne footer.destinyOne p.content {
+  font-size: 15px;
+  margin-top: var(--space-20);
+}
+.foldOne footer.destinyOne div.icons {
+  margin: var(--space-20) 0;
+  width: 100%;
+}
+.foldOne footer.destinyOne div.icons ul {
+  margin: var(--space-20) 0;
+  padding: 0;
+  align-items: center;
+  flex-direction: row;
+}
+.foldOne footer.destinyOne div.icons ul li {
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100px;
+}
+.foldOne footer.destinyOne div button {
+  align-items: center;
+}
+.foldOne footer.destinyOne div .menor {
+  border: none;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+}
+.foldOne footer.destinyOne div .menor:hover {
+  background-color: #17AC8F;
+}
+.foldOne footer.destinyOne div .menor:active {
+  background-color: #179E83;
+}
+.foldOne footer.destinyOne div .menor > img {
+  height: 13px;
+  width: auto;
+}
+.foldOne footer.destinyOne div .maior {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 230px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.foldTwo header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldTwo main {
+  flex-direction: column;
+  padding: var(--space-20);
+}
+.foldTwo main .step {
+  margin-bottom: var(--space-20);
+}
+.foldTwo main .step p {
+  flex-direction: row;
+  font-size: 20px;
+}
+.foldTwo main div {
+  justify-content: center;
+}
+.foldTwo main div form {
+  flex-direction: column;
+  width: 100%;
+}
+.foldTwo main div form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--gray);
+}
+.foldTwo main div form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldTwo main div form .label div {
+  flex-direction: row;
+}
+.foldTwo main div form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldTwo main div form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldTwo main div form input::placeholder {
+  font-size: 16px;
+}
+.foldTwo main div form .labels {
+  flex-direction: column;
+}
+.foldTwo main div form .filter {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.foldTwo main div form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+
+.foldThree header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldThree main div p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: -45px;
+  margin-bottom: var(--space-20);
+}
+.foldThree main div {
+  justify-content: center;
+}
+.foldThree main div form {
+  flex-direction: column;
+  width: 290px;
+}
+.foldThree main div form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--gray);
+}
+.foldThree main div form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldThree main div form .label div {
+  flex-direction: row;
+}
+.foldThree main div form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldThree main div form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldThree main div form input::placeholder {
+  font-size: 16px;
+}
+.foldThree main div form .labels {
+  flex-direction: column;
+}
+.foldThree main div form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+.foldThree main div.number {
+  justify-content: flex-end;
+}
+.foldThree main div.number span {
+  background-color: var(--gray);
+  font-size: 20px;
+}
+.foldThree main div.previewNext {
+  justify-content: space-between;
+  margin: var(--space-10) 0;
+}
+.foldThree main div.previewNext button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.foldThree main div.avaliacao img {
+  width: 15px;
+  margin: 0;
+  margin-left: var(--space-5);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+  padding: 0;
+}
+.foldThree main h2 {
+  font-size: 27px;
+  font-weight: 600;
+  justify-content: center;
+}
+.foldThree footer div.svgServices img {
+  width: 40px;
+  margin: 0;
+  margin-top: var(--space-10);
+  margin-left: var(--space-10);
+  margin-bottom: var(--space-10);
+}
+.foldThree footer .adress {
+  font-size: 20px;
+  font-weight: 600;
+  margin: var(--space-20);
+}
+.foldThree footer .info {
+  font-size: 20px;
+}
+.foldThree footer .buttons {
+  flex-direction: column;
+  margin: 0;
+  margin-top: var(--space-20);
+}
+.foldThree footer .buttons .back {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  margin-bottom: var(--space-20);
+  justify-content: center;
+  padding: 0;
+  width: 285px;
+  height: 45px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  color: var(--dark-1);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldThree footer .buttons .back img {
+  width: 25px;
+  margin-right: var(--space-10);
+}
+.foldThree footer .buttons .check {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.foldFour header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldFour main > div > p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+.foldFour main div.form {
+  justify-content: center;
+}
+.foldFour main div.form form {
+  flex-direction: column;
+  width: 290px;
+}
+.foldFour main div.form form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--gray);
+}
+.foldFour main div.form form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldFour main div.form form .label div {
+  flex-direction: row;
+}
+.foldFour main div.form form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldFour main div.form form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldFour main div.form form input::placeholder {
+  font-size: 16px;
+}
+.foldFour main div.form form .labels {
+  flex-direction: column;
+}
+.foldFour main div.form form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+.foldFour main div.number {
+  justify-content: flex-end;
+}
+.foldFour main div.number span {
+  background-color: var(--gray);
+  font-size: 20px;
+}
+.foldFour main div.previewNext {
+  justify-content: space-between;
+  margin: var(--space-10) 0;
+}
+.foldFour main div.previewNext button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.foldFour main div.previewNext img {
+  width: 120px;
+  margin-top: -46px;
+}
+.foldFour main div.wrap {
+  flex-direction: column;
+  background-color: rgba(26, 188, 156, 0.1);
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+.foldFour main div.wrap .panel {
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.foldFour main div.wrap .panel p.go {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bold;
+  width: 85px;
+  height: 35px;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--blue);
+}
+.foldFour main div.wrap .panel p.date {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--dark);
+  width: 85px;
+  height: 35px;
+}
+.foldFour main div.wrap .panel p.value {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--white);
+  width: 95px;
+  height: 35px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: var(--blue);
+}
+.foldFour main div.wrap .panel div.panelIsnt {
+  flex-direction: row;
+  border: 1px solid #000;
+}
+.foldFour footer .buttons {
+  flex-direction: column;
+  margin: 0;
+  margin-top: var(--space-20);
+}
+.foldFour footer .buttons .back {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  margin-bottom: var(--space-20);
+  justify-content: center;
+  padding: 0;
+  width: 285px;
+  height: 45px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  color: var(--dark-1);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldFour footer .buttons .back img {
+  width: 25px;
+  margin-right: var(--space-10);
+}
+.foldFour footer .buttons .check {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.foldFour header h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.foldFour main > div > p {
+  font-size: 20px;
+  margin: 0;
+  margin-left: var(--space-20);
+  margin-bottom: var(--space-20);
+}
+.foldFour main div.form {
+  justify-content: center;
+}
+.foldFour main div.form form {
+  flex-direction: column;
+  width: 290px;
+}
+.foldFour main div.form form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  border-color: var(--green);
+}
+.foldFour main div.form form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldFour main div.form form .label div {
+  flex-direction: row;
+}
+.foldFour main div.form form .label div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldFour main div.form form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldFour main div.form form .labelRed {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--red-0);
+  text-transform: uppercase;
+  border-color: var(--red-0);
+}
+.foldFour main div.form form .labelRed label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
+}
+.foldFour main div.form form .labelRed div {
+  flex-direction: row;
+}
+.foldFour main div.form form .labelRed div img {
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.foldFour main div.form form .labelRed div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
+}
+.foldFour main div.form form input::placeholder {
+  font-size: 20px;
+}
+.foldFour main div.form form .labels {
+  flex-direction: column;
+}
+.foldFour main div.form form > img {
+  height: 68px;
+  width: 261px;
+  margin: var(--space-5) auto;
+}
+.foldFour main div.form form .buttons {
+  flex-direction: column;
+  margin: 0;
+  margin-top: var(--space-20);
+}
+.foldFour main div.form form .buttons .back {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  margin-bottom: var(--space-20);
+  justify-content: center;
+  padding: 0;
+  width: 285px;
+  height: 45px;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  color: var(--dark-1);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldFour main div.form form .buttons .back img {
+  width: 25px;
+  margin-right: var(--space-10);
+}
+.foldFour main div.form form .buttons .check {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.foldFour main div.number {
+  justify-content: flex-end;
+}
+.foldFour main div.number span {
+  background-color: var(--gray);
+  font-size: 20px;
+}
+.foldFour main div.previewNext {
+  justify-content: space-between;
+  margin: var(--space-10) 0;
+}
+.foldFour main div.previewNext button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.foldFour main div.previewNext img {
+  width: 120px;
+  margin-top: -46px;
+}
+.foldFour main div.wrap {
+  flex-direction: column;
+  background-color: rgba(26, 188, 156, 0.1);
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+.foldFour main div.wrap .panel {
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.foldFour main div.wrap .panel p.go {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: bold;
+  width: 85px;
+  height: 35px;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--blue);
+}
+.foldFour main div.wrap .panel p.date {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--dark);
+  width: 85px;
+  height: 35px;
+}
+.foldFour main div.wrap .panel p.value {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: var(--white);
+  width: 95px;
+  height: 35px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: var(--blue);
+}
+.foldFour main div.wrap .panel div.panelIsnt {
+  flex-direction: row;
+  border: 1px solid #000;
+}
+.foldFour main div.wrap .panelInst {
+  justify-content: space-between;
+}
+.foldFour main div.wrap .panelInst div {
+  flex-direction: column;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.foldFour main div.wrap .panelInst div p {
+  justify-content: center;
+  margin: 0;
+}
+.foldFour main div.wrap .panelInst div + div {
+  border-left: 1px solid;
+}
+
+header.access {
   flex-direction: row;
   justify-content: center;
   height: var(--space-50);
@@ -475,43 +1321,43 @@ header.account {
   background-color: var(--white);
   padding: var(--space-10) 0;
 }
-header.account img {
+header.access img {
   height: 40px;
   width: auto;
 }
 
-section#account {
+section#access {
   margin-top: var(--space-50);
   padding-top: var(--space-50);
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
 }
-section#account header, section#account main, section#account footer {
+section#access header, section#access main, section#access footer {
   background-color: var(--white);
 }
-section#account header {
+section#access header {
   flex-direction: column;
 }
-section#account header img {
+section#access header img {
   height: 100px;
   width: auto;
   transform: translateY(-50px);
 }
-section#account header h1 {
+section#access header h1 {
   font-size: 30px;
   color: var(--blue);
   justify-content: center;
   margin-top: -20px;
 }
-section#account main {
+section#access main {
   flex-direction: column;
   padding: var(--space-20);
 }
-section#account main form {
+section#access main form {
   flex-direction: column;
 }
-section#account main form .label {
+section#access main form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -522,32 +1368,33 @@ section#account main form .label {
   width: 100%;
   height: 35px;
 }
-section#account main form .label label {
+section#access main form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
   font-size: 16px;
   font-weight: 600;
 }
-section#account main form .label div {
+section#access main form .label div {
   flex-direction: row;
 }
-section#account main form .label div img {
+section#access main form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-section#account main form .label div input {
+section#access main form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-section#account main form .button {
+section#access main form .button {
   justify-content: center;
 }
-section#account main form .button a {
+section#access main form .button a {
+  border: none;
   width: 65px;
   height: 45px;
   background-color: var(--aqua-green);
@@ -557,20 +1404,20 @@ section#account main form .button a {
   margin-right: var(--space-5);
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  outline: none;
 }
-section#account main form .button a:hover {
+section#access main form .button a:hover {
   background-color: #17AC8F;
 }
-section#account main form .button a:active {
+section#access main form .button a:active {
   background-color: #179E83;
 }
-section#account main form .button a > img {
+section#access main form .button a > img {
   height: 13px;
   width: auto;
 }
-section#account main form .button button {
+section#access main form .button button {
   width: 100%;
-  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -584,29 +1431,29 @@ section#account main form .button button {
   text-transform: uppercase;
   width: 230px;
 }
-section#account main form .button button:hover {
+section#access main form .button button:hover {
   background-color: #2d8ece;
 }
-section#account main form .button button:active {
+section#access main form .button button:active {
   background-color: var(--blue);
 }
-section#account footer {
+section#access footer {
   justify-content: space-evenly;
   padding-bottom: var(--space-20);
 }
-section#account footer a {
+section#access footer a {
   font-size: 13px;
 }
-section#account footer a:hover {
+section#access footer a:hover {
   color: var(--black);
 }
 
 @media (min-width: 992px) {
-  header.account {
+  header.access {
     height: var(--space-100);
     margin-bottom: var(--space-100);
   }
-  header.account img {
+  header.access img {
     height: 80px;
   }
 }
@@ -693,6 +1540,7 @@ section#create-account main form .button {
   justify-content: center;
 }
 section#create-account main form .button a {
+  border: none;
   width: 65px;
   height: 45px;
   background-color: var(--aqua-green);
@@ -702,6 +1550,7 @@ section#create-account main form .button a {
   margin-right: var(--space-5);
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  outline: none;
 }
 section#create-account main form .button a:hover {
   background-color: #17AC8F;
@@ -715,7 +1564,6 @@ section#create-account main form .button a > img {
 }
 section#create-account main form .button button {
   width: 100%;
-  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -870,6 +1718,7 @@ section#password-forget main form .button {
   justify-content: center;
 }
 section#password-forget main form .button a {
+  border: none;
   width: 65px;
   height: 45px;
   background-color: var(--aqua-green);
@@ -879,6 +1728,7 @@ section#password-forget main form .button a {
   margin-right: var(--space-5);
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  outline: none;
 }
 section#password-forget main form .button a:hover {
   background-color: #17AC8F;
@@ -892,7 +1742,6 @@ section#password-forget main form .button a > img {
 }
 section#password-forget main form .button button {
   width: 100%;
-  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -1030,6 +1879,7 @@ section#new-password main form .button {
   justify-content: center;
 }
 section#new-password main form .button a {
+  border: none;
   width: 65px;
   height: 45px;
   background-color: var(--aqua-green);
@@ -1039,6 +1889,7 @@ section#new-password main form .button a {
   margin-right: var(--space-5);
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  outline: none;
 }
 section#new-password main form .button a:hover {
   background-color: #17AC8F;
@@ -1052,7 +1903,6 @@ section#new-password main form .button a > img {
 }
 section#new-password main form .button button {
   width: 100%;
-  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -1185,7 +2035,6 @@ section#password-created footer {
 }
 section#password-created footer button {
   width: 100%;
-  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
   background-color: var(--blue);
   border: none;
   border-radius: var(--space-5);
@@ -1214,6 +2063,101 @@ section#password-created footer button:active {
     height: 80px;
   }
 }
+header.account {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-5) 0;
+}
+header.account img {
+  height: 40px;
+  width: auto;
+}
+
+aside {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+}
+aside.account {
+  background-color: var(--white);
+  padding: var(--space-20);
+  width: 100%;
+}
+aside.account header {
+  background-color: var(--dark-3);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+aside.account header p {
+  font-size: 18px;
+  font-weight: bold;
+}
+aside.account header img {
+  height: 25px;
+  width: auto;
+}
+aside.account main {
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--dark-3);
+  border-right: 1px solid var(--dark-3);
+  background-color: var(--bg-color);
+}
+aside.account main a {
+  border: 1px solid var(--blue);
+  height: 89px;
+  margin: var(--space-20);
+  padding: var(--space-5);
+  flex-direction: column;
+  justify-content: center;
+}
+aside.account main a img {
+  height: 45px;
+  width: auto;
+}
+aside.account main a p {
+  margin: 0;
+  margin-top: var(--space-5);
+  justify-content: center;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+aside.account footer {
+  padding: var(--space-20);
+  border-radius: 0 0 5px 5px;
+}
+aside.account footer button {
+  border: none;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+aside.account footer button:hover {
+  background-color: #17AC8F;
+}
+aside.account footer button:active {
+  background-color: #179E83;
+}
+aside.account footer button > img {
+  height: 13px;
+  width: auto;
+}
+
 #footer {
   width: 100%;
   background-color: var(--dark-0);
