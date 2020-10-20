@@ -203,28 +203,54 @@
     </div>
    </header>
 
-   <style>
-       @keyframes slideDown {
-
-            0%, 100% {
-                transform: translate3d(0, 12px, 0);
-            }
-            50% {
-                transform: translate3d(0, 18px, 0);
-            }
-        }
-   </style>
-
    <section id="landing">
         <div class="wrap">
             <form>
-                <div>
-                    <label for="">Text</label>
+                <div class="label">
+                    <label for="origin">Origem</label>
                     <div>
-                        <img src="assets/svg/input-origem-destino.svg" alt="">
-                        <input type="text">
+                        <img src="assets/svg/input-origem-destino.svg" alt="Ícone" />
+                        <input type="text" name="origin" id="origin" placeholder="Onde você está?"/>
                     </div>
                 </div>
+                <div class="label">
+                    <label for="origin">Destino</label>
+                    <div>
+                        <img src="assets/svg/input-origem-destino.svg" alt="Ícone" />
+                        <input type="text" name="origin" id="origin" placeholder="Para onde você quer ir?"/>
+                    </div>
+                </div>
+                <div class="labels">
+                    <div class="label">
+                        <label for="origin">Pessoas</label>
+                        <div>
+                            <img src="assets/svg/input-origem-destino.svg" alt="Ícone" />
+                            <input type="number" name="origin" id="origin" placeholder="1"/>
+                        </div>
+                    </div>
+                    <div class="label">
+                        <label for="origin">Quartos</label>
+                        <div>
+                            <img src="assets/svg/input-origem-destino.svg" alt="Ícone" />
+                            <input type="number" name="origin" id="origin" placeholder="1"/>
+                        </div>
+                    </div>
+                    <div class="label">
+                        <label for="origin">Ida</label>
+                        <div>
+                            <img src="assets/svg/input-origem-destino.svg" alt="Ícone" />
+                            <input type="date" name="origin" id="origin"/>
+                        </div>
+                    </div>
+                    <div class="label">
+                        <label for="origin">Volta</label>
+                        <div>
+                            <img src="assets/svg/input-origem-destino.svg" alt="Ícone" />
+                            <input type="date" name="origin" id="origin"/>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Partiu!!</button>
             </form>
         </div>
         <div class="bar">
