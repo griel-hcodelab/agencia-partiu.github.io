@@ -108,7 +108,7 @@ a {
   color: inherit;
 }
 
-section {
+.float-image {
   padding: var(--space-20);
   border-radius: var(--space-5);
   flex-direction: column;
@@ -118,18 +118,18 @@ section {
   z-index: 1;
   overflow: hidden;
 }
-section header {
+.float-image header {
   border-radius: var(--space-5) var(--space-5) 0 0;
 }
-section main > img {
+.float-image .box-image > img {
   transform: translateX(-20px);
   width: 100vw;
   box-shadow: 0 0 10px var(--black-50);
   margin-top: var(--space-20);
   margin-bottom: var(--space-20);
-  max-height: 1200px;
+  max-height: 1000px;
 }
-section footer {
+.float-image footer {
   border-radius: 0 0 var(--space-5) var(--space-5);
 }
 
@@ -386,8 +386,9 @@ header#topo .menu nav ul hr {
 
 main {
   flex-direction: column;
+  align-items: center;
 }
-main#content {
+main #content {
   margin-top: 50px;
   align-items: center;
 }
@@ -399,111 +400,111 @@ main .divider {
   max-width: 300px;
   height: 1px;
 }
-main > section {
+main .float-image {
   margin: 0 auto;
 }
-main > section header, main > section main, main > section footer {
+main .float-image header, main .float-image .box-image, main .float-image footer {
   background-color: var(--white);
 }
-main > section header {
+main .float-image header {
   flex-direction: column;
   align-items: center;
   padding: var(--space-20);
 }
-main > section header > div img {
+main .float-image header > div img {
   width: 52px;
   height: 52px;
   margin-right: var(--space-10);
 }
-main > section header > div img.agency-logo {
+main .float-image header > div img.agency-logo {
   width: 170px;
   height: 67px;
 }
-main > section header .avaliacao {
+main .float-image header .avaliacao {
   margin-top: var(--space-10);
 }
-main > section header .avaliacao img {
+main .float-image header .avaliacao img {
   width: 12px;
   height: 12px;
 }
-main > section main {
+main .float-image .box-image {
   flex-direction: column;
 }
-main > section main .agency {
+main .float-image .box-image .agency {
   box-shadow: initial;
 }
-main > section footer {
+main .float-image footer {
   padding: var(--space-20);
   flex-direction: column;
   align-items: center;
 }
-main > section footer p {
+main .float-image footer p {
   margin: 0;
   text-align: center;
   font-size: 22px;
 }
-main > section footer p.title {
+main .float-image footer p.title {
   font-weight: 600;
   margin-bottom: var(--space-50);
 }
-main > section footer p.block {
+main .float-image footer p.block {
   display: block;
 }
-main > section footer p.block b {
+main .float-image footer p.block b {
   font-weight: 600;
 }
-main > section footer .icons {
+main .float-image footer .icons {
   width: 100%;
   margin-top: var(--space-20);
   justify-content: center;
 }
-main > section footer .icons ul {
+main .float-image footer .icons ul {
   flex-direction: column;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-main > section footer .icons ul li {
+main .float-image footer .icons ul li {
   margin-top: var(--space-10);
 }
-main > section footer .icons ul li span {
+main .float-image footer .icons ul li span {
   color: var(--dark-0);
   font-size: 18px;
   text-align: center;
 }
-main > section footer .icons ul li svg {
+main .float-image footer .icons ul li svg {
   width: 30px;
   margin-right: 10px;
   height: auto;
 }
-main > section footer .pricing {
+main .float-image footer .pricing {
   flex-direction: column;
   margin-top: var(--space-20);
 }
-main > section footer .pricing p {
+main .float-image footer .pricing p {
   color: var(--dark-0);
   font-size: 20px;
   font-weight: 600;
 }
-main > section footer .pricing p:first-child {
+main .float-image footer .pricing p:first-child {
   font-weight: 300;
   font-size: 15px;
 }
-main > section footer .call-to-action {
+main .float-image footer .call-to-action {
   width: 100%;
   margin-top: var(--space-20);
   justify-content: center;
   align-items: center;
 }
-main > section footer .call-to-action.blue a {
+main .float-image footer .call-to-action.blue a {
   background-color: var(--blue);
   max-width: 250px;
 }
-main > section footer .call-to-action.blue a:hover {
+main .float-image footer .call-to-action.blue a:hover {
   background-color: var(--blue-0);
 }
-main > section footer .call-to-action a {
+main .float-image footer .call-to-action a {
   border-radius: 25px;
   width: 100%;
   max-width: 600px;
@@ -518,7 +519,7 @@ main > section footer .call-to-action a {
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
-main > section footer .call-to-action a:hover {
+main .float-image footer .call-to-action a:hover {
   background-color: var(--orange-1);
 }
 
@@ -531,11 +532,11 @@ main > section footer .call-to-action a:hover {
   }
 }
 @media (min-width: 500px) {
-  main > section footer .icons ul {
+  main .float-image footer .icons ul {
     flex-direction: row;
     width: 100%;
   }
-  main > section footer .call-to-action.blue {
+  main .float-image footer .call-to-action.blue {
     justify-content: flex-end;
   }
 }
@@ -2352,6 +2353,16 @@ aside.account footer button > img {
   }
   #footer > div .main .app {
     margin-top: 0;
+  }
+}
+#content .float-image footer .description {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+@media (min-width: 800px) {
+  #content .float-image footer .description {
+    font-size: 32px;
   }
 }
 
