@@ -33,9 +33,9 @@ hr {
 a {
     text-decoration: none;
     color: inherit;
-}
+} 
 
-section {
+.float-image {
 	padding: var(--space-20);
 	border-radius: var(--space-5);
 	flex-direction: column;
@@ -47,14 +47,14 @@ section {
 	header {
 		border-radius: var(--space-5) var(--space-5) 0 0;
 	}
-	main {
+	.box-image {
 		> img {
 			transform: translateX(-20px);
 			width: 100vw;
 			box-shadow: 0 0 10px var(--black-50);
 			margin-top: var(--space-20);
 			margin-bottom: var(--space-20);
-			max-height: 1200px;
+			max-height: 1000px;
 		}
 	}
 	footer {

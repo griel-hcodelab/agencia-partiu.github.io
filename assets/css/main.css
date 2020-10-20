@@ -108,7 +108,7 @@ a {
   color: inherit;
 }
 
-section {
+.float-image {
   padding: var(--space-20);
   border-radius: var(--space-5);
   flex-direction: column;
@@ -118,18 +118,18 @@ section {
   z-index: 1;
   overflow: hidden;
 }
-section header {
+.float-image header {
   border-radius: var(--space-5) var(--space-5) 0 0;
 }
-section main > img {
+.float-image .box-image > img {
   transform: translateX(-20px);
   width: 100vw;
   box-shadow: 0 0 10px var(--black-50);
   margin-top: var(--space-20);
   margin-bottom: var(--space-20);
-  max-height: 1200px;
+  max-height: 1000px;
 }
-section footer {
+.float-image footer {
   border-radius: 0 0 var(--space-5) var(--space-5);
 }
 
@@ -386,8 +386,9 @@ header#topo .menu nav ul hr {
 
 main {
   flex-direction: column;
+  align-items: center;
 }
-main#content {
+main #content {
   margin-top: 50px;
   align-items: center;
 }
@@ -399,111 +400,111 @@ main .divider {
   max-width: 300px;
   height: 1px;
 }
-main > section {
+main .float-image {
   margin: 0 auto;
 }
-main > section header, main > section main, main > section footer {
+main .float-image header, main .float-image .box-image, main .float-image footer {
   background-color: var(--white);
 }
-main > section header {
+main .float-image header {
   flex-direction: column;
   align-items: center;
   padding: var(--space-20);
 }
-main > section header > div img {
+main .float-image header > div img {
   width: 52px;
   height: 52px;
   margin-right: var(--space-10);
 }
-main > section header > div img.agency-logo {
+main .float-image header > div img.agency-logo {
   width: 170px;
   height: 67px;
 }
-main > section header .avaliacao {
+main .float-image header .avaliacao {
   margin-top: var(--space-10);
 }
-main > section header .avaliacao img {
+main .float-image header .avaliacao img {
   width: 12px;
   height: 12px;
 }
-main > section main {
+main .float-image .box-image {
   flex-direction: column;
 }
-main > section main .agency {
+main .float-image .box-image .agency {
   box-shadow: initial;
 }
-main > section footer {
+main .float-image footer {
   padding: var(--space-20);
   flex-direction: column;
   align-items: center;
 }
-main > section footer p {
+main .float-image footer p {
   margin: 0;
   text-align: center;
   font-size: 22px;
 }
-main > section footer p.title {
+main .float-image footer p.title {
   font-weight: 600;
   margin-bottom: var(--space-50);
 }
-main > section footer p.block {
+main .float-image footer p.block {
   display: block;
 }
-main > section footer p.block b {
+main .float-image footer p.block b {
   font-weight: 600;
 }
-main > section footer .icons {
+main .float-image footer .icons {
   width: 100%;
   margin-top: var(--space-20);
   justify-content: center;
 }
-main > section footer .icons ul {
+main .float-image footer .icons ul {
   flex-direction: column;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-main > section footer .icons ul li {
+main .float-image footer .icons ul li {
   margin-top: var(--space-10);
 }
-main > section footer .icons ul li span {
+main .float-image footer .icons ul li span {
   color: var(--dark-0);
   font-size: 18px;
   text-align: center;
 }
-main > section footer .icons ul li svg {
+main .float-image footer .icons ul li svg {
   width: 30px;
   margin-right: 10px;
   height: auto;
 }
-main > section footer .pricing {
+main .float-image footer .pricing {
   flex-direction: column;
   margin-top: var(--space-20);
 }
-main > section footer .pricing p {
+main .float-image footer .pricing p {
   color: var(--dark-0);
   font-size: 20px;
   font-weight: 600;
 }
-main > section footer .pricing p:first-child {
+main .float-image footer .pricing p:first-child {
   font-weight: 300;
   font-size: 15px;
 }
-main > section footer .call-to-action {
+main .float-image footer .call-to-action {
   width: 100%;
   margin-top: var(--space-20);
   justify-content: center;
   align-items: center;
 }
-main > section footer .call-to-action.blue a {
+main .float-image footer .call-to-action.blue a {
   background-color: var(--blue);
   max-width: 250px;
 }
-main > section footer .call-to-action.blue a:hover {
+main .float-image footer .call-to-action.blue a:hover {
   background-color: var(--blue-0);
 }
-main > section footer .call-to-action a {
+main .float-image footer .call-to-action a {
   border-radius: 25px;
   width: 100%;
   max-width: 600px;
@@ -518,7 +519,7 @@ main > section footer .call-to-action a {
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
-main > section footer .call-to-action a:hover {
+main .float-image footer .call-to-action a:hover {
   background-color: var(--orange-1);
 }
 
@@ -531,11 +532,11 @@ main > section footer .call-to-action a:hover {
   }
 }
 @media (min-width: 500px) {
-  main > section footer .icons ul {
+  main .float-image footer .icons ul {
     flex-direction: row;
     width: 100%;
   }
-  main > section footer .call-to-action.blue {
+  main .float-image footer .call-to-action.blue {
     justify-content: flex-end;
   }
 }
@@ -550,40 +551,67 @@ main > section footer .call-to-action a:hover {
     margin-left: var(--space-10);
   }
 }
-.foldOne #bread {
+.foldOne .main {
+  margin-top: 90px;
+  border-radius: var(--space-5);
+  flex-direction: column;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--white);
+}
+.foldOne .header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+}
+.foldOne .header #bread {
   margin: var(--space-20);
   margin-bottom: 0;
   padding: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
-.foldOne #bread ul {
+.foldOne .header #bread ul {
   flex-direction: row;
   margin: 0;
   padding: 0;
 }
-.foldOne #bread ul li {
+.foldOne .header #bread ul li {
   margin: 0;
   padding: 0;
   flex-direction: row;
   list-style: none;
-  font-size: 14px;
+  font-size: 12px;
 }
-.foldOne #bread ul li a {
+.foldOne .header #bread ul li a {
   text-decoration: none;
+}
+.foldOne div.img > img {
+  transform: translateX(-20px);
+  width: 100vw;
+  box-shadow: 0 0 10px var(--black-50);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+  max-height: 1200px;
+}
+.foldOne footer {
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
 .foldOne footer.destinyOne {
   margin: 0;
-  margin-top: -50px;
   padding-top: 0;
+  flex-direction: column;
+  align-items: center;
 }
 .foldOne footer.destinyOne header {
   margin: 0;
   padding: 0;
 }
 .foldOne footer.destinyOne header h2 {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 900;
   text-transform: none;
   margin: 0;
@@ -593,26 +621,28 @@ main > section footer .call-to-action a:hover {
   width: 15px;
   margin: 0;
   margin-left: var(--space-5);
-  margin-top: var(--space-20);
   margin-bottom: var(--space-20);
   padding: 0;
 }
 .foldOne footer.destinyOne p.title {
   font-size: 15px;
   font-weight: bold;
-  margin: var(--space-20) 0;
+  margin: var(--space-10) 0;
   padding: 0;
+  text-align: center;
 }
 .foldOne footer.destinyOne p.content {
   font-size: 15px;
   margin-top: var(--space-20);
+  padding: 0 var(--space-20);
+  text-align: center;
 }
 .foldOne footer.destinyOne div.icons {
-  margin: var(--space-20) 0;
+  margin: var(--space-10) 0;
   width: 100%;
 }
 .foldOne footer.destinyOne div.icons ul {
-  margin: var(--space-20) 0;
+  margin: var(--space-20);
   padding: 0;
   align-items: center;
   flex-direction: row;
@@ -621,6 +651,9 @@ main > section footer .call-to-action a:hover {
   align-items: center;
   justify-content: space-evenly;
   width: 100px;
+}
+.foldOne footer.destinyOne div {
+  margin: var(--space-20);
 }
 .foldOne footer.destinyOne div button {
   align-items: center;
@@ -669,32 +702,48 @@ main > section footer .call-to-action a:hover {
   font-weight: bold;
 }
 
-.foldTwo header h2 {
+.foldTwo .main {
+  margin-top: var(--space-5);
+  border-radius: var(--space-5);
+  flex-direction: column;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--white);
+}
+.foldTwo h2 {
   font-size: 27px;
-  text-transform: uppercase;
   font-weight: 600;
-  align-items: center;
+  text-transform: uppercase;
+  align-items: flex-end;
+  margin: var(--space-20);
+  margin-bottom: var(--space-5);
+  padding: 0;
   justify-content: center;
 }
-.foldTwo main {
+.foldTwo .details {
   flex-direction: column;
-  padding: var(--space-20);
+  margin: var(--space-20);
+  margin-top: 0;
 }
-.foldTwo main .step {
-  margin-bottom: var(--space-20);
+.foldTwo .details .step {
+  margin-bottom: var(--space-10);
 }
-.foldTwo main .step p {
+.foldTwo .details .step p {
   flex-direction: row;
   font-size: 20px;
+  margin-top: var(--space-10);
 }
-.foldTwo main div {
+.foldTwo .details div.form {
   justify-content: center;
 }
-.foldTwo main div form {
+.foldTwo .details div.form > form {
   flex-direction: column;
   width: 100%;
 }
-.foldTwo main div form .label {
+.foldTwo .details div.form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -708,9 +757,9 @@ main > section footer .call-to-action a:hover {
   font-weight: bold;
   color: var(--blue);
   text-transform: uppercase;
-  border-color: var(--gray);
+  border: 1px solid var(--dark-3);
 }
-.foldTwo main div form .label label {
+.foldTwo .details div.form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -718,28 +767,28 @@ main > section footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldTwo main div form .label div {
+.foldTwo .details div.form > form .label div {
   flex-direction: row;
 }
-.foldTwo main div form .label div img {
+.foldTwo .details div.form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldTwo main div form .label div input {
+.foldTwo .details div.form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldTwo main div form input::placeholder {
+.foldTwo .details div.form > form input::placeholder {
   font-size: 16px;
 }
-.foldTwo main div form .labels {
+.foldTwo .details div.form > form .labels {
   flex-direction: column;
 }
-.foldTwo main div form .filter {
+.foldTwo .details div.form > form .filter {
   border: none;
   display: flex;
   justify-content: center;
@@ -755,33 +804,54 @@ main > section footer .call-to-action a:hover {
   font-size: 20px;
   font-weight: bold;
 }
-.foldTwo main div form > img {
+.foldTwo .details div.form > form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
 
-.foldThree header h2 {
-  font-size: 27px;
-  text-transform: uppercase;
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
-}
-.foldThree main div p {
-  font-size: 20px;
-  margin: 0;
-  margin-left: -45px;
-  margin-bottom: var(--space-20);
-}
-.foldThree main div {
-  justify-content: center;
-}
-.foldThree main div form {
+.foldThree .main {
+  margin-top: var(--space-5);
+  border-radius: var(--space-5);
   flex-direction: column;
-  width: 290px;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--white);
 }
-.foldThree main div form .label {
+.foldThree h2 {
+  font-size: 27px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: var(--space-20);
+  margin-bottom: var(--space-5);
+  padding: 0;
+  justify-content: center;
+}
+.foldThree .details {
+  flex-direction: column;
+  margin: var(--space-20);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.foldThree .details .step {
+  margin-bottom: var(--space-10);
+}
+.foldThree .details .step p {
+  flex-direction: row;
+  font-size: 20px;
+  margin-top: var(--space-10);
+}
+.foldThree .details div.form {
+  justify-content: center;
+}
+.foldThree .details div.form > form {
+  flex-direction: column;
+  width: 100%;
+}
+.foldThree .details div.form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -795,9 +865,9 @@ main > section footer .call-to-action a:hover {
   font-weight: bold;
   color: var(--blue);
   text-transform: uppercase;
-  border-color: var(--gray);
+  border: 1px solid var(--dark-3);
 }
-.foldThree main div form .label label {
+.foldThree .details div.form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -805,44 +875,60 @@ main > section footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldThree main div form .label div {
+.foldThree .details div.form > form .label div {
   flex-direction: row;
 }
-.foldThree main div form .label div img {
+.foldThree .details div.form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldThree main div form .label div input {
+.foldThree .details div.form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldThree main div form input::placeholder {
+.foldThree .details div.form > form input::placeholder {
   font-size: 16px;
 }
-.foldThree main div form .labels {
+.foldThree .details div.form > form .labels {
   flex-direction: column;
 }
-.foldThree main div form > img {
+.foldThree .details div.form > form .filter {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.foldThree .details div.form > form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
-.foldThree main div.number {
+.foldThree div.number {
   justify-content: flex-end;
 }
-.foldThree main div.number span {
-  background-color: var(--gray);
+.foldThree div.number span {
+  background-color: var(--dark-3);
   font-size: 20px;
 }
-.foldThree main div.previewNext {
+.foldThree div.previewNext {
   justify-content: space-between;
   margin: var(--space-10) 0;
 }
-.foldThree main div.previewNext button {
+.foldThree div.previewNext button {
   border: none;
   display: flex;
   justify-content: center;
@@ -860,7 +946,10 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 15px;
 }
-.foldThree main div.avaliacao img {
+.foldThree div.avaliacao {
+  justify-content: center;
+}
+.foldThree div.avaliacao img {
   width: 15px;
   margin: 0;
   margin-left: var(--space-5);
@@ -868,30 +957,54 @@ main > section footer .call-to-action a:hover {
   margin-bottom: var(--space-10);
   padding: 0;
 }
-.foldThree main h2 {
-  font-size: 27px;
+.foldThree h2.afterEvalutaion {
+  font-size: 26px;
   font-weight: 600;
+  justify-content: center;
+  text-transform: none;
+  margin: 0 var(--space-20);
+}
+.foldThree div.img > img {
+  transform: translateX(-20px);
+  width: 100vw;
+  box-shadow: 0 0 10px var(--black-50);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+  max-height: 1200px;
+}
+.foldThree footer {
+  flex-direction: column;
+}
+.foldThree footer div.svgServices {
   justify-content: center;
 }
 .foldThree footer div.svgServices img {
   width: 40px;
+  margin: 0 var(--space-5);
+}
+.foldThree footer p {
   margin: 0;
-  margin-top: var(--space-10);
-  margin-left: var(--space-10);
-  margin-bottom: var(--space-10);
+  padding: 0;
+}
+.foldThree footer div.adressInfo {
+  flex-direction: column;
+  align-items: center;
 }
 .foldThree footer .adress {
   font-size: 20px;
   font-weight: 600;
-  margin: var(--space-20);
+  margin: var(--space-20) 0;
+  text-align: center;
 }
 .foldThree footer .info {
   font-size: 20px;
+  font-weight: 400;
+  margin: 0 var(--space-20);
+  text-align: center;
 }
 .foldThree footer .buttons {
   flex-direction: column;
-  margin: 0;
-  margin-top: var(--space-20);
+  margin: var(--space-20);
 }
 .foldThree footer .buttons .back {
   border: none;
@@ -905,7 +1018,7 @@ main > section footer .call-to-action a:hover {
   margin-bottom: var(--space-20);
   justify-content: center;
   padding: 0;
-  width: 285px;
+  width: 100%;
   height: 45px;
   background-color: var(--white);
   border: 1px solid var(--green);
@@ -938,27 +1051,47 @@ main > section footer .call-to-action a:hover {
   font-size: 20px;
 }
 
-.foldFour header h2 {
-  font-size: 27px;
-  text-transform: uppercase;
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
-}
-.foldFour main > div > p {
-  font-size: 20px;
-  margin: 0;
-  margin-left: var(--space-20);
-  margin-bottom: var(--space-20);
-}
-.foldFour main div.form {
-  justify-content: center;
-}
-.foldFour main div.form form {
+.foldFour .main {
+  margin-top: var(--space-5);
+  border-radius: var(--space-5);
   flex-direction: column;
-  width: 290px;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--white);
 }
-.foldFour main div.form form .label {
+.foldFour h2 {
+  font-size: 27px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: var(--space-20);
+  margin-bottom: var(--space-5);
+  padding: 0;
+  justify-content: center;
+}
+.foldFour .details {
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.foldFour .details .step {
+  margin-bottom: var(--space-10);
+}
+.foldFour .details .step p {
+  flex-direction: row;
+  font-size: 20px;
+  margin-top: var(--space-10);
+}
+.foldFour .details div.form {
+  justify-content: center;
+}
+.foldFour .details div.form > form {
+  flex-direction: column;
+  width: 100%;
+}
+.foldFour .details div.form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -972,9 +1105,9 @@ main > section footer .call-to-action a:hover {
   font-weight: bold;
   color: var(--blue);
   text-transform: uppercase;
-  border-color: var(--gray);
+  border: 1px solid var(--dark-3);
 }
-.foldFour main div.form form .label label {
+.foldFour .details div.form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -982,44 +1115,60 @@ main > section footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldFour main div.form form .label div {
+.foldFour .details div.form > form .label div {
   flex-direction: row;
 }
-.foldFour main div.form form .label div img {
+.foldFour .details div.form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldFour main div.form form .label div input {
+.foldFour .details div.form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldFour main div.form form input::placeholder {
+.foldFour .details div.form > form input::placeholder {
   font-size: 16px;
 }
-.foldFour main div.form form .labels {
+.foldFour .details div.form > form .labels {
   flex-direction: column;
 }
-.foldFour main div.form form > img {
+.foldFour .details div.form > form .filter {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.foldFour .details div.form > form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
-.foldFour main div.number {
+.foldFour div.number {
   justify-content: flex-end;
 }
-.foldFour main div.number span {
-  background-color: var(--gray);
+.foldFour div.number span {
+  background-color: var(--dark-3);
   font-size: 20px;
 }
-.foldFour main div.previewNext {
+.foldFour div.previewNext {
   justify-content: space-between;
   margin: var(--space-10) 0;
 }
-.foldFour main div.previewNext button {
+.foldFour div.previewNext button {
   border: none;
   display: flex;
   justify-content: center;
@@ -1037,23 +1186,18 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 15px;
 }
-.foldFour main div.previewNext img {
-  width: 120px;
-  margin-top: -46px;
-}
-.foldFour main div.wrap {
+.foldFour div.wrap {
   flex-direction: column;
-  background-color: rgba(26, 188, 156, 0.1);
+  background-color: #E7F8F5;
   margin: 0;
   padding: 0;
-  height: 300px;
 }
-.foldFour main div.wrap .panel {
+.foldFour div.wrap .panel {
   margin: 0;
   flex-direction: row;
   justify-content: space-between;
 }
-.foldFour main div.wrap .panel p.go {
+.foldFour div.wrap .panel p.go {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1065,7 +1209,7 @@ main > section footer .call-to-action a:hover {
   border-radius: 0 5px 5px 0;
   background-color: var(--blue);
 }
-.foldFour main div.wrap .panel p.date {
+.foldFour div.wrap .panel p.date {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1075,7 +1219,7 @@ main > section footer .call-to-action a:hover {
   width: 85px;
   height: 35px;
 }
-.foldFour main div.wrap .panel p.value {
+.foldFour div.wrap .panel p.value {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1087,14 +1231,30 @@ main > section footer .call-to-action a:hover {
   border-radius: 5px 0px 0px 5px;
   background-color: var(--blue);
 }
-.foldFour main div.wrap .panel div.panelIsnt {
-  flex-direction: row;
-  border: 1px solid #000;
+.foldFour div.wrap .panelInst {
+  justify-content: space-between;
+  margin-bottom: var(--space-20);
+}
+.foldFour div.wrap .panelInst div {
+  flex-direction: column;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.foldFour div.wrap .panelInst div p {
+  justify-content: center;
+  margin: 0;
+}
+.foldFour div.wrap .panelInst div + div {
+  border-left: 1px solid var(--dark-0);
+}
+.foldFour footer {
+  flex-direction: column;
 }
 .foldFour footer .buttons {
   flex-direction: column;
-  margin: 0;
-  margin-top: var(--space-20);
+  margin: var(--space-20);
 }
 .foldFour footer .buttons .back {
   border: none;
@@ -1108,7 +1268,7 @@ main > section footer .call-to-action a:hover {
   margin-bottom: var(--space-20);
   justify-content: center;
   padding: 0;
-  width: 285px;
+  width: 100%;
   height: 45px;
   background-color: var(--white);
   border: 1px solid var(--green);
@@ -1141,27 +1301,48 @@ main > section footer .call-to-action a:hover {
   font-size: 20px;
 }
 
-.foldFour header h2 {
+.foldFive .main {
+  margin-top: var(--space-5);
+  border-radius: var(--space-5);
+  flex-direction: column;
+  width: 100%;
+  max-width: 1180px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--white);
+}
+.foldFive h2 {
   font-size: 27px;
-  text-transform: uppercase;
   font-weight: 600;
-  align-items: center;
+  text-transform: uppercase;
+  align-items: flex-end;
+  margin: var(--space-20);
+  margin-bottom: var(--space-5);
+  padding: 0;
   justify-content: center;
 }
-.foldFour main > div > p {
-  font-size: 20px;
-  margin: 0;
-  margin-left: var(--space-20);
-  margin-bottom: var(--space-20);
-}
-.foldFour main div.form {
-  justify-content: center;
-}
-.foldFour main div.form form {
+.foldFive .details {
   flex-direction: column;
-  width: 290px;
+  margin: var(--space-20);
+  margin-top: 0;
 }
-.foldFour main div.form form .label {
+.foldFive .details .step {
+  margin-bottom: var(--space-10);
+}
+.foldFive .details .step p {
+  flex-direction: row;
+  font-size: 20px;
+  margin-top: var(--space-10);
+}
+.foldFive .details div.form {
+  justify-content: center;
+}
+.foldFive .details div.form > form {
+  flex-direction: column;
+  width: 100%;
+}
+.foldFive .details div.form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -1175,9 +1356,9 @@ main > section footer .call-to-action a:hover {
   font-weight: bold;
   color: var(--blue);
   text-transform: uppercase;
-  border-color: var(--green);
+  border: 1px solid var(--green);
 }
-.foldFour main div.form form .label label {
+.foldFive .details div.form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -1185,77 +1366,56 @@ main > section footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldFour main div.form form .label div {
+.foldFive .details div.form > form .label div {
   flex-direction: row;
 }
-.foldFour main div.form form .label div img {
+.foldFive .details div.form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldFour main div.form form .label div input {
+.foldFive .details div.form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldFour main div.form form .labelRed {
+.foldFive .details div.form > form .label:nth-last-child(-n+2) {
+  border: 1px solid var(--red-0);
+  color: var(--blue);
+}
+.foldFive .details div.form > form .labels {
   flex-direction: column;
-  flex-direction: column;
-  border: 1px solid var(--dark-1);
-  border-radius: 5px;
-  padding: var(--space-5);
-  height: 60px;
-  margin-bottom: var(--space-20);
-  width: 100%;
-  height: 60px;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--red-0);
+}
+.foldFive .details div.form > form .filter {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  height: 45px;
+  background-color: var(--yellow);
+  border-radius: 25px;
+  color: #fff;
   text-transform: uppercase;
-  border-color: var(--red-0);
-}
-.foldFour main div.form form .labelRed label {
-  font-size: var(--space-20);
-  font-weight: bold;
-  margin-bottom: var(--space-5);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--blue);
-}
-.foldFour main div.form form .labelRed div {
-  flex-direction: row;
-}
-.foldFour main div.form form .labelRed div img {
-  height: 20px;
-  width: 20px;
-  justify-content: center;
-  align-items: center;
-}
-.foldFour main div.form form .labelRed div input {
-  border: none;
-  width: 100%;
-  outline: none;
-  padding-left: var(--space-10);
-}
-.foldFour main div.form form input::placeholder {
   font-size: 20px;
+  font-weight: bold;
 }
-.foldFour main div.form form .labels {
-  flex-direction: column;
-}
-.foldFour main div.form form > img {
+.foldFive .details div.form > form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
-.foldFour main div.form form .buttons {
+.foldFive .details div.form > form footer {
   flex-direction: column;
-  margin: 0;
-  margin-top: var(--space-20);
 }
-.foldFour main div.form form .buttons .back {
+.foldFive .details div.form > form footer .buttons {
+  flex-direction: column;
+}
+.foldFive .details div.form > form footer .buttons .back {
   border: none;
   display: flex;
   justify-content: center;
@@ -1267,7 +1427,7 @@ main > section footer .call-to-action a:hover {
   margin-bottom: var(--space-20);
   justify-content: center;
   padding: 0;
-  width: 285px;
+  width: 100%;
   height: 45px;
   background-color: var(--white);
   border: 1px solid var(--green);
@@ -1276,11 +1436,11 @@ main > section footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-.foldFour main div.form form .buttons .back img {
+.foldFive .details div.form > form footer .buttons .back img {
   width: 25px;
   margin-right: var(--space-10);
 }
-.foldFour main div.form form .buttons .check {
+.foldFive .details div.form > form footer .buttons .check {
   border: none;
   display: flex;
   justify-content: center;
@@ -1298,106 +1458,6 @@ main > section footer .call-to-action a:hover {
   color: #fff;
   text-transform: uppercase;
   font-size: 20px;
-}
-.foldFour main div.number {
-  justify-content: flex-end;
-}
-.foldFour main div.number span {
-  background-color: var(--gray);
-  font-size: 20px;
-}
-.foldFour main div.previewNext {
-  justify-content: space-between;
-  margin: var(--space-10) 0;
-}
-.foldFour main div.previewNext button {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  width: 30%;
-  height: 30px;
-  background-color: var(--orange);
-  border-radius: 5px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 15px;
-}
-.foldFour main div.previewNext img {
-  width: 120px;
-  margin-top: -46px;
-}
-.foldFour main div.wrap {
-  flex-direction: column;
-  background-color: rgba(26, 188, 156, 0.1);
-  margin: 0;
-  padding: 0;
-  height: 300px;
-}
-.foldFour main div.wrap .panel {
-  margin: 0;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.foldFour main div.wrap .panel p.go {
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: var(--white);
-  font-weight: bold;
-  width: 85px;
-  height: 35px;
-  border-radius: 0 5px 5px 0;
-  background-color: var(--blue);
-}
-.foldFour main div.wrap .panel p.date {
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  margin-left: 35px;
-  text-transform: uppercase;
-  color: var(--dark);
-  width: 85px;
-  height: 35px;
-}
-.foldFour main div.wrap .panel p.value {
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  margin-left: 35px;
-  text-transform: uppercase;
-  color: var(--white);
-  width: 95px;
-  height: 35px;
-  border-radius: 5px 0px 0px 5px;
-  background-color: var(--blue);
-}
-.foldFour main div.wrap .panel div.panelIsnt {
-  flex-direction: row;
-  border: 1px solid #000;
-}
-.foldFour main div.wrap .panelInst {
-  justify-content: space-between;
-}
-.foldFour main div.wrap .panelInst div {
-  flex-direction: column;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-.foldFour main div.wrap .panelInst div p {
-  justify-content: center;
-  margin: 0;
-}
-.foldFour main div.wrap .panelInst div + div {
-  border-left: 1px solid;
 }
 
 header.access {
@@ -1419,12 +1479,14 @@ section#access {
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 section#access header, section#access main, section#access footer {
   background-color: var(--white);
 }
 section#access header {
   flex-direction: column;
+  border-radius: var(--space-5) var(--space-5) 0 0;
 }
 section#access header img {
   height: 100px;
@@ -1528,6 +1590,7 @@ section#access main form .button button:active {
 section#access footer {
   justify-content: space-evenly;
   padding-bottom: var(--space-20);
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
 section#access footer a {
   font-size: 13px;
@@ -1561,15 +1624,19 @@ header.create-account img {
 section#create-account {
   margin-top: var(--space-50);
   padding-top: var(--space-50);
+  padding-bottom: var(--space-50);
+  border-radius: var(--space-5);
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 section#create-account header, section#create-account main, section#create-account footer {
   background-color: var(--white);
 }
 section#create-account header {
   flex-direction: column;
+  border-radius: var(--space-5) var(--space-5) 0 0;
 }
 section#create-account header img {
   height: 100px;
@@ -1585,6 +1652,7 @@ section#create-account header h1 {
 section#create-account main {
   flex-direction: column;
   padding: var(--space-20);
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
 section#create-account main form {
   flex-direction: column;
@@ -1746,11 +1814,13 @@ section#password-forget {
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 section#password-forget header, section#password-forget main, section#password-forget footer {
   background-color: var(--white);
 }
 section#password-forget header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
   flex-direction: column;
 }
 section#password-forget header img {
@@ -1767,6 +1837,7 @@ section#password-forget header h1 {
 section#password-forget main {
   flex-direction: column;
   padding: var(--space-20);
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
 section#password-forget main form {
   flex-direction: column;
@@ -1866,16 +1937,6 @@ section#password-forget main .alert.danger {
   justify-content: center;
   padding: var(--space-10);
 }
-section#password-forget footer {
-  justify-content: space-evenly;
-  padding-bottom: var(--space-20);
-}
-section#password-forget footer a {
-  font-size: 13px;
-}
-section#password-forget footer a:hover {
-  color: var(--black);
-}
 
 @media (min-width: 992px) {
   header.password-forget {
@@ -1902,15 +1963,18 @@ header.new-password img {
 section#new-password {
   margin-top: var(--space-50);
   padding-top: var(--space-50);
+  padding-bottom: var(--space-50);
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 section#new-password header, section#new-password main, section#new-password footer {
   background-color: var(--white);
 }
 section#new-password header {
   flex-direction: column;
+  border-radius: var(--space-5) var(--space-5) 0 0;
 }
 section#new-password header img {
   height: 100px;
@@ -1926,6 +1990,7 @@ section#new-password header h1 {
 section#new-password main {
   flex-direction: column;
   padding: var(--space-20);
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
 section#new-password main form {
   flex-direction: column;
@@ -2038,16 +2103,6 @@ section#new-password main .alert.info {
   justify-content: center;
   padding: var(--space-10);
 }
-section#new-password footer {
-  justify-content: space-evenly;
-  padding-bottom: var(--space-20);
-}
-section#new-password footer a {
-  font-size: 13px;
-}
-section#new-password footer a:hover {
-  color: var(--black);
-}
 
 @media (min-width: 992px) {
   header.new-password {
@@ -2087,12 +2142,14 @@ section#password-created {
   max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 section#password-created header, section#password-created main, section#password-created footer {
   background-color: var(--white);
 }
 section#password-created header {
   flex-direction: column;
+  border-radius: var(--space-5) var(--space-5) 0 0;
 }
 section#password-created header img {
   height: 100px;
@@ -2123,6 +2180,7 @@ section#password-created footer {
   justify-content: center;
   padding: var(--space-20);
   padding-top: 0;
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
 section#password-created footer button {
   width: 100%;
@@ -2137,6 +2195,7 @@ section#password-created footer button {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   text-transform: uppercase;
+  height: calc(var(--space-20) + calc(var(--space-10) + var(--space-5)));
 }
 section#password-created footer button:hover {
   background-color: #2d8ece;
@@ -2387,6 +2446,16 @@ aside.account footer button > img {
   }
   #footer > div .main .app {
     margin-top: 0;
+  }
+}
+#content .float-image footer .description {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+@media (min-width: 800px) {
+  #content .float-image footer .description {
+    font-size: 32px;
   }
 }
 
