@@ -35,7 +35,7 @@ a {
     color: inherit;
 }
 
-section {
+.float-image {
 	padding: var(--space-20);
 	border-radius: var(--space-5);
 	flex-direction: column;
@@ -47,7 +47,7 @@ section {
 	header {
 		border-radius: var(--space-5) var(--space-5) 0 0;
 	}
-	main {
+	.box-image {
 		> img {
 			transform: translateX(-20px);
 			width: 100vw;

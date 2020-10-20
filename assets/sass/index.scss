@@ -93,7 +93,7 @@
 }
 
 main {
-    &#content {
+    #content {
         margin-top: 50px;
         align-items: center;
     }
@@ -106,9 +106,9 @@ main {
         max-width: 300px;
         height: 1px;
     }    
-    > section {
+    .float-image {
         margin: 0 auto; 
-        header, main, footer {
+        header, .box-image, footer {
             background-color: var(--white);
         }
         header {
@@ -134,7 +134,7 @@ main {
                 }
             }
         }
-        main {
+        .box-image {
             flex-direction: column;
             .agency {
                 box-shadow: initial;
@@ -233,7 +233,6 @@ main {
             }
         }   
     }
-    
 }
 
 @keyframes slideDown {
@@ -248,7 +247,7 @@ main {
 
 @media (min-width: 500px) {
     main {
-        > section {
+        .float-image {
             footer {
                 .icons {
                     ul {
