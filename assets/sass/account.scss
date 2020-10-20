@@ -22,6 +22,7 @@ aside {
         width: 100%;
         header {
             background-color: var(--dark-3);
+            border-top: 1px solid var(--dark-3);
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
@@ -34,7 +35,7 @@ aside {
                 width: auto;
             }
         }
-        main {
+        section {
             flex-direction: column;
             justify-content: center;
             border-left: 1px solid var(--dark-3);

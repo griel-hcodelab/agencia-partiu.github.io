@@ -2179,6 +2179,7 @@ aside.account {
 }
 aside.account header {
   background-color: var(--dark-3);
+  border-top: 1px solid var(--dark-3);
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -2191,14 +2192,14 @@ aside.account header img {
   height: 25px;
   width: auto;
 }
-aside.account main {
+aside.account section {
   flex-direction: column;
   justify-content: center;
   border-left: 1px solid var(--dark-3);
   border-right: 1px solid var(--dark-3);
   background-color: var(--bg-color);
 }
-aside.account main a {
+aside.account section a {
   border: 1px solid var(--blue);
   height: 89px;
   margin: var(--space-20);
@@ -2206,11 +2207,11 @@ aside.account main a {
   flex-direction: column;
   justify-content: center;
 }
-aside.account main a img {
+aside.account section a img {
   height: 45px;
   width: auto;
 }
-aside.account main a p {
+aside.account section a p {
   margin: 0;
   margin-top: var(--space-5);
   justify-content: center;
