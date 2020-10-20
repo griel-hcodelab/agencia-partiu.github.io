@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li, span, p {
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li, span, p, aside {
   display: flex;
 }
 
@@ -2167,13 +2167,40 @@ header.account img {
   width: auto;
 }
 
+#account {
+  padding-top: calc(var(--space-50) * 2);
+}
+#account > header {
+  background-color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+#account > header img {
+  height: 91px;
+  width: 91px;
+  border-radius: var(--space-50);
+  transform: translateY(-50px);
+}
+#account > header h1 {
+  margin-top: -20px;
+  margin-bottom: var(--space-20);
+  color: var(--blue);
+  font-size: 30px;
+}
+#account main section {
+  padding: 0;
+  padding-top: var(--space-50);
+}
+
 aside {
   position: fixed;
   z-index: 3;
   bottom: 0;
 }
 aside.account {
-  background-color: var(--white);
+  flex-direction: column;
+  background-color: var(--bg-color);
   padding: var(--space-20);
   width: 100%;
 }
@@ -2198,6 +2225,11 @@ aside.account section {
   border-left: 1px solid var(--dark-3);
   border-right: 1px solid var(--dark-3);
   background-color: var(--bg-color);
+  border-radius: 0;
+  display: none;
+}
+aside.account section.account-content.open {
+  display: flex;
 }
 aside.account section a {
   border: 1px solid var(--blue);
@@ -2206,6 +2238,7 @@ aside.account section a {
   padding: var(--space-5);
   flex-direction: column;
   justify-content: center;
+  background-color: var(--white);
 }
 aside.account section a img {
   height: 45px;
@@ -2221,6 +2254,7 @@ aside.account section a p {
 aside.account footer {
   padding: var(--space-20);
   border-radius: 0 0 5px 5px;
+  background-color: var(--white);
 }
 aside.account footer button {
   border: none;

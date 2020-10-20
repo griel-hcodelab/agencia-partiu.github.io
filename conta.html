@@ -34,42 +34,18 @@
         </a>
     </header>
 
-    <aside class="account">
+    <section id="account">
         <header>
-            <p>Gerencie sua conta</p>
-            <img src="assets/svg/menu-abrir.svg" alt="Gerencie sua conta">
-        </header>
-        <section>
-            <a href="mudar-senha.html">
-                <img src="assets/svg/icon-cadeado.svg" alt="Mudar senha">
-                <p>mudar senha</p>
-            </a>
-            <a href="mudar-foto.html">
-                <img src="assets/svg/icon-foto.svg" alt="Mudar foto">
-                <p>mudar foto</p>
-            </a>
-            <a href="mudar-foto.html">
-                <img src="assets/svg/icon-editar.svg" alt="Mudar dados pessoais">
-                <p>mudar foto</p>
-            </a>
-        </section>
-        <footer>
-            <button type="button">sair</button>
-        </footer>
-    </aside>
-
-    <main>
-        <section class="title">
-            <img src="assets/jpg/gabriel.jpg" alt="Gabriel Bispo">
+            <img src="assets/jpg/gabriel.jpg" alt="Gabriel Bispo" />
             <h1>Olá Gabriel Bispo</h1>
-        </section>
-        <section class="last-buy">
-            <header>
-                <h2>última compra</h2>
-            </header>
-            <main>
+        </header>
+        <main>
+            <section class="last-buy">
+                <header>
+                    <h2>ultima compra</h2>
+                </header>
                 <div>
-                    <p>Pedido #23055</p>
+                    <h3>Pedido #23055</h3>
                     <p>Pacote Recife</p>
                     <div class="persons">
                         <div>
@@ -92,8 +68,37 @@
                         </div>
                     </div>
                 </div>
-            </main>
+            </section>
+        </main>
+    </section>
+
+    <aside class="account">
+        <header>
+            <p>Gerencie sua conta</p>
+            <img src="assets/svg/menu-abrir.svg" alt="Gerencie sua conta" />
+        </header>
+        <section class="account-content">
+            <a href="mudar-senha.html">
+                <img src="assets/svg/icon-cadeado.svg" alt="Mudar senha" />
+                <p>mudar senha</p>
+            </a>
+            <a href="mudar-foto.html">
+                <img src="assets/svg/icon-foto.svg" alt="Mudar foto" />
+                <p>mudar foto</p>
+            </a>
+            <a href="mudar-foto.html">
+                <img src="assets/svg/icon-editar.svg" alt="Mudar dados pessoais" />
+                <p>mudar foto</p>
+            </a>
         </section>
+        <footer>
+            <button type="button">sair</button>
+        </footer>
+    </aside>
+
+
+    <main>
+
 
         <section class="wishlist">
             <header>
@@ -113,5 +118,11 @@
 
     </main>
     
+    <script>
+        const aside = document.querySelector("aside");
+        aside.firstElementChild.addEventListener("click", function(){
+            aside.children[1].classList.toggle('open');
+        })
+    </script>
 </body>
 </html>
