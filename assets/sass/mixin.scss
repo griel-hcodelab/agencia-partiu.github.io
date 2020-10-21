@@ -146,3 +146,12 @@
 	justify-content: center;
 	padding: var(--space-10);
 }
+@mixin box-yellow {
+	border: 1px solid var(--yellow-3);
+	background-color: var(--yellow-4);
+	border-radius: var(--space-5);
+	margin: var(--space-10) 0 var(--space-20) 0;
+	text-align: center;
+	justify-content: center;
+	padding: var(--space-10);
+}
