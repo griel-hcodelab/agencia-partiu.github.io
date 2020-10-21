@@ -42,62 +42,81 @@
         <main>
             <section class="last-buy">
                 <header>
-                    <h2>ultima compra</h2>
+                    <h2>última compra</h2>
                 </header>
                 <div>
                     <h3>Pedido #23055</h3>
                     <p>Pacote Recife</p>
-                    <div class="persons">
+                    <div class="wrap">
                         <div>
-                            <p>Aultos:</p>
+                            <h4>Aultos:</h4>
                             <p>02</p>
                         </div>
                         <div>
-                            <p>Crianças:</p>
+                            <h4>Crianças:</h4>
                             <p>00</p>
                         </div>
-                    </div>
-                    <div class="dates">
                         <div>
-                            <p>Ida:</p>
+                            <h4>Ida:</h4>
                             <p>25/12/2020</p>
                         </div>
                         <div>
-                            <p>Volta:</p>
+                            <h4>Volta:</h4>
                             <p>01/01/2021</p>
                         </div>
                     </div>
                 </div>
             </section>
+            <section class="favorites">
+                <header>
+                    <h2>seus favoritos</h2>
+                </header>
+                <div>
+                    <h3>resort em salvador</h3>
+                    <p>a partir de</p>
+                    <p>24x de R$349,90</p>
+                    <div class="wrap">
+                        <button type="button" class="buy">
+                            partiu!
+                        </button>
+                        <button type="button" class="remove">
+                            remover
+                        </button>
+                    </div>
+                </div>
+
+
+            </section>
+            <aside>
+                <header>
+                    <p>Gerencie sua conta</p>
+                    <img src="assets/svg/menu-abrir.svg" alt="Gerencie sua conta" />
+                </header>
+                <section class="account-content">
+                    <a href="mudar-senha.html">
+                        <img src="assets/svg/icon-cadeado.svg" alt="Mudar senha" />
+                        <p>mudar senha</p>
+                    </a>
+                    <a href="mudar-foto.html">
+                        <img src="assets/svg/icon-foto.svg" alt="Mudar foto" />
+                        <p>mudar foto</p>
+                    </a>
+                    <a href="mudar-foto.html">
+                        <img src="assets/svg/icon-editar.svg" alt="Mudar dados pessoais" />
+                        <p>mudar foto</p>
+                    </a>
+                </section>
+                <footer>
+                    <button type="button">sair</button>
+                </footer>
+            </aside> 
         </main>
     </section>
 
-    <aside class="account">
-        <header>
-            <p>Gerencie sua conta</p>
-            <img src="assets/svg/menu-abrir.svg" alt="Gerencie sua conta" />
-        </header>
-        <section class="account-content">
-            <a href="mudar-senha.html">
-                <img src="assets/svg/icon-cadeado.svg" alt="Mudar senha" />
-                <p>mudar senha</p>
-            </a>
-            <a href="mudar-foto.html">
-                <img src="assets/svg/icon-foto.svg" alt="Mudar foto" />
-                <p>mudar foto</p>
-            </a>
-            <a href="mudar-foto.html">
-                <img src="assets/svg/icon-editar.svg" alt="Mudar dados pessoais" />
-                <p>mudar foto</p>
-            </a>
-        </section>
-        <footer>
-            <button type="button">sair</button>
-        </footer>
-    </aside>
+    
 
 
-    <main>
+    <!--<main>
 
 
         <section class="wishlist">
@@ -116,13 +135,17 @@
 
         </section>
 
-    </main>
+    </main>-->
     
     <script>
         const aside = document.querySelector("aside");
         aside.firstElementChild.addEventListener("click", function(){
             aside.children[1].classList.toggle('open');
         })
+
+        function toggleMenu() {
+            
+        }
     </script>
 </body>
 </html>

@@ -59,6 +59,8 @@
   --yellow: #FFC400;
   --yellow-1: #ffcf32;
   --yellow-2: #e4af01;
+  --yellow-3: #FFF08D;
+  --yellow-4: #FFF5B1;
   --white-50: rgba(255,255,255,0.5);
   --black-50: rgba(0,0,0,0.5);
   --space-5: 5px;
@@ -2227,6 +2229,8 @@ header.account img {
 }
 
 #account {
+  flex-direction: column;
+  padding: var(--space-20);
   padding-top: calc(var(--space-50) * 2);
 }
 #account > header {
@@ -2247,38 +2251,179 @@ header.account img {
   color: var(--blue);
   font-size: 30px;
 }
-#account main section {
-  padding: 0;
-  padding-top: var(--space-50);
+#account main {
+  flex-direction: column;
+  margin-top: var(--space-50);
 }
-
-aside {
+#account main section {
+  padding: var(--space-20);
+  flex-direction: column;
+  margin: var(--space-20) 0;
+  background-color: var(--white);
+  border-radius: var(--space-5);
+  width: 100%;
+}
+#account main section header {
+  justify-content: center;
+  padding: var(--space-10);
+}
+#account main section header h2 {
+  color: var(--blue);
+  font-size: calc(var(--space-20) + var(--space-5));
+  font-weight: 400;
+  text-transform: capitalize;
+}
+#account main section.last-buy > div {
+  border: 1px solid var(--green-3);
+  background-color: var(--green-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--green-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+  margin-top: var(--space-20);
+  flex-direction: column;
+  align-items: center;
+}
+#account main section.last-buy > div h3 {
+  color: var(--dark-0);
+  font-size: var(--space-20);
+  font-weight: bold;
+}
+#account main section.last-buy > div p {
+  font-size: var(--space-20);
+  font-weight: 600;
+}
+#account main section.last-buy > div .wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(1, 2fr);
+  grid-gap: 10px;
+  width: 100%;
+  padding: var(--space-20);
+}
+#account main section.last-buy > div .wrap div {
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--space-20);
+}
+#account main section.last-buy > div .wrap div h4 {
+  font-weight: 600;
+}
+#account main section.last-buy > div .wrap div p {
+  margin: 0;
+  font-weight: 400;
+}
+#account main section.favorites {
+  padding: var(--space-20);
+  flex-direction: column;
+}
+#account main section.favorites div {
+  border: 1px solid var(--yellow-3);
+  background-color: var(--yellow-4);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+  flex-direction: column;
+  padding: 0;
+  padding-top: var(--space-20);
+  padding-right: var(--space-5);
+  padding-left: var(--space-5);
+  margin: 0;
+}
+#account main section.favorites div h3 {
+  font-size: calc(var(--space-20) + var(--space-5));
+  color: var(--dark-0);
+  font-weight: bold;
+  justify-content: center;
+  text-transform: capitalize;
+  margin-bottom: calc(var(--space-10) + var(--space-5));
+}
+#account main section.favorites div p {
+  margin: 0;
+  justify-content: center;
+  font-size: var(--space-20);
+}
+#account main section.favorites div p + p {
+  font-weight: 600;
+}
+#account main section.favorites div .wrap {
+  flex-direction: row;
+  border: none;
+}
+#account main section.favorites div .wrap button {
+  width: 100%;
+}
+#account main section.favorites div .wrap button.buy {
+  border: 1px solid var(--green-3);
+  background-color: var(--green-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--green-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+  margin-right: var(--space-20);
+  font-size: var(--space-20);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: italic;
+  transition: 0.5s;
+}
+#account main section.favorites div .wrap button.buy:hover {
+  background-color: #a4d2af;
+}
+#account main section.favorites div .wrap button.remove {
+  border: 1px solid var(--red-3);
+  background-color: var(--red-3);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--red-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-style: italic;
+  transition: 0.5s;
+}
+#account main section.favorites div .wrap button.remove:hover {
+  background-color: #ff8691;
+}
+#account main section + section {
+  margin-bottom: 180px;
+}
+#account aside {
   position: fixed;
   z-index: 3;
   bottom: 0;
-}
-aside.account {
   flex-direction: column;
   background-color: var(--bg-color);
   padding: var(--space-20);
   width: 100%;
 }
-aside.account header {
+#account aside header {
   background-color: var(--dark-3);
   border-top: 1px solid var(--dark-3);
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
-aside.account header p {
+#account aside header p {
   font-size: 18px;
   font-weight: bold;
 }
-aside.account header img {
+#account aside header img {
   height: 25px;
   width: auto;
 }
-aside.account section {
+#account aside section {
   flex-direction: column;
   justify-content: center;
   border-left: 1px solid var(--dark-3);
@@ -2286,11 +2431,13 @@ aside.account section {
   background-color: var(--bg-color);
   border-radius: 0;
   display: none;
+  margin: 0;
 }
-aside.account section.account-content.open {
+#account aside section.account-content.open {
   display: flex;
+  height: calc(100vh - 236px);
 }
-aside.account section a {
+#account aside section a {
   border: 1px solid var(--blue);
   height: 89px;
   margin: var(--space-20);
@@ -2299,23 +2446,23 @@ aside.account section a {
   justify-content: center;
   background-color: var(--white);
 }
-aside.account section a img {
+#account aside section a img {
   height: 45px;
   width: auto;
 }
-aside.account section a p {
+#account aside section a p {
   margin: 0;
   margin-top: var(--space-5);
   justify-content: center;
   font-size: 18px;
   text-transform: capitalize;
 }
-aside.account footer {
+#account aside footer {
   padding: var(--space-20);
   border-radius: 0 0 5px 5px;
   background-color: var(--white);
 }
-aside.account footer button {
+#account aside footer button {
   border: none;
   width: 65px;
   height: 45px;
@@ -2332,13 +2479,13 @@ aside.account footer button {
   text-transform: uppercase;
   color: var(--white);
 }
-aside.account footer button:hover {
+#account aside footer button:hover {
   background-color: #17AC8F;
 }
-aside.account footer button:active {
+#account aside footer button:active {
   background-color: #179E83;
 }
-aside.account footer button > img {
+#account aside footer button > img {
   height: 13px;
   width: auto;
 }
