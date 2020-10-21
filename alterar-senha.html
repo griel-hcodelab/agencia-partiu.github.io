@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mude sua senha - Agência de Turismo Partiu</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/png/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/png/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/png/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/png/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/png/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/png/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/png/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/png/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/png/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/png/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/png/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/png/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/png/favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="msapplication-TileColor" content="#1ABC9C" />
+    <meta name="msapplication-TileImage" content="assets/png/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#1ABC9C" />
+    <meta name="description" content="Conheça o mundo com a melhor agência de turismo! Partiu?" />
+    <meta name="keywords" content="agencia de turismo, site de turismo, comprar viagem, passagem para praia" />
+    <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+    <header class="account-change-password">
+        <a href="index.html">
+            <img src="assets/svg/logo-horizontal.svg" alt="Agência de Turismo Partiu" />
+        </a>
+    </header>
+
+    <section id="account-change-password">
+        <header>
+            <img src="assets/jpg/gabriel.jpg" alt="Gabriel Bispo" />
+            <h1>Olá Gabriel Bispo</h1>
+        </header>
+        <main>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus nemo dolores doloribus omnis repellendus explicabo tempore, officiis libero? Voluptatum alias obcaecati repudiandae porro cum quod temporibus. Quidem, saepe tempore!</h1>
+        </main>
+        
+    
+        <aside>
+            <header>
+                <p>Gerencie sua conta</p>
+                <img src="assets/svg/menu-abrir.svg" alt="Gerencie sua conta" />
+            </header>
+            <section class="account-content">
+                <a href="mudar-senha.html">
+                    <img src="assets/svg/icon-cadeado.svg" alt="Mudar senha" />
+                    <p>mudar senha</p>
+                </a>
+                <a href="mudar-foto.html">
+                    <img src="assets/svg/icon-foto.svg" alt="Mudar foto" />
+                    <p>mudar foto</p>
+                </a>
+            </section>
+            <footer>
+                <button type="button">sair</button>
+            </footer>
+        </aside> 
+    </section>
+
+    
+
+
+  
+    
+    <script>
+        const aside = document.querySelector("aside");
+        aside.firstElementChild.addEventListener("click", function(){
+            toggleMenu();
+        })
+
+        function toggleMenu() {
+            let menuStatus = document.querySelector(".account-content").classList[1];
+            if (menuStatus == undefined) {
+                aside.children[1].classList.add('open');
+                aside.children[0].classList.add('open');
+                document.querySelector("body").style.overflow = 'hidden';
+                document.querySelector(".account-content").style.overflow = 'scroll';
+            } else {
+                aside.children[1].classList.remove('open');
+                aside.children[0].classList.remove('open');
+                document.querySelector("body").style.overflow = '';
+                document.querySelector(".account-content").style.overflow = 'hidden';  
+            }
+        }
+    </script>
+</body>
+</html>

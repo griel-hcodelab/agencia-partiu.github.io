@@ -20,21 +20,26 @@ header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, 
 	display: flex;
 }
 
+//Os buttons passam a ter ícone de cursor
 button {
 	cursor: pointer;
 }
 
+//Estilo do hr dividor
 hr {
 	border: var(--space-5) solid var(--orange-0);
 	width: 80%;
     margin-top: var(--space-20);
     margin-bottom: var(--space-20);
 }
+
+//Estilo padrão dos links
 a {
     text-decoration: none;
     color: inherit;
 } 
 
+//Estilo para as imagens saindo da section
 .float-image {
 	padding: var(--space-20);
 	border-radius: var(--space-5);
@@ -63,6 +68,45 @@ a {
 
 }
 
+//Hover e active dos menus
+.menu {
+	nav {
+		ul {
+			li {
+				a {
+					transition: 0.5s;
+					&:hover {
+						background-color: rgba(41, 128, 185, 0.10);
+					}
+					&:active {
+						background-color: rgba(41, 128, 185, 0.20);
+					}
+				}
+			}
+			&.li {
+				a {
+					transition: 0.5s;
+					&:hover {
+						background-color: rgba(26, 188, 156, 0.10);
+					}
+					&:active {
+						background-color: rgba(26, 188, 156, 0.20);
+					}
+				}
+			}
+		}
+	}
+}
+
+//Hover dos inputs
+.label {
+	transition: 0.3s;
+	&:hover {
+		box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+	}
+}
+
+//Estilo padrão de tags
 h3 {
 	color: var(--red-0);
 	font-size: 25px;
