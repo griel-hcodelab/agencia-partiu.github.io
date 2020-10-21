@@ -2649,131 +2649,51 @@ header.account-change-password img {
 }
 #account-change-password main {
   flex-direction: column;
-  margin-top: var(--space-50);
-}
-#account-change-password main section {
-  padding: var(--space-20);
-  flex-direction: column;
-  margin: var(--space-20) 0;
   background-color: var(--white);
-  border-radius: var(--space-5);
+  padding: var(--space-20);
+  margin-bottom: 170px;
+  border-radius: 0 0 var(--space-5) var(--space-5);
+}
+#account-change-password main form {
+  flex-direction: column;
+}
+#account-change-password main form .label {
+  flex-direction: column;
+  flex-direction: column;
+  border: 1px solid var(--dark-1);
+  border-radius: 5px;
+  padding: var(--space-5);
+  height: 60px;
+  margin-bottom: var(--space-20);
   width: 100%;
 }
-#account-change-password main section header {
-  justify-content: center;
-  padding: var(--space-10);
-  margin: 0;
+#account-change-password main form .label label {
+  color: var(--dark-0) !important;
 }
-#account-change-password main section header h2 {
+#account-change-password main form .label label {
+  font-size: var(--space-20);
+  font-weight: bold;
+  margin-bottom: var(--space-5);
+  font-size: 16px;
+  font-weight: 600;
   color: var(--blue);
-  font-size: calc(var(--space-20) + var(--space-5));
-  font-weight: 400;
-  text-transform: capitalize;
 }
-#account-change-password main section.last-buy > div {
-  border: 1px solid var(--green-3);
-  background-color: var(--green-2);
-  border-radius: var(--space-5);
-  margin: var(--space-10) 0 var(--space-20) 0;
-  color: var(--green-4);
-  text-align: center;
-  justify-content: center;
-  padding: var(--space-10);
-  margin-top: var(--space-20);
-  flex-direction: column;
-  align-items: center;
-}
-#account-change-password main section.last-buy > div h3 {
-  color: var(--dark-0);
-  font-size: var(--space-20);
-  font-weight: bold;
-}
-#account-change-password main section.last-buy > div p {
-  font-size: var(--space-20);
-  font-weight: 600;
-}
-#account-change-password main section.last-buy > div .wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: repeat(1, 2fr);
-  gap: 10px;
-  width: 100%;
-  padding: var(--space-20);
-}
-#account-change-password main section.last-buy > div .wrap div {
-  flex-direction: column;
-  align-items: center;
-  font-size: var(--space-20);
-}
-#account-change-password main section.last-buy > div .wrap div h4 {
-  font-weight: 600;
-}
-#account-change-password main section.last-buy > div .wrap div p {
-  margin: 0;
-  font-weight: 400;
-}
-#account-change-password main section.favorites {
-  padding: var(--space-20);
-  flex-direction: column;
-}
-#account-change-password main section.favorites div {
-  border: 1px solid var(--yellow-3);
-  background-color: var(--yellow-4);
-  border-radius: var(--space-5);
-  margin: var(--space-10) 0 var(--space-20) 0;
-  text-align: center;
-  justify-content: center;
-  padding: var(--space-10);
-  flex-direction: column;
-  padding: 0;
-  padding-top: var(--space-20);
-  padding-right: var(--space-5);
-  padding-left: var(--space-5);
-  margin: 0;
-}
-#account-change-password main section.favorites div h3 {
-  font-size: calc(var(--space-20) + var(--space-5));
-  color: var(--dark-0);
-  font-weight: bold;
-  justify-content: center;
-  text-transform: capitalize;
-  margin-bottom: calc(var(--space-10) + var(--space-5));
-}
-#account-change-password main section.favorites div p {
-  margin: 0;
-  justify-content: center;
-  font-size: var(--space-20);
-}
-#account-change-password main section.favorites div p + p {
-  font-weight: 600;
-}
-#account-change-password main section.favorites div .wrap {
+#account-change-password main form .label div {
   flex-direction: row;
-  border: none;
 }
-#account-change-password main section.favorites div .wrap button {
-  width: 100%;
-}
-#account-change-password main section.favorites div .wrap button.buy {
-  border: 1px solid var(--green-3);
-  background-color: var(--green-2);
-  border-radius: var(--space-5);
-  margin: var(--space-10) 0 var(--space-20) 0;
-  color: var(--green-4);
-  text-align: center;
+#account-change-password main form .label div img {
+  height: 20px;
+  width: 20px;
   justify-content: center;
-  padding: var(--space-10);
-  margin-right: var(--space-20);
-  font-size: var(--space-20);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-style: italic;
-  transition: 0.5s;
+  align-items: center;
 }
-#account-change-password main section.favorites div .wrap button.buy:hover {
-  background-color: #a4d2af;
+#account-change-password main form .label div input {
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--space-10);
 }
-#account-change-password main section.favorites div .wrap button.remove {
+#account-change-password main .alert.danger {
   border: 1px solid var(--red-3);
   background-color: var(--red-3);
   border-radius: var(--space-5);
@@ -2782,17 +2702,49 @@ header.account-change-password img {
   text-align: center;
   justify-content: center;
   padding: var(--space-10);
-  font-size: 18px;
-  font-weight: 30;
-  text-transform: capitalize;
-  font-style: italic;
-  transition: 0.5s;
 }
-#account-change-password main section.favorites div .wrap button.remove:hover {
-  background-color: #ff8691;
+#account-change-password main .button a {
+  border: none;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: none;
 }
-#account-change-password main section + section {
-  margin-bottom: 180px;
+#account-change-password main .button a:hover {
+  background-color: #17AC8F;
+}
+#account-change-password main .button a:active {
+  background-color: #179E83;
+}
+#account-change-password main .button a > img {
+  height: 13px;
+  width: auto;
+}
+#account-change-password main .button button {
+  width: 100%;
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+#account-change-password main .button button:hover {
+  background-color: #2d8ece;
+}
+#account-change-password main .button button:active {
+  background-color: var(--blue);
 }
 #account-change-password aside {
   position: fixed;
@@ -2920,15 +2872,8 @@ header.account-change-password img {
   #account-change-password header {
     margin-top: 100px;
   }
-  #account-change-password main section.last-buy > div .wrap {
-    grid-template-columns: repeat(4, 2fr);
-    grid-template-rows: repeat(1, 2fr);
-  }
-  #account-change-password main section.favorites > div .wrap button {
-    width: 120px;
-  }
-  #account-change-password main section + section {
-    margin-bottom: var(--space-20);
+  #account-change-password main {
+    margin-bottom: 0;
   }
   #account-change-password aside {
     right: -20px;

@@ -37,10 +37,41 @@
     <section id="account-change-password">
         <header>
             <img src="assets/jpg/gabriel.jpg" alt="Gabriel Bispo" />
-            <h1>Olá Gabriel Bispo</h1>
+            <h1>Mudar Senha</h1>
         </header>
         <main>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus nemo dolores doloribus omnis repellendus explicabo tempore, officiis libero? Voluptatum alias obcaecati repudiandae porro cum quod temporibus. Quidem, saepe tempore!</h1>
+            <form>
+                <div class="label">
+                    <label for="current-pass">Digite sua senha atual</label>
+                    <div>
+                        <img src="assets/svg/input-cadeado.svg" alt="Senha atual" />
+                        <input type="password" name="current-pass" id="current-pass" placeholder="********" />
+                    </div>
+                </div>
+                <div class="label">
+                    <label for="new-pass">Digite sua nova senha</label>
+                    <div>
+                        <img src="assets/svg/input-cadeado.svg" alt="Senha atual" />
+                        <input type="password" name="new-pass" id="new-pass" placeholder="********" />
+                    </div>
+                </div>
+                <div class="label">
+                    <label for="new-pass-confirm">Confirme sua nova senha</label>
+                    <div>
+                        <img src="assets/svg/input-cadeado.svg" alt="Senha atual" />
+                        <input type="password" name="new-pass-confirm" id="new-pass-confirm" placeholder="********" />
+                    </div>
+                </div>
+                <div class="alert danger">
+                    A senha atual está errada; As senhas não são iguais
+                </div>
+                <div class="button">
+                    <a href="acessar.html">
+                        <img src="assets/svg/icon-voltar.svg" alt="Voltar" />
+                    </a>
+                    <button type="submit">enviar</button>
+                </div>
+            </form>
         </main>
         
     
