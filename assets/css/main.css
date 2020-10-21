@@ -387,10 +387,7 @@ header#topo .menu nav ul hr {
 main {
   flex-direction: column;
   align-items: center;
-}
-main #content {
-  margin-top: 50px;
-  align-items: center;
+  margin-top: 90px;
 }
 main .divider {
   border: 0;

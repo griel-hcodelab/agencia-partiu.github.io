@@ -93,12 +93,9 @@
 }
 
 main {
-    #content {
-        margin-top: 50px;
-        align-items: center;
-    }
     flex-direction: column;
     align-items: center;
+    margin-top: 90px;
     .divider {
         border: 0;
         background-color: var(--aqua-green);
