@@ -73,7 +73,7 @@ header {
                         display: grid;
                         grid-template-columns: repeat(2, 2fr);
                         grid-template-rows: repeat(1, 2fr);
-                        grid-gap: 10px;
+                        gap: 10px;
                         width: 100%;
                         padding: var(--space-20);
                         div {
@@ -139,7 +139,7 @@ header {
                             &.remove {
                                 @include alert-danger;
                                 font-size: 18px;
-                                font-weight: 400;
+                                font-weight: 30;
                                 text-transform: capitalize;
                                 font-style: italic;
                                 transition: 0.5s;
@@ -177,8 +177,14 @@ header {
                 font-weight: bold;
             }
             img {
+                transition: 1s;
                 height: 25px;
                 width: auto;
+            }
+            &.open {
+                img {
+                    transform: rotate(180deg);
+                }
             }
         }
         section {
@@ -188,8 +194,12 @@ header {
             border-right: 1px solid var(--dark-3);
             background-color: var(--bg-color);
             border-radius: 0;
-            display: none;
+            height: 0px;
+            padding: 0;
             margin: 0;
+            justify-content: flex-start;
+            transition: 1s;
+            overflow: hidden;
             &.account-content {
                 &.open {
                     display: flex;
@@ -197,6 +207,9 @@ header {
                 }
             }
             a {
+                &:first-child {
+                    //margin-top: calc(var(--space-100) + var(--space-20));
+                }
                 border: 1px solid var(--blue);
                 height: 89px;
                 margin: var(--space-20);
@@ -227,6 +240,90 @@ header {
                 font-size: 16px;
                 text-transform: uppercase;
                 color: var(--white);
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    header {
+        &.account {
+            position: fixed;
+            z-index: 2;
+            height: calc(var(--space-50) * 2);
+            img {
+                height: 84px;
+                width: auto;
+            }
+        }
+    }
+    #account {
+        main, header {
+            max-width: calc(100vw - 360px);
+        }
+        header {
+            margin-top: 100px;
+        }
+        main {
+            section {
+                &.last-buy {
+                    > div {
+                        .wrap {
+                            grid-template-columns: repeat(4, 2fr);
+                            grid-template-rows: repeat(1, 2fr);
+                        }
+                    }
+                }
+                &.favorites {
+                    > div {
+                        .wrap {
+                            button {
+                                width: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+            section + section {
+                margin-bottom: var(--space-20);
+            }
+        }
+        aside {
+            right: -20px;
+            bottom: unset;
+            width: 320px;
+            top: 80px;
+            background-color: var(--white);
+            height: 100vh;
+            padding: 0;
+            padding-right: var(--space-20);
+            header {
+                display: none;
+            }
+            section {
+                display: flex;
+                border: none;
+                background-color: var(--white);
+                padding: 0;
+                padding-top: var(--space-20);
+                overflow-y: scroll;
+                height: 100vh;
+                a {
+                    margin: var(--space-10);
+                    &:first-child {
+                        margin-top: var(--space-20);
+                    }
+                }
+            }
+            footer {
+                border-radius: 0;
+                padding: var(--space-20);
+                position: fixed;
+                bottom: 0;
+                width: 300px;
+                button {
+                    height: 35px;
+                }
             }
         }
     }

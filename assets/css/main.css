@@ -2299,7 +2299,7 @@ header.account img {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: repeat(1, 2fr);
-  grid-gap: 10px;
+  gap: 10px;
   width: 100%;
   padding: var(--space-20);
 }
@@ -2386,7 +2386,7 @@ header.account img {
   justify-content: center;
   padding: var(--space-10);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 30;
   text-transform: capitalize;
   font-style: italic;
   transition: 0.5s;
@@ -2420,8 +2420,12 @@ header.account img {
   font-weight: bold;
 }
 #account aside header img {
+  transition: 1s;
   height: 25px;
   width: auto;
+}
+#account aside header.open img {
+  transform: rotate(180deg);
 }
 #account aside section {
   flex-direction: column;
@@ -2430,8 +2434,12 @@ header.account img {
   border-right: 1px solid var(--dark-3);
   background-color: var(--bg-color);
   border-radius: 0;
-  display: none;
+  height: 0px;
+  padding: 0;
   margin: 0;
+  justify-content: flex-start;
+  transition: 1s;
+  overflow: hidden;
 }
 #account aside section.account-content.open {
   display: flex;
@@ -2490,6 +2498,72 @@ header.account img {
   width: auto;
 }
 
+@media (min-width: 1280px) {
+  header.account {
+    position: fixed;
+    z-index: 2;
+    height: calc(var(--space-50) * 2);
+  }
+  header.account img {
+    height: 84px;
+    width: auto;
+  }
+
+  #account main, #account header {
+    max-width: calc(100vw - 360px);
+  }
+  #account header {
+    margin-top: 100px;
+  }
+  #account main section.last-buy > div .wrap {
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(1, 2fr);
+  }
+  #account main section.favorites > div .wrap button {
+    width: 120px;
+  }
+  #account main section + section {
+    margin-bottom: var(--space-20);
+  }
+  #account aside {
+    right: -20px;
+    bottom: unset;
+    width: 320px;
+    top: 80px;
+    background-color: var(--white);
+    height: 100vh;
+    padding: 0;
+    padding-right: var(--space-20);
+  }
+  #account aside header {
+    display: none;
+  }
+  #account aside section {
+    display: flex;
+    border: none;
+    background-color: var(--white);
+    padding: 0;
+    padding-top: var(--space-20);
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  #account aside section a {
+    margin: var(--space-10);
+  }
+  #account aside section a:first-child {
+    margin-top: var(--space-20);
+  }
+  #account aside footer {
+    border-radius: 0;
+    padding: var(--space-20);
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+  }
+  #account aside footer button {
+    height: 35px;
+  }
+}
 #footer {
   width: 100%;
   background-color: var(--dark-0);

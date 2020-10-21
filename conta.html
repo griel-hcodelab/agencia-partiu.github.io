@@ -101,10 +101,6 @@
                         <img src="assets/svg/icon-foto.svg" alt="Mudar foto" />
                         <p>mudar foto</p>
                     </a>
-                    <a href="mudar-foto.html">
-                        <img src="assets/svg/icon-editar.svg" alt="Mudar dados pessoais" />
-                        <p>mudar foto</p>
-                    </a>
                 </section>
                 <footer>
                     <button type="button">sair</button>
@@ -116,35 +112,27 @@
     
 
 
-    <!--<main>
-
-
-        <section class="wishlist">
-            <header>
-                <h2>seus favoritos</h2>
-            </header>
-            <main>
-                <h3>Resort em Salvador</h3>
-                <p>a partir de</p>
-                <p>24x de R$349,90</p>
-                <div>
-                    <button class="go">partiu!</button>
-                    <button class="remove">remover</button>
-                </div>
-            </main>
-
-        </section>
-
-    </main>-->
+  
     
     <script>
         const aside = document.querySelector("aside");
         aside.firstElementChild.addEventListener("click", function(){
-            aside.children[1].classList.toggle('open');
+            toggleMenu();
         })
 
         function toggleMenu() {
-            
+            let menuStatus = document.querySelector(".account-content").classList[1];
+            if (menuStatus == undefined) {
+                aside.children[1].classList.add('open');
+                aside.children[0].classList.add('open');
+                document.querySelector("body").style.overflow = 'hidden';
+                document.querySelector(".account-content").style.overflow = 'scroll';
+            } else {
+                aside.children[1].classList.remove('open');
+                aside.children[0].classList.remove('open');
+                document.querySelector("body").style.overflow = '';
+                document.querySelector(".account-content").style.overflow = 'hidden';  
+            }
         }
     </script>
 </body>
