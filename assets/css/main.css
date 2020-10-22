@@ -38,6 +38,7 @@
   --blue-2: #D1ECF1;
   --blue-3: #BEE5EB;
   --blue-4: #0C5460;
+  --blue-5: #2980B9;
   --aqua-green: #1ABC9C;
   --green-2: #D4EDDA;
   --green-3: #C3E6CB;
@@ -3305,6 +3306,23 @@ header.account-change-photo img {
   padding: var(--space-20);
   margin-bottom: 170px;
   border-radius: 0 0 var(--space-5) var(--space-5);
+}
+#account-change-photo main button {
+  background-color: var(--blue-5);
+  color: var(--white);
+  font-size: calc(var(--space-20) + var(--space-5));
+  text-transform: capitalize;
+  border: 0;
+  border-radius: 5px;
+  height: var(--space-50);
+  width: 280px;
+  justify-content: center;
+  align-items: center;
+}
+#account-change-photo main img {
+  padding: var(--space-5) 0;
+  height: 280px;
+  width: 280px;
 }
 #account-change-photo main .alert {
   width: 281px;

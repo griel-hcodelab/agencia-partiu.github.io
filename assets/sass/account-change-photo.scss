@@ -47,6 +47,23 @@ header {
         padding: var(--space-20);
         margin-bottom: 170px;
         border-radius: 0 0 var(--space-5) var(--space-5);
+        button {
+            background-color: var(--blue-5);
+            color: var(--white);
+            font-size: calc(var(--space-20) + var(--space-5));
+            text-transform: capitalize;
+            border: 0;
+            border-radius: 5px;
+            height: var(--space-50);
+            width: 280px;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            padding: var(--space-5) 0;
+            height: 280px;
+            width: 280px;
+        }
         .alert {
             width: 281px;
             &.success {
