@@ -123,7 +123,7 @@ a {
 .float-image header {
   border-radius: var(--space-5) var(--space-5) 0 0;
 }
-.float-image .box-image > img {
+.float-image .box-image > picture img {
   transform: translateX(-20px);
   width: 100vw;
   box-shadow: 0 0 10px var(--black-50);
