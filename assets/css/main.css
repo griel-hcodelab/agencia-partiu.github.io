@@ -56,6 +56,7 @@
   --green: #1ABC9C;
   --green-1: #11806A;
   --orange: #F86624;
+  --orange-1: #fa4f00;
   --yellow: #FFC400;
   --yellow-1: #ffcf32;
   --yellow-2: #e4af01;
@@ -177,6 +178,22 @@ h2 {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 68px;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  transition: 1s ease-in-out;
+  display: none;
+  transition: 1s ease-in-out;
+}
+.overlay.open {
+  display: flex;
 }
 
 header#topo {
@@ -3323,6 +3340,55 @@ header.account-change-photo img {
   padding: var(--space-5) 0;
   height: 280px;
   width: 280px;
+}
+#account-change-photo main .button {
+  width: 100%;
+}
+#account-change-photo main .button a {
+  border: none;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+#account-change-photo main .button a:hover {
+  background-color: #17AC8F;
+}
+#account-change-photo main .button a:active {
+  background-color: #179E83;
+}
+#account-change-photo main .button a > img {
+  height: 13px;
+  width: auto;
+}
+#account-change-photo main .button a img {
+  height: 13px;
+}
+#account-change-photo main .button button {
+  width: 100%;
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--space-5);
+  font-size: var(--space-20);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+#account-change-photo main .button button:hover {
+  background-color: #2d8ece;
+}
+#account-change-photo main .button button:active {
+  background-color: var(--blue);
 }
 #account-change-photo main .alert {
   width: 281px;

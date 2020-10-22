@@ -64,6 +64,18 @@ header {
             height: 280px;
             width: 280px;
         }
+        .button {
+            width: 100%;
+            a {
+                @include back-button;
+                img {
+                    height: 13px;
+                }
+            }
+            button {
+                @include next-button;
+            }
+        }
         .alert {
             width: 281px;
             &.success {

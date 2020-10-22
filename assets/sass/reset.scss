@@ -126,3 +126,12 @@ h2 {
 	text-transform: capitalize;
 }
 
+//Overlay
+.overlay {
+	@include overlay;
+	display: none;
+	transition: 1s ease-in-out;
+	&.open {
+		display: flex;
+	}
+}
