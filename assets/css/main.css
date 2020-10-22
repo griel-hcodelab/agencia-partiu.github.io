@@ -3211,6 +3211,276 @@ header.account-password-changed img {
     height: 35px;
   }
 }
+header.account-change-photo {
+  flex-direction: row;
+  justify-content: center;
+  height: var(--space-50);
+  width: 100%;
+  background-color: var(--white);
+  padding: var(--space-5) 0;
+}
+header.account-change-photo img {
+  height: 40px;
+  width: auto;
+}
+
+#account-change-photo {
+  flex-direction: column;
+  padding: var(--space-20);
+  padding-top: calc(var(--space-50) * 2);
+  align-items: center;
+}
+#account-change-photo header, #account-change-photo main {
+  min-width: 320px;
+  max-width: 720px;
+  width: 100%;
+}
+#account-change-photo > header {
+  background-color: var(--white);
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+#account-change-photo > header img {
+  height: 91px;
+  width: 91px;
+  border-radius: var(--space-50);
+  transform: translateY(-50px);
+}
+#account-change-photo > header h1 {
+  margin-top: -20px;
+  margin-bottom: var(--space-20);
+  color: var(--blue);
+  font-size: 30px;
+}
+#account-change-photo main {
+  flex-direction: column;
+  background-color: var(--white);
+  padding: var(--space-20);
+  margin-bottom: 170px;
+  border-radius: 0 0 var(--space-5) var(--space-5);
+}
+#account-change-photo main .alert {
+  width: 281px;
+}
+#account-change-photo main .alert.success {
+  border: 1px solid var(--green-3);
+  background-color: var(--green-2);
+  border-radius: var(--space-5);
+  margin: var(--space-10) 0 var(--space-20) 0;
+  color: var(--green-4);
+  text-align: center;
+  justify-content: center;
+  padding: var(--space-10);
+}
+#account-change-photo main a {
+  border: none;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  width: 281px;
+  font-size: 15px;
+}
+#account-change-photo main a:hover {
+  background-color: #17AC8F;
+}
+#account-change-photo main a:active {
+  background-color: #179E83;
+}
+#account-change-photo main a > img {
+  height: 13px;
+  width: auto;
+}
+#account-change-photo aside {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: var(--space-20);
+  width: 100%;
+}
+#account-change-photo aside header {
+  background-color: var(--dark-3);
+  border-top: 1px solid var(--dark-3);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+#account-change-photo aside header p {
+  font-size: 18px;
+  font-weight: bold;
+}
+#account-change-photo aside header img {
+  transition: 1s;
+  height: 25px;
+  width: auto;
+}
+#account-change-photo aside header.open img {
+  transform: rotate(180deg);
+}
+#account-change-photo aside section {
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--dark-3);
+  border-right: 1px solid var(--dark-3);
+  background-color: var(--bg-color);
+  border-radius: 0;
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  transition: 1s;
+  overflow: hidden;
+}
+#account-change-photo aside section.account-content.open {
+  display: flex;
+  height: calc(100vh - 236px);
+}
+#account-change-photo aside section a {
+  border: 1px solid var(--blue);
+  height: 89px;
+  margin: var(--space-20);
+  padding: var(--space-5);
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  transition: 0.5s;
+}
+#account-change-photo aside section a img {
+  height: 45px;
+  width: auto;
+}
+#account-change-photo aside section a p {
+  margin: 0;
+  margin-top: var(--space-5);
+  justify-content: center;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+#account-change-photo aside section a:hover {
+  background-color: rgba(41, 128, 185, 0.1);
+}
+#account-change-photo aside section a:active {
+  background-color: rgba(41, 128, 185, 0.2);
+}
+#account-change-photo aside footer {
+  padding: var(--space-20);
+  border-radius: 0 0 5px 5px;
+  background-color: var(--white);
+}
+#account-change-photo aside footer button {
+  border: none;
+  width: 65px;
+  height: 45px;
+  background-color: var(--aqua-green);
+  border-radius: var(--space-5);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+#account-change-photo aside footer button:hover {
+  background-color: #17AC8F;
+}
+#account-change-photo aside footer button:active {
+  background-color: #179E83;
+}
+#account-change-photo aside footer button > img {
+  height: 13px;
+  width: auto;
+}
+
+@media (min-width: 1280px) {
+  header.account-change-photo {
+    position: fixed;
+    z-index: 2;
+    height: calc(var(--space-50) * 2);
+  }
+  header.account-change-photo img {
+    height: 84px;
+    width: auto;
+  }
+
+  #account-change-photo {
+    padding-top: calc(var(--space-50) * 3);
+  }
+  #account-change-photo main, #account-change-photo header {
+    max-width: 720px;
+    margin-right: 300px;
+  }
+  #account-change-photo header {
+    margin-top: 100px;
+  }
+  #account-change-photo header img {
+    height: 205px;
+    width: auto;
+    border-radius: var(--space-100);
+    transform: translateY(-100px);
+  }
+  #account-change-photo header h1 {
+    margin-top: -70px;
+    font-size: var(--space-50);
+  }
+  #account-change-photo main {
+    margin-bottom: 0;
+  }
+  #account-change-photo aside {
+    display: flex;
+    right: -20px;
+    bottom: unset;
+    width: 320px;
+    top: 80px;
+    background-color: var(--white);
+    height: 100vh;
+    padding: 0;
+    padding-right: var(--space-20);
+  }
+  #account-change-photo aside header {
+    display: none;
+  }
+  #account-change-photo aside section {
+    display: flex;
+    border: none;
+    background-color: var(--white);
+    padding: 0;
+    padding-top: var(--space-20);
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  #account-change-photo aside section a {
+    margin: var(--space-10);
+  }
+  #account-change-photo aside section a:first-child {
+    margin-top: var(--space-20);
+  }
+  #account-change-photo aside footer {
+    border-radius: 0;
+    padding: var(--space-20);
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+  }
+  #account-change-photo aside footer button {
+    height: 35px;
+  }
+}
 #footer {
   width: 100%;
   background-color: var(--dark-0);
