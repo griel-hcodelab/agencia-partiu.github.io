@@ -32,7 +32,7 @@
   --bg-color: #F6F6F6;
   --white: #FFF;
   --black: #000;
-  --blue: #2980B9;
+  --blue: #005b96;
   --blue-0: #35a9f5;
   --blue-1: #483BA8;
   --blue-2: #D1ECF1;
@@ -364,7 +364,7 @@ header#topo .menu nav ul hr {
   justify-content: center;
   align-items: center;
   background-color: var(--yellow);
-  color: var(--white);
+  color: var(--dark-0);
   text-transform: uppercase;
   font-size: 25px;
   font-weight: bold;
@@ -3561,10 +3561,12 @@ header.account-change-photo img {
   flex-direction: column;
   align-items: center;
 }
-#footer > div .main h4 {
+#footer > div .main h3 {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
+  color: var(--white);
+  justify-content: center;
 }
 #footer > div .main .contact {
   flex-direction: column;
