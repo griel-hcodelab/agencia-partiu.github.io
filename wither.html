@@ -205,7 +205,7 @@
         Dobra referente ao inicio da página de destino.
     -->
     <section class="foldOne">
-        <div class="main">
+        <div class="float-image">
             <div class="header">
                 <div id="bread">
                     <div>
@@ -217,15 +217,15 @@
                             <li><a href="#">Nacionais</a></li>
                         </ul>
                     </div>
-    
+
                     <div>
                         <img src="assets/svg/icon-coracao-desmarcado.svg" alt="Favorito-Desmarcado" />
                     </div>
                 </div>    
             </div>
 
-            <div class="img">
-                <img src="assets/jpg/salvador-640.jpg" alt="Salvador">
+            <div class="box-image">
+                <img src="assets/jpg/salvador-1280.jpg" alt="Salvador">
             </div>
 
             <footer class="destinyOne">
@@ -260,18 +260,19 @@
     </section>
     <!--Final Section Inicial-->
 
-     <!--
+    <!--
         Dobra referente ao detalhes da viagem. Onde o usúario informa origem, quantidade de pessoas, numero de quartos
             data de ida e volta.
     -->
     <section class="foldTwo">
-        <div class="main">
-
-            <h2>Detalhes da Viagem</h2>
+        <div class="float-image">
+            <div class="header">
+                <h2>Detalhes da Viagem</h2>    
+            </div>
 
             <div class="details">
                 <div class="step">
-                    <p>Passo 1: Dê mais informações sobre a sua viagem</p>
+                    <p>Passo 1:  Dê mais informações sobre a sua viagem</p>
                 </div>
                 <div class="form">
                     <form>
@@ -283,39 +284,46 @@
                             </div>
                         </div>
 
-                        <div class="label">
-                            <label for="people">Pessoas</label>
-                            <div>
-                                <img src="assets/svg/input-pessoas.svg" alt="Pessoas" >
-                                <input type="number"  name="people" aria-label="people" placeholder="1">
+                        <div class="labels">
+                            <div class="label left">
+                                <label for="people">Pessoas</label>
+                                <div>
+                                    <img src="assets/svg/input-pessoas.svg" alt="Pessoas" >
+                                    <input type="number"  name="people" aria-label="people" placeholder="1">
+                                </div>
+                            </div>
+    
+                            <div class="label right">
+                                <label for="bedrooms">Quartos</label>
+                                <div>
+                                    <img src="assets/svg/input-quartos.svg" alt="Quartos" >
+                                    <input type="number"  name="bedrooms" aria-label="bedrooms" placeholder="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="labels">
+                            <div class="label left">
+                                <label for="going">Ida</label>
+                                <div>
+                                    <img src="assets/svg/input-calendario.svg" alt="Ida" >
+                                    <input type="text"  name="going" aria-label="going" placeholder="23/12/20">
+                                </div>
+                            </div>
+    
+                            <div class="label right">
+                                <label for="return">Volta</label>
+                                <div>
+                                    <img src="assets/svg/input-calendario.svg" alt="Volta" >
+                                    <input type="text"  name="return" aria-label="return" placeholder="02/01/21">
+                                </div>
                             </div>
                         </div>
 
-                        <div class="label">
-                            <label for="bedrooms">Quartos</label>
-                            <div>
-                                <img src="assets/svg/input-quartos.svg" alt="Quartos" >
-                                <input type="number"  name="bedrooms" aria-label="bedrooms" placeholder="1">
-                            </div>
+                        <div class="button">
+                            <button type="submit" class="filter">Filtrar</button>
                         </div>
-
-                        <div class="label">
-                            <label for="going">Ida</label>
-                            <div>
-                                <img src="assets/svg/input-calendario.svg" alt="Ida" >
-                                <input type="text"  name="going" aria-label="going" placeholder="23/12/20">
-                            </div>
-                        </div>
-
-                        <div class="label">
-                            <label for="return">Volta</label>
-                            <div>
-                                <img src="assets/svg/input-calendario.svg" alt="Volta" >
-                                <input type="text"  name="return" aria-label="return" placeholder="02/01/21">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="filter">Filtrar</button>
+                        
                     </form>
                 </div>
             </div>
@@ -327,9 +335,12 @@
         Dobra referente ao inicio da página de Hospedagem.
         Onde o usúario escolherá o hotel desejado para a sua estadia.
     -->
+
     <section class="foldThree">
-        <div class="main">
-            <h2>Hospedagem</h2>
+        <div class="float-image">
+            <div class="header">
+                <h2>Hospedagem</h2>    
+            </div>
 
             <div class="details">
                 <div class="step">
@@ -358,19 +369,19 @@
                 <button class="next">Próximo ></button>
             </div>
 
-            <div class="avaliacao">
+            <div class="evaluation">
                 <img src="assets/svg/icon-estrela-completa.svg" alt="Nota" />
                 <img src="assets/svg/icon-estrela-completa.svg" alt="Nota" />
                 <img src="assets/svg/icon-estrela-completa.svg" alt="Nota" />
                 <img src="assets/svg/icon-estrela-dividida.svg" alt="Nota" />
             </div>
 
-            <h2 class="afterEvalutaion">Gran Hotel Stella Maris</h2>
+            <h2 class="afterEvaluation">Gran Hotel Stella Maris</h2>
 
-            <div class="img">
-                <img src="assets/jpg/resort-640.jpg" alt="Salvador">
+            <div class="box-image">
+                <img src="assets/jpg/resort-1280.jpg" alt="Salvador">
             </div>
-                
+
             <footer>
                 <div class="svgServices">
                     <img src="assets/svg/service-wifi.svg" alt="Wifi" />
@@ -399,8 +410,10 @@
         Onde o usúario escolherá o comanhia aérea desejada e as datas de ida e volta.
     -->
     <section class="foldFour">
-        <div class="main">
-            <h2>Passagem</h2>
+        <div class="float-image">
+            <div class="header">
+                <h2>Passagem</h2>  
+            </div>
 
             <div class="details">
                 <div class="step">
@@ -430,56 +443,60 @@
             </div>
 
             <div class="wrap">
-                <div class="panel">
-                    <p class="go">Ida</p>
-                    <p class="date">12/11/2020</p>
-                    <p class="value">R$536,99</p>
+                <div class="panelWrap left">
+                    <div class="panel">
+                        <p class="go">Ida</p>
+                        <p class="date">12/11/2020</p>
+                        <p class="value">R$536,99</p>
+                    </div>
+                    <div class="panelInst">
+                        <div>
+                            <p>Partida</p>
+                            <p>02:00</p>
+                        </div>
+                        <div>
+                            <p>Duração</p>
+                            <p>02:00</p>
+                        </div>
+                        <div>
+                            <p>Escala</p>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p>Bagagem</p>
+                            <img src="assets/svg/icon-bagagens.svg" alt="Bagagens">
+                        </div>
+                    </div>
                 </div>
-                <div class="panelInst">
-                    <div>
-                        <p>Partida</p>
-                        <p>02:00</p>
+                
+                
+                <div class="panelWrap right">
+                    <div class="panel">
+                        <p class="go">Volta</p>
+                        <p class="date">18/11/2020</p>
+                        <p class="value">R$536,99</p>
                     </div>
-                    <div>
-                        <p>Duração</p>
-                        <p>02:00</p>
-                    </div>
-                    <div>
-                        <p>Escala</p>
-                        <p>0</p>
-                    </div>
-                    <div>
-                        <p>Bagagem</p>
-                        <img src="assets/svg/icon-bagagens.svg" alt="Bagagens">
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <p class="go">Volta</p>
-                    <p class="date">18/11/2020</p>
-                    <p class="value">R$536,99</p>
-                </div>
-                <div class="panelInst">
-                    <div>
-                        <p>Partida</p>
-                        <p>02:00</p>
-                    </div>
-                    <div>
-                        <p>Duração</p>
-                        <p>02:00</p>
-                    </div>
-                    <div>
-                        <p>Escala</p>
-                        <p>0</p>
-                    </div>
-                    <div>
-                        <p>Bagagem</p>
-                        <img src="assets/svg/icon-bagagens.svg" alt="Bagagens">
+                    <div class="panelInst">
+                        <div>
+                            <p>Partida</p>
+                            <p>02:00</p>
+                        </div>
+                        <div>
+                            <p>Duração</p>
+                            <p>02:00</p>
+                        </div>
+                        <div>
+                            <p>Escala</p>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p>Bagagem</p>
+                            <img src="assets/svg/icon-bagagens.svg" alt="Bagagens">
+                        </div>
                     </div>
                 </div>
             </div>
 
-                
             <footer>
                 <div class="buttons">
                     <button class="back"><img src="assets/svg/icon-voltar-cinza.svg" alt="Voltar">Voltar para o filtro</button>
@@ -494,9 +511,10 @@
         Dobra referente ao resumo viagem. Onde o usúario terá informações do destino escolhido.
     -->
     <section class="foldFive">
-        <div class="main">
-
-            <h2>Resumo</h2>
+        <div class="float-image">
+            <div class="header">
+                <h2>Resumo</h2>   
+            </div>
 
             <div class="details">
                 <div class="form">
@@ -515,20 +533,22 @@
                             </div>
                         </div>
 
-                        <div class="label">
-                            <label for="quantities">Pessoas</label>
-                            <div>
-                                <input type="text"  name="quantities" aria-label="quantities" placeholder="1 Pessoa(s)">
+                        <div class="resume">
+                            <div class="label">
+                                <label for="quantities">Pessoas</label>
+                                <div>
+                                    <input type="text"  name="quantities" aria-label="quantities" placeholder="1 Pessoa(s)">
+                                </div>
+                            </div>
+    
+                            <div class="label">
+                                <label for="bedrooms">Quartos</label>
+                                <div>
+                                    <input type="text"  name="bedrooms" aria-label="bedrooms" placeholder="1 Quarto(s)">
+                                </div>
                             </div>
                         </div>
-
-                        <div class="label">
-                            <label for="bedrooms">Quartos</label>
-                            <div>
-                                <input type="text"  name="bedrooms" aria-label="bedrooms" placeholder="1 Quarto(s)">
-                            </div>
-                        </div>
-
+                        
                         <div class="label">
                             <label for="airlines">Companhia Aérea</label>
                             <div>
@@ -536,19 +556,22 @@
                             </div>
                         </div>
 
-                        <div class="label">
-                            <label for="going">Ida</label>
-                            <div>
-                                <input type="text"  name="going" aria-label="going" placeholder="12/11/2020">
+                        <div class="resume">
+                            <div class="label">
+                                <label for="going">Ida</label>
+                                <div>
+                                    <input type="text"  name="going" aria-label="going" placeholder="12/11/2020">
+                                </div>
+                            </div>
+    
+                            <div class="label">
+                                <label for="back">Volta</label>
+                                <div>
+                                    <input type="text"  name="back" aria-label="back" placeholder="18/11/2020">
+                                </div>
                             </div>
                         </div>
-
-                        <div class="label">
-                            <label for="back">Volta</label>
-                            <div>
-                                <input type="text"  name="back" aria-label="back" placeholder="18/11/2020">
-                            </div>
-                        </div>
+                        
 
                         <div class="label">
                             <label for="back">Valor Total</label>

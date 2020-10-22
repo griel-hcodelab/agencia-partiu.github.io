@@ -550,21 +550,15 @@ main .float-image footer .call-to-action a:hover {
     margin-left: var(--space-10);
   }
 }
-.foldOne .main {
-  margin-top: 90px;
-  border-radius: var(--space-5);
-  flex-direction: column;
-  width: 100%;
-  max-width: 1180px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+.foldOne .float-image {
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.foldOne .float-image .header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
   background-color: var(--white);
 }
-.foldOne .header {
-  border-radius: var(--space-5) var(--space-5) 0 0;
-}
-.foldOne .header #bread {
+.foldOne .float-image .header #bread {
   margin: var(--space-20);
   margin-bottom: 0;
   padding: 0;
@@ -573,91 +567,90 @@ main .float-image footer .call-to-action a:hover {
   justify-content: space-between;
   width: 100%;
 }
-.foldOne .header #bread ul {
+.foldOne .float-image .header #bread ul {
   flex-direction: row;
   margin: 0;
   padding: 0;
 }
-.foldOne .header #bread ul li {
+.foldOne .float-image .header #bread ul li {
   margin: 0;
   padding: 0;
   flex-direction: row;
   list-style: none;
   font-size: 12px;
 }
-.foldOne .header #bread ul li a {
+.foldOne .float-image .header #bread ul li a {
   text-decoration: none;
 }
-.foldOne div.img > img {
-  transform: translateX(-20px);
-  width: 100vw;
-  box-shadow: 0 0 10px var(--black-50);
-  margin-top: var(--space-10);
-  margin-bottom: var(--space-10);
-  max-height: 1200px;
+.foldOne .float-image .box-image {
+  background-color: var(--white);
 }
-.foldOne footer {
+.foldOne .float-image .box-image > img {
+  margin: var(--space-10) 0;
+}
+.foldOne .float-image footer {
   border-radius: 0 0 var(--space-5) var(--space-5);
+  background-color: var(--white);
 }
-.foldOne footer.destinyOne {
+.foldOne .float-image footer.destinyOne {
   margin: 0;
   padding-top: 0;
   flex-direction: column;
   align-items: center;
 }
-.foldOne footer.destinyOne header {
+.foldOne .float-image footer.destinyOne header {
   margin: 0;
   padding: 0;
 }
-.foldOne footer.destinyOne header h2 {
+.foldOne .float-image footer.destinyOne header h2 {
   font-size: 30px;
   font-weight: 900;
   text-transform: none;
   margin: 0;
   padding: 0;
 }
-.foldOne footer.destinyOne .avaliacao img {
+.foldOne .float-image footer.destinyOne .avaliacao img {
   width: 15px;
   margin: 0;
   margin-left: var(--space-5);
-  margin-bottom: var(--space-20);
   padding: 0;
 }
-.foldOne footer.destinyOne p.title {
+.foldOne .float-image footer.destinyOne p.title {
   font-size: 15px;
   font-weight: bold;
   margin: var(--space-10) 0;
   padding: 0;
   text-align: center;
 }
-.foldOne footer.destinyOne p.content {
+.foldOne .float-image footer.destinyOne p.content {
   font-size: 15px;
   margin-top: var(--space-20);
   padding: 0 var(--space-20);
   text-align: center;
 }
-.foldOne footer.destinyOne div.icons {
+.foldOne .float-image footer.destinyOne .icons {
   margin: var(--space-10) 0;
   width: 100%;
+  justify-content: center;
 }
-.foldOne footer.destinyOne div.icons ul {
+.foldOne .float-image footer.destinyOne .icons ul {
   margin: var(--space-20);
   padding: 0;
   align-items: center;
   flex-direction: row;
 }
-.foldOne footer.destinyOne div.icons ul li {
+.foldOne .float-image footer.destinyOne .icons ul li {
   align-items: center;
   justify-content: space-evenly;
   width: 100px;
 }
-.foldOne footer.destinyOne div {
+.foldOne .float-image footer.destinyOne div {
   margin: var(--space-20);
 }
-.foldOne footer.destinyOne div button {
+.foldOne .float-image footer.destinyOne div button {
   align-items: center;
 }
-.foldOne footer.destinyOne div .menor {
+.foldOne .float-image footer.destinyOne div .menor {
   border: none;
   width: 65px;
   height: 45px;
@@ -674,17 +667,17 @@ main .float-image footer .call-to-action a:hover {
   border: none;
   border-radius: 50%;
 }
-.foldOne footer.destinyOne div .menor:hover {
+.foldOne .float-image footer.destinyOne div .menor:hover {
   background-color: #17AC8F;
 }
-.foldOne footer.destinyOne div .menor:active {
+.foldOne .float-image footer.destinyOne div .menor:active {
   background-color: #179E83;
 }
-.foldOne footer.destinyOne div .menor > img {
+.foldOne .float-image footer.destinyOne div .menor > img {
   height: 13px;
   width: auto;
 }
-.foldOne footer.destinyOne div .maior {
+.foldOne .float-image footer.destinyOne div .maior {
   border: none;
   display: flex;
   justify-content: center;
@@ -701,48 +694,51 @@ main .float-image footer .call-to-action a:hover {
   font-weight: bold;
 }
 
-.foldTwo .main {
-  margin-top: var(--space-5);
-  border-radius: var(--space-5);
-  flex-direction: column;
-  width: 100%;
-  max-width: 1180px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  background-color: var(--white);
+.foldTwo .float-image {
+  margin: 0 auto;
 }
-.foldTwo h2 {
+.foldTwo .float-image .header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+  background-color: var(--white);
+  justify-content: center;
+}
+.foldTwo .float-image .header h2 {
   font-size: 27px;
   font-weight: 600;
   text-transform: uppercase;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin: var(--space-20);
   margin-bottom: var(--space-5);
   padding: 0;
-  justify-content: center;
 }
-.foldTwo .details {
+.foldTwo .float-image .details {
   flex-direction: column;
-  margin: var(--space-20);
   margin-top: 0;
+  padding: var(--space-20);
+  background-color: var(--white);
+  border-radius: 0 0 var(--space-5) var(--space-5);
 }
-.foldTwo .details .step {
+.foldTwo .float-image .details .step {
   margin-bottom: var(--space-10);
 }
-.foldTwo .details .step p {
+.foldTwo .float-image .details .step p {
   flex-direction: row;
   font-size: 20px;
   margin-top: var(--space-10);
 }
-.foldTwo .details div.form {
+.foldTwo .float-image .details .form {
   justify-content: center;
+  background-color: var(--white);
 }
-.foldTwo .details div.form > form {
+.foldTwo .float-image .details .form > form {
   flex-direction: column;
   width: 100%;
 }
-.foldTwo .details div.form > form .label {
+.foldTwo .float-image .details .form > form .labelWrap {
+  flex-direction: column;
+}
+.foldTwo .float-image .details .form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -758,7 +754,7 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   border: 1px solid var(--dark-3);
 }
-.foldTwo .details div.form > form .label label {
+.foldTwo .float-image .details .form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -766,28 +762,28 @@ main .float-image footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldTwo .details div.form > form .label div {
+.foldTwo .float-image .details .form > form .label div {
   flex-direction: row;
 }
-.foldTwo .details div.form > form .label div img {
+.foldTwo .float-image .details .form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldTwo .details div.form > form .label div input {
+.foldTwo .float-image .details .form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldTwo .details div.form > form input::placeholder {
+.foldTwo .float-image .details .form > form input::placeholder {
   font-size: 16px;
 }
-.foldTwo .details div.form > form .labels {
+.foldTwo .float-image .details .form > form .labels {
   flex-direction: column;
 }
-.foldTwo .details div.form > form .filter {
+.foldTwo .float-image .details .form > form .filter {
   border: none;
   display: flex;
   justify-content: center;
@@ -802,25 +798,18 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
-}
-.foldTwo .details div.form > form > img {
-  height: 68px;
-  width: 261px;
-  margin: var(--space-5) auto;
+  margin-bottom: var(--space-20);
 }
 
-.foldThree .main {
-  margin-top: var(--space-5);
-  border-radius: var(--space-5);
-  flex-direction: column;
-  width: 100%;
-  max-width: 1180px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  background-color: var(--white);
+.foldThree .float-image {
+  margin: 0 auto;
 }
-.foldThree h2 {
+.foldThree .float-image .header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+  background-color: var(--white);
+  justify-content: center;
+}
+.foldThree .float-image .header h2 {
   font-size: 27px;
   font-weight: 600;
   text-transform: uppercase;
@@ -829,28 +818,29 @@ main .float-image footer .call-to-action a:hover {
   padding: 0;
   justify-content: center;
 }
-.foldThree .details {
+.foldThree .float-image .details {
   flex-direction: column;
-  margin: var(--space-20);
   margin-top: 0;
   margin-bottom: 0;
+  padding: var(--space-20);
+  background-color: var(--white);
 }
-.foldThree .details .step {
+.foldThree .float-image .details .step {
   margin-bottom: var(--space-10);
 }
-.foldThree .details .step p {
+.foldThree .float-image .details .step p {
   flex-direction: row;
   font-size: 20px;
   margin-top: var(--space-10);
 }
-.foldThree .details div.form {
+.foldThree .float-image .details .form {
   justify-content: center;
 }
-.foldThree .details div.form > form {
+.foldThree .float-image .details .form > form {
   flex-direction: column;
   width: 100%;
 }
-.foldThree .details div.form > form .label {
+.foldThree .float-image .details .form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -866,7 +856,7 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   border: 1px solid var(--dark-3);
 }
-.foldThree .details div.form > form .label label {
+.foldThree .float-image .details .form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -874,28 +864,28 @@ main .float-image footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldThree .details div.form > form .label div {
+.foldThree .float-image .details .form > form .label div {
   flex-direction: row;
 }
-.foldThree .details div.form > form .label div img {
+.foldThree .float-image .details .form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldThree .details div.form > form .label div input {
+.foldThree .float-image .details .form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldThree .details div.form > form input::placeholder {
+.foldThree .float-image .details .form > form input::placeholder {
   font-size: 16px;
 }
-.foldThree .details div.form > form .labels {
+.foldThree .float-image .details .form > form .labels {
   flex-direction: column;
 }
-.foldThree .details div.form > form .filter {
+.foldThree .float-image .details .form > form .filter {
   border: none;
   display: flex;
   justify-content: center;
@@ -911,23 +901,25 @@ main .float-image footer .call-to-action a:hover {
   font-size: 20px;
   font-weight: bold;
 }
-.foldThree .details div.form > form > img {
+.foldThree .float-image .details .form > form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
-.foldThree div.number {
+.foldThree .float-image .number {
   justify-content: flex-end;
+  background-color: var(--white);
 }
-.foldThree div.number span {
+.foldThree .float-image .number span {
   background-color: var(--dark-3);
   font-size: 20px;
 }
-.foldThree div.previewNext {
+.foldThree .float-image .previewNext {
   justify-content: space-between;
-  margin: var(--space-10) 0;
+  padding: var(--space-10) 0;
+  background-color: var(--white);
 }
-.foldThree div.previewNext button {
+.foldThree .float-image .previewNext button {
   border: none;
   display: flex;
   justify-content: center;
@@ -945,10 +937,11 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 15px;
 }
-.foldThree div.avaliacao {
+.foldThree .float-image .evaluation {
   justify-content: center;
+  background-color: var(--white);
 }
-.foldThree div.avaliacao img {
+.foldThree .float-image .evaluation img {
   width: 15px;
   margin: 0;
   margin-left: var(--space-5);
@@ -956,56 +949,56 @@ main .float-image footer .call-to-action a:hover {
   margin-bottom: var(--space-10);
   padding: 0;
 }
-.foldThree h2.afterEvalutaion {
+.foldThree .float-image .afterEvaluation {
   font-size: 26px;
   font-weight: 600;
   justify-content: center;
-  text-transform: none;
-  margin: 0 var(--space-20);
+  text-transform: capitalize;
+  background-color: var(--white);
 }
-.foldThree div.img > img {
-  transform: translateX(-20px);
-  width: 100vw;
-  box-shadow: 0 0 10px var(--black-50);
-  margin-top: var(--space-10);
-  margin-bottom: var(--space-10);
-  max-height: 1200px;
+.foldThree .float-image .box-image {
+  background-color: var(--white);
 }
-.foldThree footer {
+.foldThree .float-image .box-image > img {
+  margin: var(--space-10) 0;
+}
+.foldThree .float-image footer {
   flex-direction: column;
+  border-radius: 0 0 var(--space-5) var(--space-5);
+  background-color: var(--white);
 }
-.foldThree footer div.svgServices {
+.foldThree .float-image footer .svgServices {
   justify-content: center;
 }
-.foldThree footer div.svgServices img {
+.foldThree .float-image footer .svgServices img {
   width: 40px;
   margin: 0 var(--space-5);
 }
-.foldThree footer p {
+.foldThree .float-image footer p {
   margin: 0;
   padding: 0;
 }
-.foldThree footer div.adressInfo {
+.foldThree .float-image footer .adressInfo {
   flex-direction: column;
   align-items: center;
 }
-.foldThree footer .adress {
+.foldThree .float-image footer .adress {
   font-size: 20px;
   font-weight: 600;
   margin: var(--space-20) 0;
   text-align: center;
 }
-.foldThree footer .info {
+.foldThree .float-image footer .info {
   font-size: 20px;
   font-weight: 400;
   margin: 0 var(--space-20);
   text-align: center;
 }
-.foldThree footer .buttons {
+.foldThree .float-image footer .buttons {
   flex-direction: column;
   margin: var(--space-20);
 }
-.foldThree footer .buttons .back {
+.foldThree .float-image footer .buttons .back {
   border: none;
   display: flex;
   justify-content: center;
@@ -1026,11 +1019,11 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-.foldThree footer .buttons .back img {
+.foldThree .float-image footer .buttons .back img {
   width: 25px;
   margin-right: var(--space-10);
 }
-.foldThree footer .buttons .check {
+.foldThree .float-image footer .buttons .check {
   border: none;
   display: flex;
   justify-content: center;
@@ -1050,18 +1043,15 @@ main .float-image footer .call-to-action a:hover {
   font-size: 20px;
 }
 
-.foldFour .main {
-  margin-top: var(--space-5);
-  border-radius: var(--space-5);
-  flex-direction: column;
-  width: 100%;
-  max-width: 1180px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  background-color: var(--white);
+.foldFour .float-image {
+  margin: 0 auto;
 }
-.foldFour h2 {
+.foldFour .float-image .header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+  background-color: var(--white);
+  justify-content: center;
+}
+.foldFour .float-image .header h2 {
   font-size: 27px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1070,27 +1060,30 @@ main .float-image footer .call-to-action a:hover {
   padding: 0;
   justify-content: center;
 }
-.foldFour .details {
+.foldFour .float-image .details {
   flex-direction: column;
   margin-top: 0;
   margin-bottom: 0;
+  padding: var(--space-20);
+  padding-bottom: 0;
+  background-color: var(--white);
 }
-.foldFour .details .step {
+.foldFour .float-image .details .step {
   margin-bottom: var(--space-10);
 }
-.foldFour .details .step p {
+.foldFour .float-image .details .step p {
   flex-direction: row;
   font-size: 20px;
   margin-top: var(--space-10);
 }
-.foldFour .details div.form {
+.foldFour .float-image .details .form {
   justify-content: center;
 }
-.foldFour .details div.form > form {
+.foldFour .float-image .details .form > form {
   flex-direction: column;
   width: 100%;
 }
-.foldFour .details div.form > form .label {
+.foldFour .float-image .details .form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -1106,7 +1099,7 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   border: 1px solid var(--dark-3);
 }
-.foldFour .details div.form > form .label label {
+.foldFour .float-image .details .form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -1114,28 +1107,28 @@ main .float-image footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldFour .details div.form > form .label div {
+.foldFour .float-image .details .form > form .label div {
   flex-direction: row;
 }
-.foldFour .details div.form > form .label div img {
+.foldFour .float-image .details .form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldFour .details div.form > form .label div input {
+.foldFour .float-image .details .form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldFour .details div.form > form input::placeholder {
+.foldFour .float-image .details .form > form input::placeholder {
   font-size: 16px;
 }
-.foldFour .details div.form > form .labels {
+.foldFour .float-image .details .form > form .labels {
   flex-direction: column;
 }
-.foldFour .details div.form > form .filter {
+.foldFour .float-image .details .form > form .filter {
   border: none;
   display: flex;
   justify-content: center;
@@ -1151,23 +1144,25 @@ main .float-image footer .call-to-action a:hover {
   font-size: 20px;
   font-weight: bold;
 }
-.foldFour .details div.form > form > img {
+.foldFour .float-image .details .form > form > img {
   height: 68px;
   width: 261px;
   margin: var(--space-5) auto;
 }
-.foldFour div.number {
+.foldFour .float-image .number {
   justify-content: flex-end;
+  background-color: var(--white);
 }
-.foldFour div.number span {
+.foldFour .float-image .number span {
   background-color: var(--dark-3);
   font-size: 20px;
 }
-.foldFour div.previewNext {
+.foldFour .float-image .previewNext {
   justify-content: space-between;
-  margin: var(--space-10) 0;
+  padding: var(--space-10) 0;
+  background-color: var(--white);
 }
-.foldFour div.previewNext button {
+.foldFour .float-image .previewNext button {
   border: none;
   display: flex;
   justify-content: center;
@@ -1185,18 +1180,18 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 15px;
 }
-.foldFour div.wrap {
+.foldFour .float-image .wrap {
   flex-direction: column;
   background-color: #E7F8F5;
   margin: 0;
   padding: 0;
 }
-.foldFour div.wrap .panel {
+.foldFour .float-image .wrap .panel {
   margin: 0;
   flex-direction: row;
   justify-content: space-between;
 }
-.foldFour div.wrap .panel p.go {
+.foldFour .float-image .wrap .panel p.go {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1208,7 +1203,7 @@ main .float-image footer .call-to-action a:hover {
   border-radius: 0 5px 5px 0;
   background-color: var(--blue);
 }
-.foldFour div.wrap .panel p.date {
+.foldFour .float-image .wrap .panel p.date {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1218,7 +1213,7 @@ main .float-image footer .call-to-action a:hover {
   width: 85px;
   height: 35px;
 }
-.foldFour div.wrap .panel p.value {
+.foldFour .float-image .wrap .panel p.value {
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -1230,32 +1225,38 @@ main .float-image footer .call-to-action a:hover {
   border-radius: 5px 0px 0px 5px;
   background-color: var(--blue);
 }
-.foldFour div.wrap .panelInst {
+.foldFour .float-image .wrap .panelInst {
   justify-content: space-between;
   margin-bottom: var(--space-20);
 }
-.foldFour div.wrap .panelInst div {
+.foldFour .float-image .wrap .panelInst div {
   flex-direction: column;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-.foldFour div.wrap .panelInst div p {
+.foldFour .float-image .wrap .panelInst div p {
   justify-content: center;
   margin: 0;
 }
-.foldFour div.wrap .panelInst div + div {
+.foldFour .float-image .wrap .panelInst div + div {
   border-left: 1px solid var(--dark-0);
 }
-.foldFour footer {
+.foldFour .float-image .wrap .panelWrap {
+  margin: 0;
   flex-direction: column;
 }
-.foldFour footer .buttons {
+.foldFour .float-image footer {
+  flex-direction: column;
+  border-radius: 0 0 var(--space-5) var(--space-5);
+  background-color: var(--white);
+}
+.foldFour .float-image footer .buttons {
   flex-direction: column;
   margin: var(--space-20);
 }
-.foldFour footer .buttons .back {
+.foldFour .float-image footer .buttons .back {
   border: none;
   display: flex;
   justify-content: center;
@@ -1276,11 +1277,11 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-.foldFour footer .buttons .back img {
+.foldFour .float-image footer .buttons .back img {
   width: 25px;
   margin-right: var(--space-10);
 }
-.foldFour footer .buttons .check {
+.foldFour .float-image footer .buttons .check {
   border: none;
   display: flex;
   justify-content: center;
@@ -1300,48 +1301,45 @@ main .float-image footer .call-to-action a:hover {
   font-size: 20px;
 }
 
-.foldFive .main {
-  margin-top: var(--space-5);
-  border-radius: var(--space-5);
-  flex-direction: column;
-  width: 100%;
-  max-width: 1180px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  background-color: var(--white);
+.foldFive .float-image {
+  margin: 0 auto;
 }
-.foldFive h2 {
+.foldFive .float-image .header {
+  border-radius: var(--space-5) var(--space-5) 0 0;
+  background-color: var(--white);
+  justify-content: center;
+}
+.foldFive .float-image .header h2 {
   font-size: 27px;
   font-weight: 600;
   text-transform: uppercase;
-  align-items: flex-end;
   margin: var(--space-20);
   margin-bottom: var(--space-5);
   padding: 0;
   justify-content: center;
 }
-.foldFive .details {
+.foldFive .float-image .details {
   flex-direction: column;
-  margin: var(--space-20);
+  padding: var(--space-20);
   margin-top: 0;
+  background-color: var(--white);
 }
-.foldFive .details .step {
+.foldFive .float-image .details .step {
   margin-bottom: var(--space-10);
 }
-.foldFive .details .step p {
+.foldFive .float-image .details .step p {
   flex-direction: row;
   font-size: 20px;
   margin-top: var(--space-10);
 }
-.foldFive .details div.form {
+.foldFive .float-image .details .form {
   justify-content: center;
 }
-.foldFive .details div.form > form {
+.foldFive .float-image .details .form > form {
   flex-direction: column;
   width: 100%;
 }
-.foldFive .details div.form > form .label {
+.foldFive .float-image .details .form > form .label {
   flex-direction: column;
   flex-direction: column;
   border: 1px solid var(--dark-1);
@@ -1357,7 +1355,7 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   border: 1px solid var(--green);
 }
-.foldFive .details div.form > form .label label {
+.foldFive .float-image .details .form > form .label label {
   font-size: var(--space-20);
   font-weight: bold;
   margin-bottom: var(--space-5);
@@ -1365,56 +1363,39 @@ main .float-image footer .call-to-action a:hover {
   font-weight: 600;
   color: var(--blue);
 }
-.foldFive .details div.form > form .label div {
+.foldFive .float-image .details .form > form .label div {
   flex-direction: row;
 }
-.foldFive .details div.form > form .label div img {
+.foldFive .float-image .details .form > form .label div img {
   height: 20px;
   width: 20px;
   justify-content: center;
   align-items: center;
 }
-.foldFive .details div.form > form .label div input {
+.foldFive .float-image .details .form > form .label div input {
   border: none;
   width: 100%;
   outline: none;
   padding-left: var(--space-10);
 }
-.foldFive .details div.form > form .label:nth-last-child(-n+2) {
+.foldFive .float-image .details .form > form div:nth-child(6) {
   border: 1px solid var(--red-0);
   color: var(--blue);
 }
-.foldFive .details div.form > form .labels {
+.foldFive .float-image .details .form > form .labels {
   flex-direction: column;
 }
-.foldFive .details div.form > form .filter {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  height: 45px;
-  background-color: var(--yellow);
-  border-radius: 25px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-}
-.foldFive .details div.form > form > img {
-  height: 68px;
-  width: 261px;
-  margin: var(--space-5) auto;
-}
-.foldFive .details div.form > form footer {
+.foldFive .float-image .details .form > form .resume {
   flex-direction: column;
 }
-.foldFive .details div.form > form footer .buttons {
+.foldFive .float-image .details .form > form footer {
+  flex-direction: column;
+  border-radius: 0 0 var(--space-5) var(--space-5);
+}
+.foldFive .float-image .details .form > form footer .buttons {
   flex-direction: column;
 }
-.foldFive .details div.form > form footer .buttons .back {
+.foldFive .float-image .details .form > form footer .buttons .back {
   border: none;
   display: flex;
   justify-content: center;
@@ -1435,11 +1416,11 @@ main .float-image footer .call-to-action a:hover {
   text-transform: uppercase;
   font-size: 20px;
 }
-.foldFive .details div.form > form footer .buttons .back img {
+.foldFive .float-image .details .form > form footer .buttons .back img {
   width: 25px;
   margin-right: var(--space-10);
 }
-.foldFive .details div.form > form footer .buttons .check {
+.foldFive .float-image .details .form > form footer .buttons .check {
   border: none;
   display: flex;
   justify-content: center;
@@ -1459,6 +1440,223 @@ main .float-image footer .call-to-action a:hover {
   font-size: 20px;
 }
 
+@media (min-width: 1200px) {
+  .foldOne .float-image {
+    margin-top: 120px;
+    max-width: 720px;
+    padding: 0;
+  }
+  .foldOne .float-image .header #bread ul li {
+    font-size: 15px;
+  }
+  .foldOne .float-image .box-image > img {
+    height: 480px;
+  }
+
+  .foldTwo .float-image {
+    max-width: 720px;
+    padding: 0;
+    margin-top: var(--space-20);
+  }
+  .foldTwo .float-image .details .form > form input::placeholder {
+    text-align: center;
+  }
+  .foldTwo .float-image .details .form > form .labels {
+    flex-direction: row;
+  }
+  .foldTwo .float-image .details .form > form .labels .left {
+    margin-right: var(--space-10);
+  }
+  .foldTwo .float-image .details .form > form .labels .right {
+    margin-left: var(--space-10);
+  }
+  .foldTwo .float-image .details .form > form .button {
+    justify-content: center;
+  }
+  .foldTwo .float-image .details .form > form .button .filter {
+    width: 280px;
+  }
+
+  .foldThree .float-image {
+    max-width: 720px;
+    padding: 0;
+    margin-top: var(--space-20);
+  }
+  .foldThree .float-image .details {
+    padding-bottom: 0;
+  }
+  .foldThree .float-image .previewNext button {
+    width: 100px;
+  }
+  .foldThree .float-image .box-image > img {
+    margin: var(--space-20) 0;
+    height: 480px;
+  }
+  .foldThree .float-image footer {
+    flex-direction: column;
+    border-radius: 0 0 var(--space-5) var(--space-5);
+    background-color: var(--white);
+  }
+  .foldThree .float-image footer .svgServices {
+    justify-content: center;
+  }
+  .foldThree .float-image footer .svgServices img {
+    width: 40px;
+    margin: 0 var(--space-5);
+  }
+  .foldThree .float-image footer p {
+    margin: 0;
+    padding: 0;
+  }
+  .foldThree .float-image footer .adressInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .foldThree .float-image footer .adress {
+    font-size: 20px;
+    font-weight: 600;
+    margin: var(--space-20) 0;
+    text-align: center;
+  }
+  .foldThree .float-image footer .info {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 var(--space-20);
+    text-align: center;
+  }
+  .foldThree .float-image footer .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .foldThree .float-image footer .buttons .back {
+    width: 280px;
+  }
+  .foldThree .float-image footer .buttons .check {
+    width: 280px;
+  }
+
+  .foldFour .float-image {
+    max-width: 720px;
+    padding: 0;
+    margin-top: var(--space-20);
+  }
+  .foldFour .float-image .previewNext button {
+    width: 100px;
+  }
+  .foldFour .float-image .wrap {
+    flex-direction: row;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+  }
+  .foldFour .float-image .wrap div.left {
+    width: 320px;
+    background-color: #E7F8F5;
+  }
+  .foldFour .float-image .wrap div.right {
+    width: 320px;
+    background-color: #E7F8F5;
+  }
+  .foldFour .float-image .wrap .panelWrap {
+    margin: 0;
+    flex-direction: column;
+  }
+  .foldFour .float-image footer .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: var(--space-20);
+  }
+  .foldFour .float-image footer .buttons .back {
+    width: 300px;
+  }
+  .foldFour .float-image footer .buttons .check {
+    width: 300px;
+  }
+
+  .foldFive .float-image {
+    max-width: 720px;
+    padding: 0;
+    margin-top: var(--space-20);
+  }
+  .foldFive .float-image .details .form {
+    justify-content: center;
+  }
+  .foldFive .float-image .details .form > form {
+    flex-direction: column;
+    width: 100% px;
+  }
+  .foldFive .float-image .details .form > form .resume {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .foldFive .float-image .details .form > form .resume > .label {
+    width: 325px;
+  }
+  .foldFive .float-image .details .form > form .label {
+    height: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--blue);
+    text-transform: uppercase;
+    border: 1px solid var(--green);
+  }
+  .foldFive .float-image .details .form > form input::placeholder {
+    font-size: 20px;
+    text-align: center;
+  }
+  .foldFive .float-image .details .form > form footer {
+    flex-direction: column;
+    border-radius: 0 0 var(--space-5) var(--space-5);
+  }
+  .foldFive .float-image .details .form > form footer .buttons {
+    flex-direction: column;
+  }
+  .foldFive .float-image .details .form > form footer .buttons .back {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0;
+    margin-bottom: var(--space-20);
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    height: 45px;
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    border-radius: 25px;
+    color: var(--dark-1);
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .foldFive .float-image .details .form > form footer .buttons .back img {
+    width: 25px;
+    margin-right: var(--space-10);
+  }
+  .foldFive .float-image .details .form > form footer .buttons .check {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 45px;
+    background-color: var(--yellow);
+    border-radius: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+}
 header.access {
   flex-direction: row;
   justify-content: center;

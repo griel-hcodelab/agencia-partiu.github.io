@@ -1,716 +1,946 @@
-.foldOne{
-    .main {
-        margin-top: 90px;
-        border-radius: var(--space-5);
-        flex-direction: column;
-        width: 100%;
-        max-width: 1180px;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-color: var(--white);
-    }
-	.header {
-        border-radius: var(--space-5) var(--space-5) 0 0;
-        #bread {
-            margin: var(--space-20);
-            margin-bottom: 0;
-            padding: 0;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            ul {
-                flex-direction: row;
-                margin: 0;
+.foldOne {
+    .float-image{
+        margin: 0 auto;
+        margin-top: 60px;
+      
+        .header {
+            border-radius: var(--space-5) var(--space-5) 0 0;
+            background-color: var(--white);
+            #bread {
+                margin: var(--space-20);
+                margin-bottom: 0;
                 padding: 0;
-                li {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                ul {
+                    flex-direction: row;
                     margin: 0;
                     padding: 0;
-                    flex-direction: row;
-                    list-style: none;
-                    font-size: 12px;
-                    a {
-                        text-decoration: none;
+                    li {
+                        margin: 0;
+                        padding: 0;
+                        flex-direction: row;
+                        list-style: none;
+                        font-size: 12px;
+                        a {
+                            text-decoration: none;
+                        }
                     }
                 }
             }
-        }    
-	}
-	div {
-        &.img{
-            > img {
-                transform: translateX(-20px);
-                width: 100vw;
-                box-shadow: 0 0 10px var(--black-50);
-                margin-top: var(--space-10);
-                margin-bottom: var(--space-10);
-                max-height: 1200px;
-		    }
         }
-	}
-	footer {
-		border-radius: 0 0 var(--space-5) var(--space-5);
-    }
-    footer.destinyOne {
-        margin: 0;
-        padding-top: 0;
-        flex-direction: column;
-        align-items: center;
-        header {
+        .box-image {
+            background-color: var(--white);
+            > img {
+                margin: var(--space-10) 0;
+            }
+        }    
+        footer {
+            border-radius: 0 0 var(--space-5) var(--space-5);
+            background-color: var(--white);
+        }
+        footer.destinyOne {
             margin: 0;
-            padding: 0;
-            h2 {
-                font-size: 30px;
-                font-weight: 900;
-                text-transform: none;
+            padding-top: 0;
+            flex-direction: column;
+            align-items: center;
+            header {
                 margin: 0;
+                padding: 0;
+                h2 {
+                    font-size: 30px;
+                    font-weight: 900;
+                    text-transform: none;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .avaliacao{
+                img {
+                    width: 15px;
+                    margin: 0;
+                    margin-left: var(--space-5);
+                    padding: 0;
+                }
+            }
+            p.title {
+                font-size: 15px;
+                font-weight: bold;
+                margin: var(--space-10) 0;
+                padding: 0;
+                text-align: center;
+            }
+            p.content {
+                font-size: 15px;
+                margin-top: var(--space-20);
+                padding: 0 var(--space-20);
+                text-align: center;
+            }
+            .icons {
+                margin: var(--space-10) 0;
+                width: 100%;
+                justify-content: center;
+                ul {
+                    margin: var(--space-20);
+                    padding: 0;
+                    align-items: center;
+                    flex-direction: row;
+                    li {
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 100px;
+                    }
+                }
+            }
+            div {
+                margin: var(--space-20);
+                button {
+                    align-items: center;
+                }
+                .menor {
+                    @include back-button;
+                    width: 45px;
+                    height: 45px;
+                    border: none;
+                    border-radius: 50%;
+                }
+                .maior {
+                    @include button;
+                    width: 230px;
+                    background-color: var(--yellow);
+                    border-radius: 25px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }      
+        } 
+    }    
+}
+
+.foldTwo {   
+    .float-image{
+        margin: 0 auto;
+        .header {
+            border-radius: var(--space-5) var(--space-5) 0 0;
+            background-color: var(--white);
+            justify-content: center;
+            h2 {
+                font-size: 27px;
+                font-weight: 600;
+                text-transform: uppercase;
+                justify-content: center;
+                align-items: center;
+                margin: var(--space-20);
+                margin-bottom: var(--space-5);
                 padding: 0;
             }
         }
-        .avaliacao{
+        .details {
+            flex-direction: column;
+            margin-top: 0;
+            padding: var(--space-20);
+            background-color: var(--white);
+            border-radius: 0 0 var(--space-5) var(--space-5);
+            .step {
+                margin-bottom: var(--space-10);
+                p {
+                flex-direction: row;
+                font-size: 20px;
+                margin-top: var(--space-10);
+                }
+            }
+            .form {
+                justify-content: center;
+                background-color: var(--white);
+
+                > form {
+                    flex-direction: column;
+                    width: 100%;
+                    .labelWrap {
+                        flex-direction: column;
+                    }
+                    .label {
+                        flex-direction: column;
+                        @include account-input;
+                        height: 60px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: var(--blue);
+                        text-transform: uppercase;
+                        border: 1px solid var(--dark-3);
+                    }
+                    input::placeholder {
+                        font-size: 16px;
+                    }
+                    .labels {
+                        flex-direction: column;
+                    }
+                    .filter {
+                        @include button;
+                        height: 45px;
+                        background-color: var(--yellow);
+                        border-radius: 25px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: var(--space-20);
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.foldThree {
+    .float-image{
+        margin: 0 auto;
+        .header {
+            border-radius: var(--space-5) var(--space-5) 0 0;
+            background-color: var(--white);
+            justify-content: center;
+            h2 {
+                font-size: 27px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: var(--space-20);
+                margin-bottom: var(--space-5);
+                padding: 0;
+                justify-content: center;
+            }
+        }
+        .details {
+            flex-direction: column;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: var(--space-20);
+            background-color: var(--white);
+            .step {
+                margin-bottom: var(--space-10);
+                p {
+                flex-direction: row;
+                font-size: 20px;
+                margin-top: var(--space-10);
+                }
+            }
+            .form {
+                justify-content: center;
+                > form {
+                    flex-direction: column;
+                    width: 100%;
+                    .label {
+                        flex-direction: column;
+                        @include account-input;
+                        height: 60px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: var(--blue);
+                        text-transform: uppercase;
+                        border: 1px solid var(--dark-3);
+                    }
+                    input::placeholder {
+                        font-size: 16px;
+                    }
+                    .labels {
+                        flex-direction: column;
+                    }
+                    .filter {
+                        @include button;
+                        height: 45px;
+                        background-color: var(--yellow);
+                        border-radius: 25px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    > img {
+                        height: 68px;
+                        width: 261px;
+                        margin: var(--space-5) auto;
+                    }
+                }
+            }
+        }
+        .number {
+            justify-content: flex-end;
+            background-color: var(--white);
+            span {
+                background-color: var(--dark-3);
+                font-size: 20px;
+            }
+        }
+        .previewNext {
+            justify-content: space-between;
+            padding: var(--space-10) 0;
+            background-color: var(--white);
+            button {
+                @include button;
+                margin: 0;
+                padding: 0;
+                width: 30%;
+                height: 30px;
+                background-color: var(--orange);
+                border-radius: 5px;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+        }
+        .evaluation{
+            justify-content: center;
+            background-color: var(--white);
             img {
                 width: 15px;
                 margin: 0;
                 margin-left: var(--space-5);
-                margin-bottom: var(--space-20);
-                padding: 0;
-            }
-        }
-        p.title {
-            font-size: 15px;
-            font-weight: bold;
-            margin: var(--space-10) 0;
-            padding: 0;
-            text-align: center;
-        }
-        p.content {
-            font-size: 15px;
-            margin-top: var(--space-20);
-            padding: 0 var(--space-20);
-            text-align: center;
-        }
-        div.icons {
-            margin: var(--space-10) 0;
-            width: 100%;
-            ul {
-                margin: var(--space-20);
-                padding: 0;
-                align-items: center;
-                flex-direction: row;
-                li {
-                    align-items: center;
-                    justify-content: space-evenly;
-                    width: 100px;
-                }
-            }
-        }
-        div {
-            margin: var(--space-20);
-            button {
-                align-items: center;
-            }
-            .menor {
-                @include back-button;
-                width: 45px;
-                height: 45px;
-                border: none;
-                border-radius: 50%;
-            }
-            .maior {
-                @include button;
-                width: 230px;
-                background-color: var(--yellow);
-                border-radius: 25px;
-                color: #fff;
-                text-transform: uppercase;
-                font-size: 20px;
-                font-weight: bold;
-            }
-        }      
-    } 
-}
-
-.foldTwo{
-    .main {
-        margin-top: var(--space-5);
-        border-radius: var(--space-5);
-        flex-direction: column;
-        width: 100%;
-        max-width: 1180px;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-color: var(--white);
-    }
-    h2 {
-        font-size: 27px;
-        font-weight: 600;
-        text-transform: uppercase;
-        align-items: flex-end;
-        margin: var(--space-20);
-        margin-bottom: var(--space-5);
-        padding: 0;
-        justify-content: center;
-    }
-	.details {
-        flex-direction: column;
-        margin: var(--space-20);
-        margin-top: 0;
-        .step {
-            margin-bottom: var(--space-10);
-            p {
-            flex-direction: row;
-            font-size: 20px;
-            margin-top: var(--space-10);
-            }
-        }
-        div.form {
-            justify-content: center;
-            > form {
-                flex-direction: column;
-                width: 100%;
-                .label {
-                    flex-direction: column;
-                    @include account-input;
-                    height: 60px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: var(--blue);
-                    text-transform: uppercase;
-                    border: 1px solid var(--dark-3);
-                }
-                input::placeholder {
-                    font-size: 16px;
-                }
-                .labels {
-                    flex-direction: column;
-                }
-                .filter {
-                    @include button;
-                    height: 45px;
-                    background-color: var(--yellow);
-                    border-radius: 25px;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-                > img {
-                    height: 68px;
-                    width: 261px;
-                    margin: var(--space-5) auto;
-                }
-            }
-        }
-    }
-}
-
-.foldThree{
-    .main {
-        margin-top: var(--space-5);
-        border-radius: var(--space-5);
-        flex-direction: column;
-        width: 100%;
-        max-width: 1180px;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-color: var(--white);
-    }
-    h2 {
-        font-size: 27px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin: var(--space-20);
-        margin-bottom: var(--space-5);
-        padding: 0;
-        justify-content: center;
-    }
-	.details {
-        flex-direction: column;
-        margin: var(--space-20);
-        margin-top: 0;
-        margin-bottom: 0;
-        .step {
-            margin-bottom: var(--space-10);
-            p {
-            flex-direction: row;
-            font-size: 20px;
-            margin-top: var(--space-10);
-            }
-        }
-        div.form {
-            justify-content: center;
-            > form {
-                flex-direction: column;
-                width: 100%;
-                .label {
-                    flex-direction: column;
-                    @include account-input;
-                    height: 60px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: var(--blue);
-                    text-transform: uppercase;
-                    border: 1px solid var(--dark-3);
-                }
-                input::placeholder {
-                    font-size: 16px;
-                }
-                .labels {
-                    flex-direction: column;
-                }
-                .filter {
-                    @include button;
-                    height: 45px;
-                    background-color: var(--yellow);
-                    border-radius: 25px;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-                > img {
-                    height: 68px;
-                    width: 261px;
-                    margin: var(--space-5) auto;
-                }
-            }
-        }
-    }
-    div.number {
-        justify-content: flex-end;
-        span {
-            background-color: var(--dark-3);
-            font-size: 20px;
-        }
-    }
-    div.previewNext {
-        justify-content: space-between;
-        margin: var(--space-10) 0;
-        button {
-            @include button;
-            margin: 0;
-            padding: 0;
-            width: 30%;
-            height: 30px;
-            background-color: var(--orange);
-            border-radius: 5px;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 15px;
-        }
-    }
-    div.avaliacao{
-        justify-content: center;
-        img {
-            width: 15px;
-            margin: 0;
-            margin-left: var(--space-5);
-            margin-top: var(--space-10);
-            margin-bottom: var(--space-10);
-            padding: 0;
-        }
-    }
-    h2.afterEvalutaion {
-        font-size: 26px;
-        font-weight: 600;
-        justify-content: center;
-        text-transform: none;
-        margin: 0 var(--space-20);
-    }
-    div {
-        &.img{
-            > img {
-                transform: translateX(-20px);
-                width: 100vw;
-                box-shadow: 0 0 10px var(--black-50);
                 margin-top: var(--space-10);
                 margin-bottom: var(--space-10);
-                max-height: 1200px;
-		    }
-        }
-    }
-    footer {
-        flex-direction: column;
-        div.svgServices {
-            justify-content: center;
-            img {
-                width: 40px;
-                margin: 0 var(--space-5);
+                padding: 0;
             }
         }
-        p {
-            margin: 0;
-            padding: 0;
-        }
-        div.adressInfo{
-            flex-direction: column;
-            align-items: center;
-        }
-        .adress {
-            font-size: 20px;
+        .afterEvaluation {
+            font-size: 26px;
             font-weight: 600;
-            margin: var(--space-20) 0;
-            text-align: center;
-        }
-        .info {
-            font-size: 20px;
-            font-weight: 400;
-            margin: 0 var(--space-20);
-            text-align: center;
-        } 
-        .buttons {
-            flex-direction: column;
-            
-            margin: var(--space-20);
-            .back {
-                @include button;
-                margin: 0;
-                margin-bottom: var(--space-20);
-                justify-content: center;
-                padding: 0;
-                width: 100%;
-                height: 45px;
-                background-color: var(--white);
-                border: 1px solid var(--green);
-                border-radius: 25px;
-                color: var(--dark-1); 
-                text-transform: uppercase;
-                font-size: 20px;
-                img {
-                    width: 25px;
-                    margin-right: var(--space-10);
-                }
-            }
-            .check {
-                @include button;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 45px;
-                background-color: var(--yellow);
-                border-radius: 25px;
-                font-weight: bold;
-                color: #fff;
-                text-transform: uppercase;
-                font-size: 20px;
-            }
-        }
-    }
-}
-
-.foldFour{
-    .main {
-        margin-top: var(--space-5);
-        border-radius: var(--space-5);
-        flex-direction: column;
-        width: 100%;
-        max-width: 1180px;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-color: var(--white);
-    }
-    h2 {
-        font-size: 27px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin: var(--space-20);
-        margin-bottom: var(--space-5);
-        padding: 0;
-        justify-content: center;
-    }
-	.details {
-        flex-direction: column;
-        margin-top: 0;
-        margin-bottom: 0;
-        .step {
-            margin-bottom: var(--space-10);
-            p {
-            flex-direction: row;
-            font-size: 20px;
-            margin-top: var(--space-10);
-            }
-        }
-        div.form {
             justify-content: center;
-            > form {
+            text-transform: capitalize;
+            background-color: var(--white);
+        }
+        .box-image {
+            background-color: var(--white);
+            > img {
+                margin: var(--space-10) 0;
+            }
+        }  
+        footer {
+            flex-direction: column;
+            border-radius: 0 0 var(--space-5) var(--space-5);
+            background-color: var(--white);
+            .svgServices {
+                justify-content: center;
+                img {
+                    width: 40px;
+                    margin: 0 var(--space-5);
+                }
+            }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            .adressInfo{
                 flex-direction: column;
-                width: 100%;
-                .label {
-                    flex-direction: column;
-                    @include account-input;
-                    height: 60px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: var(--blue);
-                    text-transform: uppercase;
-                    border: 1px solid var(--dark-3);
-                }
-                input::placeholder {
-                    font-size: 16px;
-                }
-                .labels {
-                    flex-direction: column;
-                }
-                .filter {
+                align-items: center;
+            }
+            .adress {
+                font-size: 20px;
+                font-weight: 600;
+                margin: var(--space-20) 0;
+                text-align: center;
+            }
+            .info {
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0 var(--space-20);
+                text-align: center;
+            } 
+            .buttons {
+                flex-direction: column;
+                
+                margin: var(--space-20);
+                .back {
                     @include button;
+                    margin: 0;
+                    margin-bottom: var(--space-20);
+                    justify-content: center;
+                    padding: 0;
+                    width: 100%;
+                    height: 45px;
+                    background-color: var(--white);
+                    border: 1px solid var(--green);
+                    border-radius: 25px;
+                    color: var(--dark-1); 
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    img {
+                        width: 25px;
+                        margin-right: var(--space-10);
+                    }
+                }
+                .check {
+                    @include button;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
                     height: 45px;
                     background-color: var(--yellow);
                     border-radius: 25px;
+                    font-weight: bold;
                     color: #fff;
                     text-transform: uppercase;
                     font-size: 20px;
-                    font-weight: bold;
-                }
-                > img {
-                    height: 68px;
-                    width: 261px;
-                    margin: var(--space-5) auto;
                 }
             }
         }
-    }
-    div.number {
-        justify-content: flex-end;
-        span {
-            background-color: var(--dark-3);
-            font-size: 20px;
+    }    
+}
+
+.foldFour {
+    .float-image{
+        margin: 0 auto;
+        .header {
+            border-radius: var(--space-5) var(--space-5) 0 0;
+            background-color: var(--white);
+            justify-content: center;
+            h2 {
+                font-size: 27px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: var(--space-20);
+                margin-bottom: var(--space-5);
+                padding: 0;
+                justify-content: center;
+            }
         }
-    }
-    div.previewNext {
-        justify-content: space-between;
-        margin: var(--space-10) 0;
-        button {
-            @include button;
+        .details {
+            flex-direction: column;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: var(--space-20);
+            padding-bottom: 0;
+            background-color: var(--white);
+            .step {
+                margin-bottom: var(--space-10);
+                p {
+                flex-direction: row;
+                font-size: 20px;
+                margin-top: var(--space-10);
+                }
+            }
+            .form {
+                justify-content: center;
+                > form {
+                    flex-direction: column;
+                    width: 100%;
+                    .label {
+                        flex-direction: column;
+                        @include account-input;
+                        height: 60px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: var(--blue);
+                        text-transform: uppercase;
+                        border: 1px solid var(--dark-3);
+                    }
+                    input::placeholder {
+                        font-size: 16px;
+                    }
+                    .labels {
+                        flex-direction: column;
+                    }
+                    .filter {
+                        @include button;
+                        height: 45px;
+                        background-color: var(--yellow);
+                        border-radius: 25px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                    > img {
+                        height: 68px;
+                        width: 261px;
+                        margin: var(--space-5) auto;
+                    }
+                }
+            }
+        }
+        .number {
+            justify-content: flex-end;
+            background-color: var(--white);
+            span {
+                background-color: var(--dark-3);
+                font-size: 20px;
+            }
+        }
+        .previewNext {
+            justify-content: space-between;
+            padding: var(--space-10) 0;
+            background-color: var(--white);
+            button {
+                @include button;
+                margin: 0;
+                padding: 0;
+                width: 30%;
+                height: 30px;
+                background-color: var(--orange);
+                border-radius: 5px;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+        }
+        .wrap {
+            flex-direction: column;
+            background-color: #E7F8F5;
             margin: 0;
             padding: 0;
-            width: 30%;
-            height: 30px;
-            background-color: var(--orange);
-            border-radius: 5px;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 15px;
-        }
-    }
-    div.wrap {
-        flex-direction: column;
-        background-color: #E7F8F5;
-        margin: 0;
-        padding: 0;
-        .panel {
-            margin: 0;
-            flex-direction: row;
-            justify-content: space-between;
-            p.go {
-                justify-content: center;
-                align-items: center;
-                font-size: 20px;
-                text-transform: uppercase;
-                color: var(--white);
-                font-weight: bold;
-                width: 85px;
-                height: 35px;
-                border-radius: 0 5px 5px 0;
-                background-color: var(--blue);
-            }
-            p.date {
-                justify-content: center;
-                align-items: center;
-                font-size: 20px;
-                margin-left: 35px;
-                text-transform: uppercase;
-                color: var(--dark);
-                width: 85px;
-                height: 35px;
-            }
-            p.value {
-                justify-content: center;
-                align-items: center;
-                font-size: 20px;
-                margin-left: 35px;
-                text-transform: uppercase;
-                color: var(--white);
-                width: 95px;
-                height: 35px;
-                border-radius: 5px 0px 0px 5px;
-                background-color: var(--blue);
-            }
-        }
-        .panelInst {
-            justify-content: space-between;
-            margin-bottom: var(--space-20);
-            div {
-                flex-direction: column;
+            .panel {
                 margin: 0;
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                p {
+                flex-direction: row;
+                justify-content: space-between;
+                p.go {
                     justify-content: center;
-                    margin: 0;
-                }
-            }
-            div + div {
-                border-left: 1px solid var(--dark-0);
-
-            }
-        }
-    }
-    footer {
-        flex-direction: column;
-        .buttons {
-            flex-direction: column;
-            margin: var(--space-20);
-            .back {
-                @include button;
-                margin: 0;
-                margin-bottom: var(--space-20);
-                justify-content: center;
-                padding: 0;
-                width: 100%;
-                height: 45px;
-                background-color: var(--white);
-                border: 1px solid var(--green);
-                border-radius: 25px;
-                color: var(--dark-1); 
-                text-transform: uppercase;
-                font-size: 20px;
-                img {
-                    width: 25px;
-                    margin-right: var(--space-10);
-                }
-            }
-            .check {
-                @include button;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 45px;
-                background-color: var(--yellow);
-                border-radius: 25px;
-                font-weight: bold;
-                color: #fff;
-                text-transform: uppercase;
-                font-size: 20px;
-            }
-        }
-    }
-}
-
-.foldFive{
-    .main {
-        margin-top: var(--space-5);
-        border-radius: var(--space-5);
-        flex-direction: column;
-        width: 100%;
-        max-width: 1180px;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        background-color: var(--white);
-    }
-    h2 {
-        font-size: 27px;
-        font-weight: 600;
-        text-transform: uppercase;
-        align-items: flex-end;
-        margin: var(--space-20);
-        margin-bottom: var(--space-5);
-        padding: 0;
-        justify-content: center;
-    }
-	.details {
-        flex-direction: column;
-        margin: var(--space-20);
-        margin-top: 0;
-        .step {
-            margin-bottom: var(--space-10);
-            p {
-            flex-direction: row;
-            font-size: 20px;
-            margin-top: var(--space-10);
-            }
-        }
-        div.form {
-            justify-content: center;
-            > form {
-                flex-direction: column;
-                width: 100%;
-                .label {
-                    flex-direction: column;
-                    @include account-input;
-                    height: 60px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: var(--blue);
+                    align-items: center;
+                    font-size: 20px;
                     text-transform: uppercase;
-                    border: 1px solid var(--green);
+                    color: var(--white);
+                    font-weight: bold;
+                    width: 85px;
+                    height: 35px;
+                    border-radius: 0 5px 5px 0;
+                    background-color: var(--blue);
                 }
-                .label:nth-last-child(-n + 2) {
-                    border: 1px solid var(--red-0);
-                    color: var(--blue);
+                p.date {
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    margin-left: 35px;
+                    text-transform: uppercase;
+                    color: var(--dark);
+                    width: 85px;
+                    height: 35px;
                 }
-                .labels {
+                p.value {
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    margin-left: 35px;
+                    text-transform: uppercase;
+                    color: var(--white);
+                    width: 95px;
+                    height: 35px;
+                    border-radius: 5px 0px 0px 5px;
+                    background-color: var(--blue);
+                }
+            }
+            .panelInst {
+                justify-content: space-between;
+                margin-bottom: var(--space-20);
+                div {
                     flex-direction: column;
+                    margin: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    p {
+                        justify-content: center;
+                        margin: 0;
+                    }
                 }
-                .filter {
+                div + div {
+                    border-left: 1px solid var(--dark-0);
+
+                }
+            }
+            .panelWrap {
+                margin: 0;
+                flex-direction: column;
+            }
+        } 
+        footer {
+            flex-direction: column;
+            border-radius: 0 0 var(--space-5) var(--space-5);
+            background-color: var(--white);
+            .buttons {
+                flex-direction: column;
+                
+                margin: var(--space-20);
+                .back {
                     @include button;
+                    margin: 0;
+                    margin-bottom: var(--space-20);
+                    justify-content: center;
+                    padding: 0;
+                    width: 100%;
+                    height: 45px;
+                    background-color: var(--white);
+                    border: 1px solid var(--green);
+                    border-radius: 25px;
+                    color: var(--dark-1); 
+                    text-transform: uppercase;
+                    font-size: 20px;
+                    img {
+                        width: 25px;
+                        margin-right: var(--space-10);
+                    }
+                }
+                .check {
+                    @include button;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
                     height: 45px;
                     background-color: var(--yellow);
                     border-radius: 25px;
+                    font-weight: bold;
                     color: #fff;
                     text-transform: uppercase;
                     font-size: 20px;
-                    font-weight: bold;
                 }
-                > img {
-                    height: 68px;
-                    width: 261px;
-                    margin: var(--space-5) auto;
+            }
+        }
+    }    
+}
+
+.foldFive {
+    .float-image{
+        margin: 0 auto;
+        .header {
+            border-radius: var(--space-5) var(--space-5) 0 0;
+            background-color: var(--white);
+            justify-content: center;
+            h2 {
+                font-size: 27px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: var(--space-20);
+                margin-bottom: var(--space-5);
+                padding: 0;
+                justify-content: center;
+            }
+        }
+        .details {
+            flex-direction: column;
+            padding: var(--space-20);
+            margin-top: 0;
+            background-color: var(--white);
+            .step {
+                margin-bottom: var(--space-10);
+                p {
+                flex-direction: row;
+                font-size: 20px;
+                margin-top: var(--space-10);
                 }
-                footer {
+            }
+            .form {
+                justify-content: center;
+                > form {
                     flex-direction: column;
-                    .buttons {
+                    width: 100%;
+                    .label {
                         flex-direction: column;
-                        .back {
-                            @include button;
-                            margin: 0;
-                            margin-bottom: var(--space-20);
-                            justify-content: center;
-                            padding: 0;
-                            width: 100%;
-                            height: 45px;
-                            background-color: var(--white);
-                            border: 1px solid var(--green);
-                            border-radius: 25px;
-                            color: var(--dark-1); 
-                            text-transform: uppercase;
-                            font-size: 20px;
-                            img {
-                                width: 25px;
-                                margin-right: var(--space-10);
+                        @include account-input;
+                        height: 60px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: var(--blue);
+                        text-transform: uppercase;
+                        border: 1px solid var(--green);
+                    }
+                    div:nth-child(6) {
+                        border: 1px solid var(--red-0);
+                        color: var(--blue);
+                    }
+                    .labels {
+                        flex-direction: column;
+                    }
+                    .resume {
+                        flex-direction: column;
+                    }
+                    footer {
+                        flex-direction: column;
+                        border-radius: 0 0 var(--space-5) var(--space-5);
+                        .buttons {
+                            flex-direction: column;
+                            .back {
+                                @include button;
+                                margin: 0;
+                                margin-bottom: var(--space-20);
+                                justify-content: center;
+                                padding: 0;
+                                width: 100%;
+                                height: 45px;
+                                background-color: var(--white);
+                                border: 1px solid var(--green);
+                                border-radius: 25px;
+                                color: var(--dark-1); 
+                                text-transform: uppercase;
+                                font-size: 20px;
+                                img {
+                                    width: 25px;
+                                    margin-right: var(--space-10);
+                                }
                             }
-                        }
-                        .check {
-                            @include button;
-                            margin: 0;
-                            padding: 0;
-                            width: 100%;
-                            height: 45px;
-                            background-color: var(--yellow);
-                            border-radius: 25px;
-                            font-weight: bold;
-                            color: #fff;
-                            text-transform: uppercase;
-                            font-size: 20px;
+                            .check {
+                                @include button;
+                                margin: 0;
+                                padding: 0;
+                                width: 100%;
+                                height: 45px;
+                                background-color: var(--yellow);
+                                border-radius: 25px;
+                                font-weight: bold;
+                                color: #fff;
+                                text-transform: uppercase;
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
             }
         }
+    }    
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+    .foldOne {
+        .float-image{
+            margin-top: 120px;
+            max-width: 720px;
+            padding: 0;
+            .header {
+                #bread {
+                    ul {
+                        li {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .box-image {
+                > img {
+                    height: 480px;
+                }
+            }
+        }    
+    }
+
+    .foldTwo {   
+        .float-image{
+            max-width: 720px;
+            padding: 0;
+            margin-top: var(--space-20);
+            .details {
+                .form {
+                    > form {
+                        input::placeholder {
+                            text-align: center;
+                        }
+                        .labels {
+                            flex-direction: row;
+                            .left {
+                                margin-right: var(--space-10); 
+                            }
+                            .right {
+                                margin-left: var(--space-10); 
+                            }
+                        }
+                        .button {
+                            justify-content: center;
+                            .filter {
+                                width: 280px;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }  
+    
+    .foldThree {
+        .float-image{
+            max-width: 720px;
+            padding: 0;
+            margin-top: var(--space-20);
+            .details {
+                padding-bottom: 0;
+            }
+            .previewNext {
+                button {
+                    width: 100px;
+                }
+            }
+            .box-image {
+                > img {
+                    margin: var(--space-20) 0;
+                    height: 480px;
+                }
+            }  
+            footer {
+                flex-direction: column;
+                border-radius: 0 0 var(--space-5) var(--space-5);
+                background-color: var(--white);
+                .svgServices {
+                    justify-content: center;
+                    img {
+                        width: 40px;
+                        margin: 0 var(--space-5);
+                    }
+                }
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+                .adressInfo{
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .adress {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin: var(--space-20) 0;
+                    text-align: center;
+                }
+                .info {
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin: 0 var(--space-20);
+                    text-align: center;
+                } 
+                .buttons {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .back {
+                        width: 280px;
+                    }
+                    .check {
+                        width: 280px;
+                    }
+                }
+            }
+        }    
+    }
+    
+    .foldFour {
+        .float-image{
+            max-width: 720px;
+            padding: 0;
+            margin-top: var(--space-20);
+            .previewNext {
+                button {
+                    width: 100px;
+                }
+            }
+            .wrap {
+                flex-direction: row;
+                background-color: var(--white);
+                margin: 0;
+                padding: 0;
+                justify-content: space-between;
+                div {
+                    &.left {
+                        width: 320px;
+                        background-color: #E7F8F5;
+                    }
+                    &.right {
+                        width: 320px;
+                        background-color: #E7F8F5;
+                    }
+                }
+                .panelWrap {
+                    margin: 0;
+                    flex-direction: column;
+                }
+            } 
+            footer {
+                .buttons {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: var(--space-20);
+                    .back {
+                        width: 300px;
+                    }
+                    .check {
+                        width: 300px;
+                    }
+                }
+            }
+        }    
+    }
+
+    .foldFive {
+        .float-image{
+            max-width: 720px;
+            padding: 0;
+            margin-top: var(--space-20);
+            .details {
+                .form {
+                    justify-content: center;
+                    > form {
+                        flex-direction: column;
+                        width: 100%px;
+                        .resume {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            > .label {
+                                width: 325px;
+                            }
+                        }
+                        .label {
+                            
+                            height: 80px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: var(--blue);
+                            text-transform: uppercase;
+                            border: 1px solid var(--green);
+                        }
+                        input::placeholder {
+                            font-size: 20px;
+                            text-align: center;
+                        }
+                        footer {
+                            flex-direction: column;
+                            border-radius: 0 0 var(--space-5) var(--space-5);
+                            .buttons {
+                                flex-direction: column;
+                                .back {
+                                    @include button;
+                                    margin: 0;
+                                    margin-bottom: var(--space-20);
+                                    justify-content: center;
+                                    padding: 0;
+                                    width: 100%;
+                                    height: 45px;
+                                    background-color: var(--white);
+                                    border: 1px solid var(--green);
+                                    border-radius: 25px;
+                                    color: var(--dark-1); 
+                                    text-transform: uppercase;
+                                    font-size: 20px;
+                                    img {
+                                        width: 25px;
+                                        margin-right: var(--space-10);
+                                    }
+                                }
+                                .check {
+                                    @include button;
+                                    margin: 0;
+                                    padding: 0;
+                                    width: 100%;
+                                    height: 45px;
+                                    background-color: var(--yellow);
+                                    border-radius: 25px;
+                                    font-weight: bold;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }    
     }
 }
