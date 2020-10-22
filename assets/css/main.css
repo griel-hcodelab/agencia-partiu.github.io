@@ -415,20 +415,22 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main #content {
-  margin-top: 50px;
-  align-items: center;
+main.margin-header {
+  margin-top: 100px;
 }
 main .divider {
   border: 0;
   background-color: var(--aqua-green);
-  margin: 50px 0;
+  margin: 40px 0;
   width: 50%;
   max-width: 300px;
   height: 1px;
 }
 main .float-image {
   margin: 0 auto;
+}
+main .float-image .illustration {
+  width: 500px;
 }
 main .float-image header, main .float-image .box-image, main .float-image footer {
   background-color: var(--white);
@@ -437,6 +439,12 @@ main .float-image header {
   flex-direction: column;
   align-items: center;
   padding: var(--space-20);
+}
+main .float-image header > div h1 {
+  color: var(--red-0);
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 main .float-image header > div img {
   width: 52px;
@@ -464,6 +472,44 @@ main .float-image footer {
   padding: var(--space-20);
   flex-direction: column;
   align-items: center;
+}
+main .float-image footer.tips {
+  align-items: flex-start;
+}
+main .float-image footer.tips p {
+  font-size: 16px;
+  text-align: left;
+}
+main .float-image footer.tips p.tip-title {
+  font-size: 20px;
+  margin: 40px 0px 15px 0px;
+  color: var(--aqua-green);
+}
+main .float-image footer.tips p.tip-title:first-child {
+  margin-top: 0;
+}
+main .float-image footer.tips > div {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+main .float-image footer.tips > div a {
+  display: flex;
+  width: 300px;
+  height: 45px;
+  border-radius: 25px;
+  background-color: var(--yellow);
+  color: var(--white);
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-20);
+}
+main .float-image footer.tips > div a:hover {
+  background-color: var(--yellow-1);
+}
+main .float-image footer.tips > div a:active {
+  background-color: var(--yellow-2);
 }
 main .float-image footer p {
   margin: 0;
