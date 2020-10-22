@@ -1,5 +1,6 @@
+
 header {
-    &.account {
+    &.account-change-photo {
         flex-direction: row;
         justify-content: center;
         height: var(--space-50);
@@ -12,7 +13,7 @@ header {
         }
     }
 }
-#account {
+#account-change-photo {
     flex-direction: column;
     padding: var(--space-20);
     padding-top: calc(var(--space-50) * 2);
@@ -42,128 +43,53 @@ header {
     }
     main {
         flex-direction: column;
-        margin-top: var(--space-50);
-        section {
-            padding: var(--space-20);
-            flex-direction: column;
-            margin: var(--space-20) 0;
-            background-color: var(--white);
-            border-radius: var(--space-5);
+        background-color: var(--white);
+        padding: var(--space-20);
+        margin-bottom: 170px;
+        border-radius: 0 0 var(--space-5) var(--space-5);
+        button {
+            background-color: var(--blue-5);
+            color: var(--white);
+            font-size: calc(var(--space-20) + var(--space-5));
+            text-transform: capitalize;
+            border: 0;
+            border-radius: 5px;
+            height: var(--space-50);
+            width: 280px;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            padding: var(--space-5) 0;
+            height: 280px;
+            width: 280px;
+        }
+        .button {
             width: 100%;
-            header {
-                justify-content: center;
-                padding: var(--space-10);
-                margin: 0;
-                h2 {
-                    color: var(--blue);
-                    font-size: calc(var(--space-20) + var(--space-5));
-                    font-weight: 400;
-                    text-transform: capitalize;
+            a {
+                @include back-button;
+                img {
+                    height: 13px;
                 }
             }
-            &.last-buy {
-                > div {
-                    @include alert-success;
-                    margin-top: var(--space-20);
-                    flex-direction: column;
-                    align-items: center;
-                    h3 {
-                        color: var(--dark-0);
-                        font-size: var(--space-20);
-                        font-weight: bold;
-                    }
-                    p {
-                        font-size: var(--space-20);
-                        font-weight: 600;
-                    }
-                    .wrap {
-                        display: grid;
-                        grid-template-columns: repeat(2, 2fr);
-                        grid-template-rows: repeat(1, 2fr);
-                        gap: 10px;
-                        width: 100%;
-                        padding: var(--space-20);
-                        div {
-                            flex-direction: column;
-                            align-items: center;
-                            font-size: var(--space-20);
-                            h4 {
-                                font-weight: 600;
-                            }
-                            p {
-                                margin: 0;
-                                font-weight: 400;
-                            }
-                        }
- 
-                    }
-                } 
-            }
-            &.favorites {
-                padding: var(--space-20);
-                flex-direction: column;
-                div {
-                    @include box-yellow;
-                    flex-direction: column;
-                    padding: 0;
-                    padding-top: var(--space-20);
-                    padding-right: var(--space-5);
-                    padding-left: var(--space-5);
-                    margin: 0;
-                    h3 {
-                        font-size: calc(var(--space-20) + var(--space-5));
-                        color: var(--dark-0);
-                        font-weight: bold;
-                        justify-content: center;
-                        text-transform: capitalize;
-                        margin-bottom: calc(var(--space-10) + var(--space-5));
-                    }
-                    p {
-                        margin: 0;
-                        justify-content: center;
-                        font-size: var(--space-20);
-                    }
-                    p + p {
-                        font-weight: 600;
-                    }
-                    .wrap {
-                        flex-direction: row;
-                        border: none;
-                        button {
-                            width: 100%;
-                            &.buy {
-                                @include alert-success;
-                                margin-right: var(--space-20);
-                                font-size: var(--space-20);
-                                font-weight: 600;
-                                text-transform: uppercase;
-                                font-style: italic;
-                                transition: 0.5s;
-                                &:hover {
-                                    background-color: #a4d2af;
-                                }
-                            }
-                            &.remove {
-                                @include alert-danger;
-                                font-size: 18px;
-                                font-weight: 30;
-                                text-transform: capitalize;
-                                font-style: italic;
-                                transition: 0.5s;
-                                &:hover {
-                                    background-color: #ff8691;
-                                }
-                            }   
-                        }
-                    }
-                }
+            button {
+                @include next-button;
             }
         }
-        section + section {
-            margin-bottom: 180px;
+        .alert {
+            width: 281px;
+            &.success {
+                @include alert-success;
+            }
+        }
+        a {
+            @include back-button;
+            width: 281px;
+            font-size: 15px;
         }
     }
     aside {
+        display: none;
         position: fixed;
         z-index: 3;
         bottom: 0;
@@ -258,7 +184,7 @@ header {
 
 @media (min-width: 1280px) {
     header {
-        &.account {
+        &.account-change-photo {
             position: fixed;
             z-index: 2;
             height: calc(var(--space-50) * 2);
@@ -268,7 +194,7 @@ header {
             }
         }
     }
-    #account {
+    #account-change-photo {
         padding-top: calc(var(--space-50) * 3);
         main, header {
             max-width: 720px;
@@ -288,30 +214,10 @@ header {
             }
         }
         main {
-            section {
-                &.last-buy {
-                    > div {
-                        .wrap {
-                            grid-template-columns: repeat(4, 2fr);
-                            grid-template-rows: repeat(1, 2fr);
-                        }
-                    }
-                }
-                &.favorites {
-                    > div {
-                        .wrap {
-                            button {
-                                width: 120px;
-                            }
-                        }
-                    }
-                }
-            }
-            section + section {
-                margin-bottom: var(--space-20);
-            }
+            margin-bottom: 0;  
         }
         aside {
+            display: flex;
             right: -20px;
             bottom: unset;
             width: 320px;

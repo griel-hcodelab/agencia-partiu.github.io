@@ -4,18 +4,19 @@
     --black: #000;
 
     //Azul
-    --blue: #2980B9; //Borda do nav, Texto do Logo, Botão de continuar
+    --blue: #005b96; //Borda do nav, Texto do Logo, Botão de continuar
     --blue-0: #35a9f5; //Fundo dos botões para nota do Lighthouse
     --blue-1: #483BA8; //Texto dos botões
     --blue-2: #D1ECF1; //Alerta de Info: Fundo
     --blue-3: #BEE5EB; //Alerta de Info: Borda
     --blue-4: #0C5460; //Alerta de Info: Texto
+    --blue-5: #2980B9; //Botão de alterar foto
 
     //Verde
     --aqua-green: #1ABC9C; //Fundo do botão voltar
     --green-2: #D4EDDA; //Alerta de Sucesso: Fundo
     --green-3: #C3E6CB; //Alerta de Sucesso: Borda
-    --green-4: #155724 //Alerta de Sucesso: Texto
+    --green-4: #155724; //Alerta de Sucesso: Texto
 
     //Preto
     --shadow: #A7A7A7; //Sombra dos botões e Borda do Menu
@@ -37,11 +38,14 @@
    
     //Laranja
     --orange: #F86624; //Cor do Call to Action da Index
+    --orange-1: #fa4f00; //Cor do Call to Action da Index
 
     //Amarelo
     --yellow: #FFC400; //Cor do botões Call to Action
     --yellow-1: #ffcf32; 
     --yellow-2: #e4af01; 
+    --yellow-3: #FFF08D; //Borda dos Favoritos
+    --yellow-4: #FFF5B1; //Fundo dos Favoritos
 
     //Transparencias
     --white-50: rgba(255,255,255,0.5);

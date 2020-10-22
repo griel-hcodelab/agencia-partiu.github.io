@@ -1,0 +1,22 @@
+#content {
+    .float-image {
+        footer {
+            .description {
+                font-size: 19px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    #content {
+        .float-image {
+            footer {
+                .description {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}

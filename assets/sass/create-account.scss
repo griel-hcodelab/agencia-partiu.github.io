@@ -17,14 +17,18 @@ section {
     &#create-account {
         margin-top: var(--space-50);
         padding-top: var(--space-50);
+        padding-bottom: var(--space-50);
+        border-radius: var(--space-5);
         max-width: 360px;
         margin-left: auto;
         margin-right: auto;
+        flex-direction: column;
         header, main, footer {
             background-color: var(--white);
         }
         header {
             flex-direction: column;
+            border-radius: var(--space-5) var(--space-5) 0 0;
             img {
                 height: 100px;
                 width: auto;
@@ -40,6 +44,7 @@ section {
         main {
             flex-direction: column;
             padding: var(--space-20);
+            border-radius: 0 0 var(--space-5) var(--space-5);
             form {
                 flex-direction: column;
                 .label {

@@ -16,25 +16,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //Definindo tags como display flex
-header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li, span, p  {
+header, main, nav, img, a, footer, div, form, label, input, button, h1, h2, h3, h4, h5, h6, section, article, p, ul, li, span, p, aside  {
 	display: flex;
 }
 
+//Os buttons passam a ter ícone de cursor
 button {
 	cursor: pointer;
 }
 
+//Estilo do hr dividor
 hr {
 	border: var(--space-5) solid var(--orange-0);
 	width: 80%;
     margin-top: var(--space-20);
     margin-bottom: var(--space-20);
 }
+
+//Estilo padrão dos links
 a {
     text-decoration: none;
     color: inherit;
-}
+} 
 
+//Estilo para as imagens saindo da section
 .float-image {
 	padding: var(--space-20);
 	border-radius: var(--space-5);
@@ -48,13 +53,15 @@ a {
 		border-radius: var(--space-5) var(--space-5) 0 0;
 	}
 	.box-image {
-		> img {
-			transform: translateX(-20px);
-			width: 100vw;
-			box-shadow: 0 0 10px var(--black-50);
-			margin-top: var(--space-20);
-			margin-bottom: var(--space-20);
-			max-height: 1200px;
+		> picture{
+			img {
+				transform: translateX(-20px);
+				width: 100vw;
+				box-shadow: 0 0 10px var(--black-50);
+				margin-top: var(--space-20);
+				margin-bottom: var(--space-20);
+				max-height: 1000px;
+			}
 		}
 	}
 	footer {
@@ -63,6 +70,45 @@ a {
 
 }
 
+//Hover e active dos menus
+.menu {
+	nav {
+		ul {
+			li {
+				a {
+					transition: 0.5s;
+					&:hover {
+						background-color: rgba(41, 128, 185, 0.10);
+					}
+					&:active {
+						background-color: rgba(41, 128, 185, 0.20);
+					}
+				}
+			}
+			&.li {
+				a {
+					transition: 0.5s;
+					&:hover {
+						background-color: rgba(26, 188, 156, 0.10);
+					}
+					&:active {
+						background-color: rgba(26, 188, 156, 0.20);
+					}
+				}
+			}
+		}
+	}
+}
+
+//Hover dos inputs
+.label {
+	transition: 0.3s;
+	&:hover {
+		box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+	}
+}
+
+//Estilo padrão de tags
 h3 {
 	color: var(--red-0);
 	font-size: 25px;
@@ -80,3 +126,12 @@ h2 {
 	text-transform: capitalize;
 }
 
+//Overlay
+.overlay {
+	@include overlay;
+	display: none;
+	transition: 1s ease-in-out;
+	&.open {
+		display: flex;
+	}
+}

@@ -4,7 +4,7 @@
 @import 'mixin.scss';
 
 //CSS de reset dos estilos padrões
-@import 'reset.scss';
+@import 'reset.scss'; 
 
 //CSS de elementos das páginas
 @import 'header.scss';
@@ -24,6 +24,12 @@
 
 //CSS das páginas de perfil
 @import 'account.scss';
+@import 'account-change-password.scss';
+@import 'account-password-changed.scss';
+@import 'account-change-photo.scss';
 
 //CSS do footer
 @import 'footer.scss';
+
+//CSS sobre a agência
+@import 'about.scss';
