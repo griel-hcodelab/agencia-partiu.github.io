@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agência de Turismo Partiu</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/png/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/png/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/png/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/png/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/png/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/png/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/png/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/png/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/png/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/png/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/png/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/png/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/png/favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="msapplication-TileColor" content="#1ABC9C" />
+    <meta name="msapplication-TileImage" content="assets/png/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#1ABC9C" />
+    <meta name="description" content="Conheça o mundo com a melhor agência de turismo! Partiu?" />
+    <meta name="keywords" content="agencia de turismo, site de turismo, comprar viagem, passagem para praia" />
+    <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+    <header id="topo">
+        <img src="assets/svg/logo-horizontal.svg" alt="Agência de Turismo Partiu" />
+    </header>
+
+
+
+    <main>
+
+        <section id="checkout-section">
+
+            <img src="assets/svg/icon-checkout.svg" alt="Checkout" />
+
+            <h1>Confirme suas Escolhas</h1>
+
+            <form id="confirm">
+
+                <h2>Destino</h2>
+
+                <div class="label">
+                    <label for="chosen-destin">Destino escolhido:</label>
+                    <input type="text" id="chosen-destin" name="chosen-destin" aria-label="Destino escolhido"
+                        value="Destino escolhido">
+                </div>
+
+
+                <div class="wrap-two">
+                    <div class="label">
+                        <label for="adults">Adultos:</label>
+                        <input type="text" id="adults" name="adults" aria-label="Adultos" value="2">
+                    </div>
+
+                    <div class="label">
+                        <label for="children">Crianças:</label>
+                        <input type="text" id="children" name="children" aria-label="Crianças" value="0">
+                    </div>
+                </div>
+
+
+                <div class="wrap">
+
+                    <div class="label">
+                        <label for="going">Data/Ida:</label>
+                        <input type="date" id="going" name="going" aria-label="Data de Ida">
+                    </div>
+
+                    <div class="label">
+                        <label for="return">Data/Volta:</label>
+                        <input type="date" id="return" name="return" aria-label="Data de Volta">
+                    </div>
+
+                </div>
+
+            </form>
+
+            <form id="invoice">
+
+                <h2>Dados Faturamento</h2>
+
+                <div class="label">
+                    <label for="full-name">Nome Completo:</label>
+                    <input type="text" id="full-name" name="full-name" aria-label="Nome Completo"
+                        value="Gabriel G. Bispo">
+                </div>
+
+                <div class="wrap-tree">
+                    <div class="label">
+                        <label for="document">CPF:</label>
+                        <input type="text" id="document" name="document" aria-label="Seu CPF" value="012.345.678-90">
+                    </div>
+
+                    <div class="label">
+                        <label for="zip-code">CEP:</label>
+                        <input type="text" id="zip-code" name="zip-code" aria-label="Seu CEP" value="23.839-357">
+                    </div>
+                </div>
+
+                <div class="label">
+                    <label for="address">Endereço:</label>
+                    <input type="text" id="address" name="address" aria-label="Seu Endereço" value="Rua das Alamedas">
+                </div>
+
+                <div class="wrap">
+
+                    <div class="label">
+                        <label for="address-number">Número:</label>
+                        <input type="text" id="address-number" name="address-number" aria-label="Número" value="369">
+                    </div>
+
+                    <div class="label">
+                        <label for="address-complement">Comp.:</label>
+                        <input type="text" id="address-complement" name="address-complement" aria-label="Complemento"
+                            value="Ap. 305, Bl. 2">
+                    </div>
+
+                </div>
+
+                <div class="wrap-four">
+                    <div class="label">
+                        <label for="address-state">Estado:</label>
+                        <input type="text" id="address-state" name="address-state" aria-label="Estado"
+                            value="Minas Gerais">
+                    </div>
+
+                    <div class="label">
+                        <label for="address-city">Cidade:</label>
+                        <input type="text" id="address-city" name="address-city" aria-label="Cidade"
+                            value="Belo Horizonte">
+                    </div>
+                </div>
+
+            </form>
+
+            <form id="payment">
+
+                <h2>Pagamento</h2>
+
+                <div class="wrap-five">
+                    <div class="wrap-six">
+                        <div class="label">
+                            <label for="name-card">Nome Impresso no Cartão:</label>
+                            <input type="text" id="name-card" name="name-card" aria-label="Nome impresso no cartão"
+                                value="Gabriel Bispo">
+                        </div>
+
+                        <div class="label">
+                            <label for="card-number">Número do Cartão:</label>
+                            <input type="text" id="card-number" name="card-number" aria-label="Número do Cartão"
+                                value="1234 5678 9012 3456">
+                        </div>
+
+                        <div class="wrap">
+
+                            <div class="label">
+                                <label for="validate">Validade:</label>
+                                <input type="month" id="validate" name="validate" aria-label="Validade">
+                            </div>
+
+                            <div class="label">
+                                <label for="code">CVV:</label>
+                                <input type="text" id="code" name="code" aria-label="Código Cartão" value="123">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-card">
+
+                        <div class="faces" id="credit-card">
+                            
+                            <svg class="front" xmlns="http://www.w3.org/2000/svg" width="397.846" height="246.643" viewBox="0 0 397.846 246.643">
+                                <g id="Grupo_1965" data-name="Grupo 1965" transform="translate(10169.083 -6919.639)">
+                                  <g id="Grupo_1964" data-name="Grupo 1964">
+                                    <path id="Caminho_5434" data-name="Caminho 5434" d="M590.443,461.542a20.611,20.611,0,0,1-20.7,20.7H213.3a20.611,20.611,0,0,1-20.7-20.7V256.3a20.611,20.611,0,0,1,20.7-20.7H569.745a20.611,20.611,0,0,1,20.7,20.7Z" transform="translate(-10361.683 6684.04)" fill="#f0f0f0"/>
+                                    <g id="Grupo_1949" data-name="Grupo 1949" transform="translate(-10132.288 6990.354)">
+                                      <g id="Grupo_1942" data-name="Grupo 1942" transform="translate(0 41.394)">
+                                        <path id="Caminho_5435" data-name="Caminho 5435" d="M199,256.25a9.081,9.081,0,0,0,9.2,9.2h9.774V255.1H199Z" transform="translate(-199 -255.1)" fill="#d5d5d5"/>
+                                      </g>
+                                      <g id="Grupo_1943" data-name="Grupo 1943" transform="translate(0 27.596)">
+                                        <rect id="Retângulo_256" data-name="Retângulo 256" width="18.972" height="10.349" fill="#d5d5d5"/>
+                                      </g>
+                                      <path id="Caminho_5436" data-name="Caminho 5436" d="M199,257.1v1.15h18.972V247.9H208.2a9.081,9.081,0,0,0-9.2,9.2Z" transform="translate(-199 -247.9)" fill="#d5d5d5"/>
+                                      <g id="Grupo_1944" data-name="Grupo 1944" transform="translate(21.847)">
+                                        <path id="Caminho_5437" data-name="Caminho 5437" d="M228.671,247.9H202.8v51.743h13.223V258.249H237.87V257.1a9.081,9.081,0,0,0-9.2-9.2Z" transform="translate(-202.8 -247.9)" fill="#d5d5d5"/>
+                                      </g>
+                                      <g id="Grupo_1945" data-name="Grupo 1945" transform="translate(0 13.798)">
+                                        <rect id="Retângulo_257" data-name="Retângulo 257" width="18.972" height="10.349" fill="#d5d5d5"/>
+                                      </g>
+                                      <g id="Grupo_1946" data-name="Grupo 1946" transform="translate(38.519 13.798)">
+                                        <rect id="Retângulo_258" data-name="Retângulo 258" width="18.397" height="10.349" fill="#d5d5d5"/>
+                                      </g>
+                                      <g id="Grupo_1947" data-name="Grupo 1947" transform="translate(38.519 27.596)">
+                                        <rect id="Retângulo_259" data-name="Retângulo 259" width="18.397" height="10.349" fill="#d5d5d5"/>
+                                      </g>
+                                      <g id="Grupo_1948" data-name="Grupo 1948" transform="translate(38.519 41.394)">
+                                        <path id="Caminho_5438" data-name="Caminho 5438" d="M205.7,265.449h9.2a9.081,9.081,0,0,0,9.2-9.2V255.1H205.7Z" transform="translate(-205.7 -255.1)" fill="#d5d5d5"/>
+                                      </g>
+                                    </g>
+                                    <text id="_00_00" data-name="00/00" transform="translate(-10132.166 7134.279)" fill="#536e86" font-size="20" font-family="Teko-Regular, Teko"><tspan x="0" y="0">00/00</tspan></text>
+                                    <text id="GABRIEL_G_BISPO" data-name="GABRIEL G BISPO" transform="translate(-10073.166 7134.279)" fill="#536e86" font-size="20" font-family="Teko-Regular, Teko"><tspan x="0" y="0">GABRIEL G BISPO</tspan></text>
+                                    <text id="_0000" data-name="0000" transform="translate(-10132.466 7086.278)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="0" y="0">0000</tspan></text>
+                                    <text id="_0000-2" data-name="0000" transform="translate(-10042.466 7086.278)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="0" y="0">0000</tspan></text>
+                                    <text id="_0000-3" data-name="0000" transform="translate(-9951.466 7086.278)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="0" y="0">0000</tspan></text>
+                                    <text id="_0000-4" data-name="0000" transform="translate(-9861.466 7086.278)" fill="#536e86" font-size="35" font-family="Teko-Regular, Teko"><tspan x="0" y="0">0000</tspan></text>
+                                    <g id="tarjeta-mastercard" transform="translate(-9864.378 7053.691)">
+                                      <path id="Caminho_5263" data-name="Caminho 5263" d="M40.93,75.19A20.465,20.465,0,1,1,20.465,54.719,20.466,20.466,0,0,1,40.93,75.19Z" transform="translate(0 0)" fill="#e2574c"/>
+                                      <path id="Caminho_5264" data-name="Caminho 5264" d="M129.9,54.719a20.352,20.352,0,0,0-12.23,4.082l.016,0a17.543,17.543,0,0,1,1.984,1.853l-4.258.068a21.052,21.052,0,0,0-1.849,2.168h7.509a19.025,19.025,0,0,1,1.578,2.039H112.206a20.4,20.4,0,0,0-1.046,2.041h12.684a17.432,17.432,0,0,1,.88,1.976H110.409a19.718,19.718,0,0,0-.569,2.166h15.485c.152.708.268,1.363.348,2.031h-16.14c-.068.674-.1,1.357-.1,2.047h16.359a17.979,17.979,0,0,1-.125,2.047H109.532q.1,1.041.307,2.047H125.3c-.16.663-.344,1.331-.575,2.023H110.362a19.871,19.871,0,0,0,.77,2.043h12.713a18.646,18.646,0,0,1-1.191,2.039H112.169a19.921,19.921,0,0,0,1.365,2.055l7.542.112a19.927,19.927,0,0,1-2.219,1.912c.041.033-1.2,0-3.648-.043A20.466,20.466,0,1,0,129.9,54.719Z" transform="translate(-84.86 0)" fill="#f4b459"/>
+                                    </g>
+                                    <g id="Componente_3_1" data-name="Componente 3 – 1" transform="translate(-9966 6931)">
+                                      <g id="Grupo_1962" data-name="Grupo 1962" transform="translate(10152 -6934)">
+                                        <path id="Caminho_5441" data-name="Caminho 5441" d="M226.523,259.447a11.478,11.478,0,0,1-5.174,1.15c-5.174,0-8.049-3.45-8.049-8.049a13.87,13.87,0,0,1,4.024-9.774A12.109,12.109,0,0,1,224.8,239.9c2.3,0,4.024.575,4.6,1.15l-.575,1.725c-.575-.575-2.3-.575-4.024-.575a7.381,7.381,0,0,0-5.749,2.3,10.929,10.929,0,0,0-2.875,7.474c0,3.449,1.725,6.324,6.324,6.324a32.41,32.41,0,0,0,4.024-.575Z" transform="translate(-10253.418 6705.801)" fill="#536e86"/>
+                                        <path id="Caminho_5442" data-name="Caminho 5442" d="M225.2,255.373a8.545,8.545,0,0,1,.575-3.45h0c-1.725,2.875-3.45,4.024-5.749,4.024s-4.025-2.3-4.025-4.6c0-5.174,3.45-10.349,9.774-10.349a9.785,9.785,0,0,1,4.024.575l-1.725,7.474a30.379,30.379,0,0,0-.575,6.9h-2.3Zm1.725-12.648H225.2c-3.45,0-6.9,4.024-6.9,8.049,0,1.725.575,3.45,2.3,3.45,2.3,0,4.6-2.875,5.174-6.324Z" transform="translate(-10240.595 6711.025)" fill="#536e86"/>
+                                        <path id="Caminho_5443" data-name="Caminho 5443" d="M218.7,255.848l1.725-9.2a17.734,17.734,0,0,0,.575-5.174h2.3c0,1.15,0,2.3-.575,2.875h0c1.15-1.725,2.3-3.45,4.6-3.45h.575l-.575,2.3h-.575c-2.3,0-4.024,2.3-4.6,5.749L221,255.273h-2.3Z" transform="translate(-10227.773 6710.55)" fill="#536e86"/>
+                                        <path id="Caminho_5444" data-name="Caminho 5444" d="M234.773,239.8,231.9,256.473a12.658,12.658,0,0,0-.575,4.6h-2.3l.575-2.875h0a5.525,5.525,0,0,1-5.174,3.45c-2.875,0-4.024-2.3-4.024-5.174,0-5.174,4.024-9.774,8.624-9.774,1.15,0,1.725,0,2.3.575l1.15-6.9h2.3Zm-4.024,8.624c-.575-.575-1.15-.575-2.3-.575-3.449,0-6.324,3.45-6.324,7.474,0,1.725.575,3.45,2.875,3.45,1.725,0,4.024-2.3,4.6-5.174Z" transform="translate(-10219.699 6705.327)" fill="#536e86"/>
+                                      </g>
+                                      <text id="Partiu" transform="translate(27 32)" fill="#2980b9" font-size="37" font-family="Pristina-Regular, Pristina" letter-spacing="-0.015em"><tspan x="0" y="0">Partiu</tspan></text>
+                                      <g id="Grupo_1957" data-name="Grupo 1957" transform="translate(0 5)">
+                                        <g id="Grupo_1" data-name="Grupo 1" transform="translate(2.775 2.775)">
+                                          <path id="Caminho_1" data-name="Caminho 1" d="M183.9,71.547A10.516,10.516,0,0,0,173.524,82.2c0,5.882,10.373,22.849,10.373,22.849S194.269,88.08,194.269,82.2A10.516,10.516,0,0,0,183.9,71.547Zm0,16.211a5.562,5.562,0,1,1,5.414-5.56A5.488,5.488,0,0,1,183.9,87.758Z" transform="translate(-173.524 -71.547)" fill="#1abc9c"/>
+                                        </g>
+                                        <path id="Caminho_2" data-name="Caminho 2" d="M169.213,93.36c-2.613-4.27-10.621-17.824-10.621-23.6a13.148,13.148,0,0,1,26.3,0c0,6.5-10.169,22.891-11.329,24.738h0a.985.985,0,0,1-1.819-.524V69.763" transform="translate(-158.592 -56.616)" fill="none" stroke="#2980b9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                                        <path id="Caminho_3" data-name="Caminho 3" d="M208.712,107.2c-.017,2.112-.491,5.949-.491,5.949l1,1.339-.013,1.6-1.482-.712-1.493.633.013-1.6,1.018-1.285s-.411-3.86-.394-5.972v-.128l-3.936,2.843.011-1.345a3.053,3.053,0,0,1,.76-2c.547-.477,2.3-2.355,3.2-3.334l.025-3.054s.15-2.943.946-2.922.9,2.971.9,2.971l-.025,3.054c.884,1.026,2.6,3,3.141,3.5a3.151,3.151,0,0,1,.727,2.038l-.011,1.345-3.888-3.05Z" transform="translate(-194.616 -92.477)" fill="#2980b9"/>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                              
+                              
+                              
+                            <svg class="back" xmlns="http://www.w3.org/2000/svg" width="397.613" height="246.5" viewBox="0 0 397.613 246.5">
+                                <g id="Grupo_1961" data-name="Grupo 1961" transform="translate(10576.083 -6919.497)">
+                                  <g id="Grupo_1959" data-name="Grupo 1959">
+                                    <g id="CreditCardBack" transform="translate(-14868.166 10653.994)">
+                                      <g id="Grupo_1937" data-name="Grupo 1937" transform="translate(4292.083 -3734.497)">
+                                        <path id="Caminho_5423" data-name="Caminho 5423" d="M590.213,409.912A20.6,20.6,0,0,1,569.527,430.6H213.285A20.6,20.6,0,0,1,192.6,409.912V204.785A20.6,20.6,0,0,1,213.285,184.1H569.527a20.6,20.6,0,0,1,20.685,20.685Z" transform="translate(-192.6 -184.1)" fill="#f0f0f0"/>
+                                      </g>
+                                      <g id="Grupo_1938" data-name="Grupo 1938" transform="translate(4292.657 -3709.215)">
+                                        <rect id="Retângulo_251" data-name="Retângulo 251" width="397.038" height="64.353" fill="#333"/>
+                                      </g>
+                                      <g id="Grupo_1939" data-name="Grupo 1939" transform="translate(4309.39 -3625.305)">
+                                        <rect id="Retângulo_252" data-name="Retângulo 252" width="304.157" height="47.116" fill="#fff"/>
+                                      </g>
+                                      <g id="Grupo_1940" data-name="Grupo 1940" transform="translate(4613.478 -3625.9)">
+                                        <rect id="Retângulo_253" data-name="Retângulo 253" width="59.555" height="47.116" fill="#e5e3df"/>
+                                      </g>
+                                      <rect id="Retângulo_254" data-name="Retângulo 254" width="305" height="6" transform="translate(4309 -3613)" fill="#ccc"/>
+                                      <rect id="Retângulo_255" data-name="Retângulo 255" width="305" height="7" transform="translate(4309 -3599)" fill="#ccc"/>
+                                      <text id="_000" data-name="000" transform="translate(4628.205 -3593)" fill="#333" font-size="27" font-family="Teko-Regular, Teko"><tspan x="0" y="0">000</tspan></text>
+                                      <text id="Gabriel_G_Bispo" data-name="Gabriel G Bispo" transform="translate(4319.566 -3596)" fill="#333" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Gabriel G Bispo</tspan></text>
+                                    </g>
+                                    <text id="Partiu" transform="translate(-10525 7145)" fill="#2980b9" font-size="37" font-family="Pristina-Regular, Pristina" letter-spacing="-0.015em"><tspan x="0" y="0">Partiu</tspan></text>
+                                    <g id="Grupo_1955" data-name="Grupo 1955" transform="translate(-10549 7119)">
+                                      <g id="Grupo_1" data-name="Grupo 1" transform="translate(2.775 2.775)">
+                                        <path id="Caminho_1" data-name="Caminho 1" d="M183.9,71.547A10.516,10.516,0,0,0,173.524,82.2c0,5.882,10.373,22.849,10.373,22.849S194.269,88.08,194.269,82.2A10.516,10.516,0,0,0,183.9,71.547Zm0,16.211a5.562,5.562,0,1,1,5.414-5.56A5.488,5.488,0,0,1,183.9,87.758Z" transform="translate(-173.524 -71.547)" fill="#1abc9c"/>
+                                      </g>
+                                      <path id="Caminho_2" data-name="Caminho 2" d="M169.213,93.36c-2.613-4.27-10.621-17.824-10.621-23.6a13.148,13.148,0,0,1,26.3,0c0,6.5-10.169,22.891-11.329,24.738h0a.985.985,0,0,1-1.819-.524V69.763" transform="translate(-158.592 -56.616)" fill="none" stroke="#2980b9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                                      <path id="Caminho_3" data-name="Caminho 3" d="M208.712,107.2c-.017,2.112-.491,5.949-.491,5.949l1,1.339-.013,1.6-1.482-.712-1.493.633.013-1.6,1.018-1.285s-.411-3.86-.394-5.972v-.128l-3.936,2.843.011-1.345a3.053,3.053,0,0,1,.76-2c.547-.477,2.3-2.355,3.2-3.334l.025-3.054s.15-2.943.946-2.922.9,2.971.9,2.971l-.025,3.054c.884,1.026,2.6,3,3.141,3.5a3.151,3.151,0,0,1,.727,2.038l-.011,1.345-3.888-3.05Z" transform="translate(-194.616 -92.477)" fill="#2980b9"/>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                              
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+            </form>
+        </section>
+
+        <section id=checkout-footer>
+            <div class="checkout-wrap-footer">
+
+                <div class="boxes">
+
+                    <div class="box-two">
+                        <div class="inboxes">
+                            <span class="service">Hotel</span>
+                            <span class="value">R$ 120,54</span>
+                        </div>
+                        <div class="inboxes">
+                            <span class="service">Pacote</span>
+                            <span class="value">R$ 1399,00</span>
+                        </div>
+                    </div>
+
+                    <div class="box-tree">
+                        <div class="inboxes">
+                            <span class="service">Passagem</span>
+                            <span class="value">R$ 536,99</span>
+                        </div>
+                        <div class="inboxes">
+                            <span class="service">Encargos</span>
+                            <span class="value">R$ 70,00</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box-one">
+                    <span class="summation">Total</span>
+                    <span class="value">R$ 2126,53</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="assets/js/showHide.js" async></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/flipedCard.js"></script>
+</body>
+
+</html>
