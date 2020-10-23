@@ -38,6 +38,7 @@
   --blue-2: #D1ECF1;
   --blue-3: #BEE5EB;
   --blue-4: #0C5460;
+  --blue-hover: rgba(41, 128, 185, .42);
   --aqua-green: #1ABC9C;
   --green-2: #D4EDDA;
   --green-3: #C3E6CB;
@@ -2772,6 +2773,7 @@ header img {
   left: 0;
   justify-content: center;
   perspective: 1000px;
+  margin-bottom: 20px;
 }
 #checkout-section #payment .form-card .faces {
   margin-top: 100px;
@@ -2792,6 +2794,50 @@ header img {
 }
 #checkout-section #payment .form-card .faces .back {
   transform: rotateY(180deg);
+}
+
+.checkout-button {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+.checkout-button button {
+  border-radius: 5px;
+  border: none;
+  height: 45px;
+  outline: none;
+  cursor: pointer;
+}
+.checkout-button button.checkout-return {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  width: 45px;
+  margin-right: var(--space-20);
+}
+.checkout-button button.checkout-return:hover {
+  background-color: var(--green-2);
+}
+.checkout-button button.checkout-pack-your-bags {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: var(--blue-0);
+  color: var(--white);
+  font-weight: bold;
+}
+.checkout-button button.checkout-pack-your-bags:hover {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: var(--blue-hover);
+  color: var(--white);
+  font-weight: bold;
 }
 
 #checkout-footer {
@@ -3155,6 +3201,50 @@ header img {
   text-align: justify;
 }
 
+.checkout-button {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+.checkout-button button {
+  border-radius: 5px;
+  border: none;
+  height: 45px;
+  outline: none;
+  cursor: pointer;
+}
+.checkout-button button.checkout-return {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  width: 45px;
+  margin-right: var(--space-20);
+}
+.checkout-button button.checkout-return:hover {
+  background-color: var(--green-2);
+}
+.checkout-button button.checkout-pack-your-bags {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: var(--blue-0);
+  color: var(--white);
+  font-weight: bold;
+}
+.checkout-button button.checkout-pack-your-bags:hover {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: var(--blue-hover);
+  color: var(--white);
+  font-weight: bold;
+}
+
 @media (min-width: 900px) {
   #checkout-success {
     max-width: 720px;
@@ -3215,6 +3305,50 @@ header img {
   text-align: justify;
   display: flex;
   flex-direction: row;
+}
+
+.checkout-button {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+.checkout-button button {
+  border-radius: 5px;
+  border: none;
+  height: 45px;
+  outline: none;
+  cursor: pointer;
+}
+.checkout-button button.checkout-return {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  width: 45px;
+  margin-right: var(--space-20);
+}
+.checkout-button button.checkout-return:hover {
+  background-color: var(--green-2);
+}
+.checkout-button button.checkout-pack-your-bags {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: var(--blue-0);
+  color: var(--white);
+  font-weight: bold;
+}
+.checkout-button button.checkout-pack-your-bags:hover {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  background-color: var(--blue-hover);
+  color: var(--white);
+  font-weight: bold;
 }
 
 @media (min-width: 900px) {

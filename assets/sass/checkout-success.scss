@@ -50,6 +50,51 @@ header {
     }
 }
 
+.checkout-button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 25px;
+    button {
+        border-radius: 5px;
+        border: none;
+        height: 45px;
+        outline: none;
+        cursor: pointer;
+        &.checkout-return {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--green);
+            width: 45px;
+            margin-right: var(--space-20);
+        }
+        &.checkout-return:hover {
+            background-color: var(--green-2);
+        }
+        &.checkout-pack-your-bags {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            background-color: var(--blue-0);
+            color: var(--white);
+            font-weight: bold;
+        }
+        &.checkout-pack-your-bags:hover {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            background-color: var(--blue-hover);
+            color: var(--white);
+            font-weight: bold;
+        }
+    }
+
+}
+
 @media (min-width: 900px) {
     #checkout-success {
         max-width: 720px;
