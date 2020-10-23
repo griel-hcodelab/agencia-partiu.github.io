@@ -660,14 +660,12 @@ main .float-image footer .call-to-action a:hover {
   width: 100%;
 }
 .foldOne .float-image .header #bread ul {
-  flex-direction: row;
   margin: 0;
   padding: 0;
 }
 .foldOne .float-image .header #bread ul li {
   margin: 0;
   padding: 0;
-  flex-direction: row;
   list-style: none;
   font-size: 12px;
 }
@@ -729,6 +727,8 @@ main .float-image footer .call-to-action a:hover {
   margin: var(--space-20);
   padding: 0;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
   flex-direction: row;
 }
 .foldOne .float-image footer.destinyOne .icons ul li {
@@ -883,6 +883,7 @@ main .float-image footer .call-to-action a:hover {
   outline: none;
   cursor: pointer;
   background-color: transparent;
+  width: 100%;
   height: 45px;
   background-color: var(--yellow);
   border-radius: 25px;
@@ -1532,7 +1533,7 @@ main .float-image footer .call-to-action a:hover {
   font-size: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 998px) {
   .foldOne .float-image {
     margin-top: 120px;
     max-width: 720px;
@@ -1541,8 +1542,12 @@ main .float-image footer .call-to-action a:hover {
   .foldOne .float-image .header #bread ul li {
     font-size: 15px;
   }
-  .foldOne .float-image .box-image > img {
+  .foldOne .float-image .box-image picture > img {
     height: 480px;
+  }
+  .foldOne .float-image .icons ul {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .foldTwo .float-image {
@@ -1580,8 +1585,7 @@ main .float-image footer .call-to-action a:hover {
   .foldThree .float-image .previewNext button {
     width: 100px;
   }
-  .foldThree .float-image .box-image > img {
-    margin: var(--space-20) 0;
+  .foldThree .float-image .box-image picture > img {
     height: 480px;
   }
   .foldThree .float-image footer {

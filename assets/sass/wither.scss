@@ -15,13 +15,11 @@
                 justify-content: space-between;
                 width: 100%;
                 ul {
-                    flex-direction: row;
                     margin: 0;
                     padding: 0;
                     li {
                         margin: 0;
                         padding: 0;
-                        flex-direction: row;
                         list-style: none;
                         font-size: 12px;
                         a {
@@ -86,6 +84,8 @@
                     margin: var(--space-20);
                     padding: 0;
                     align-items: center;
+                    width: 100%;
+                    justify-content: space-between;
                     flex-direction: row;
                     li {
                         align-items: center;
@@ -181,6 +181,7 @@
                     }
                     .filter {
                         @include button;
+                        width: 100%;
                         height: 45px;
                         background-color: var(--yellow);
                         border-radius: 25px;
@@ -697,11 +698,7 @@
     }    
 }
 
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 998px) {
     .foldOne {
         .float-image{
             margin-top: 120px;
@@ -717,9 +714,18 @@
                 }
             }
             .box-image {
-                > img {
-                    height: 480px;
+                picture{
+                    > img {
+                        height: 480px;
+                    }
                 }
+            }
+            .icons {
+                ul {
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                
             }
         }    
     }
@@ -770,11 +776,13 @@
                 }
             }
             .box-image {
-                > img {
-                    margin: var(--space-20) 0;
-                    height: 480px;
+                picture{
+                    > img {
+                        height: 480px;
+                    }
                 }
-            }  
+                
+            }
             footer {
                 flex-direction: column;
                 border-radius: 0 0 var(--space-5) var(--space-5);
