@@ -1,15 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="281" height="152" viewBox="0 0 281 152">
+<<<<<<< HEAD
   <g id="partiu-card" transform="translate(-40 -606)">
     <g id="Grupo_1717" data-name="Grupo 1717" transform="translate(-10828 -6545)">
       <g id="Retângulo_144" data-name="Retângulo 144" transform="translate(10868 7151)" fill="#fff" stroke="#707070" stroke-width="1">
         <rect width="281" height="152" rx="10" stroke="none"/>
         <rect x="0.5" y="0.5" width="280" height="151" rx="9.5" fill="none"/>
+=======
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-2, .cls-6, .cls-7 {
+        fill: #1abc9c;
+      }
+
+      .cls-11, .cls-3 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #2980b9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #2980b9;
+      }
+
+      .cls-5 {
+        font-size: 30px;
+        font-family: Pristina-Regular, Pristina;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        letter-spacing: -0.015em;
+      }
+
+      .cls-6 {
+        font-size: 12px;
+      }
+
+      .cls-6, .cls-7 {
+        font-family: OpenSans-Regular, Open Sans;
+      }
+
+      .cls-7 {
+        font-size: 16px;
+      }
+
+      .cls-8 {
+        fill: #e2574c;
+      }
+
+      .cls-9 {
+        fill: #f4b459;
+      }
+
+      .cls-10 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="partiu-card" transform="translate(-40 -606)">
+    <g id="Grupo_1717" data-name="Grupo 1717" transform="translate(-10828 -6545)">
+      <g id="Retângulo_144" data-name="Retângulo 144" class="cls-1" transform="translate(10868 7151)">
+        <rect class="cls-10" width="281" height="152" rx="10"/>
+        <rect class="cls-11" x="0.5" y="0.5" width="280" height="151" rx="9.5"/>
+>>>>>>> 27284318d3a4c5f59ecf7f5346aaf817ddbe19ac
       </g>
       <g id="Grupo_1652" data-name="Grupo 1652" transform="translate(10795 7154)">
         <g id="Grupo_14" data-name="Grupo 14" transform="translate(109 -91)">
           <g id="Grupo_5" data-name="Grupo 5" transform="translate(-22 99)">
             <g id="Grupo_2" data-name="Grupo 2">
               <g id="Grupo_1" data-name="Grupo 1" transform="translate(2.325 2.325)">
+<<<<<<< HEAD
                 <path id="Caminho_1" data-name="Caminho 1" d="M181.762,71.547a8.375,8.375,0,0,0-8.238,8.5c0,4.7,8.238,18.243,8.238,18.243S190,84.748,190,80.051A8.375,8.375,0,0,0,181.762,71.547Zm0,12.943a4.441,4.441,0,1,1,4.3-4.439A4.371,4.371,0,0,1,181.762,84.49Z" transform="translate(-173.524 -71.547)" fill="#1abc9c"/>
               </g>
               <path id="Caminho_2" data-name="Caminho 2" d="M167.126,86.137c-2.1-3.43-8.534-14.32-8.534-18.958a10.563,10.563,0,0,1,21.126,0c0,5.226-8.17,18.391-9.1,19.875h0a.791.791,0,0,1-1.461-.421V67.179" transform="translate(-158.592 -56.616)" fill="none" stroke="#2980b9" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
@@ -25,6 +94,23 @@
       <g id="tarjeta-mastercard" transform="translate(11092.622 7201.281)">
         <path id="Caminho_5263" data-name="Caminho 5263" d="M26.345,67.9A13.173,13.173,0,1,1,13.173,54.719,13.173,13.173,0,0,1,26.345,67.9Z" fill="#e2574c"/>
         <path id="Caminho_5264" data-name="Caminho 5264" d="M122.608,54.719a13.1,13.1,0,0,0-7.872,2.627h.011a11.291,11.291,0,0,1,1.277,1.192l-2.741.043a13.549,13.549,0,0,0-1.19,1.4h4.833a12.244,12.244,0,0,1,1.016,1.312h-6.725a13.129,13.129,0,0,0-.673,1.314h8.164a11.222,11.222,0,0,1,.567,1.272H110.06a12.691,12.691,0,0,0-.366,1.394h9.967c.1.456.173.878.224,1.307H109.5c-.043.434-.066.874-.066,1.318h10.529a11.573,11.573,0,0,1-.08,1.318H109.5q.067.67.2,1.318h9.951c-.1.427-.221.856-.37,1.3H110.03a12.789,12.789,0,0,0,.5,1.315h8.183a12,12,0,0,1-.767,1.312h-6.748a12.82,12.82,0,0,0,.879,1.323l4.854.072a12.826,12.826,0,0,1-1.428,1.231c.026.021-.773,0-2.348-.028a13.173,13.173,0,1,0,9.458-22.34Z" transform="translate(-93.616)" fill="#f4b459"/>
+=======
+                <path id="Caminho_1" data-name="Caminho 1" class="cls-2" d="M181.762,71.547a8.375,8.375,0,0,0-8.238,8.5c0,4.7,8.238,18.243,8.238,18.243S190,84.748,190,80.051A8.375,8.375,0,0,0,181.762,71.547Zm0,12.943a4.441,4.441,0,1,1,4.3-4.439A4.371,4.371,0,0,1,181.762,84.49Z" transform="translate(-173.524 -71.547)"/>
+              </g>
+              <path id="Caminho_2" data-name="Caminho 2" class="cls-3" d="M167.126,86.137c-2.1-3.43-8.534-14.32-8.534-18.958a10.563,10.563,0,0,1,21.126,0c0,5.226-8.17,18.391-9.1,19.875h0a.791.791,0,0,1-1.461-.421V67.179" transform="translate(-158.592 -56.616)"/>
+              <path id="Caminho_3" data-name="Caminho 3" class="cls-4" d="M207.776,105.582c-.014,1.77-.411,4.985-.411,4.985l.836,1.122-.011,1.342-1.242-.6-1.251.531.011-1.342.853-1.077s-.345-3.235-.33-5v-.107l-3.3,2.382.009-1.128a2.559,2.559,0,0,1,.637-1.675c.458-.4,1.924-1.973,2.678-2.794l.021-2.559s.126-2.466.793-2.449.753,2.49.753,2.49l-.021,2.559c.741.86,2.18,2.511,2.632,2.934a2.64,2.64,0,0,1,.61,1.708l-.009,1.128-3.258-2.556Z" transform="translate(-196.419 -93.244)"/>
+            </g>
+          </g>
+        </g>
+        <text id="Partiu" class="cls-5" transform="translate(115.999 30)"><tspan x="0" y="0">Partiu</tspan></text>
+      </g>
+      <text id="GABRIEL_G_BISPO" data-name="GABRIEL G BISPO" class="cls-6" transform="translate(10883 7278)"><tspan x="0" y="0">GABRIEL G BISPO</tspan></text>
+      <text id="XXXX_XXXX_XXXX_XXXX" data-name="XXXX   XXXX   XXXX   XXXX" class="cls-7" transform="translate(10883 7255)"><tspan x="0" y="0" xml:space="preserve">XXXX   XXXX   XXXX   XXXX</tspan></text>
+      <text id="_08_21" data-name="08/21" class="cls-6" transform="translate(11031 7278)"><tspan x="0" y="0">08/21</tspan></text>
+      <g id="tarjeta-mastercard" transform="translate(11092.622 7201.281)">
+        <path id="Caminho_5263" data-name="Caminho 5263" class="cls-8" d="M26.345,67.9A13.173,13.173,0,1,1,13.173,54.719,13.173,13.173,0,0,1,26.345,67.9Z"/>
+        <path id="Caminho_5264" data-name="Caminho 5264" class="cls-9" d="M122.608,54.719a13.1,13.1,0,0,0-7.872,2.627h.011a11.291,11.291,0,0,1,1.277,1.192l-2.741.043a13.549,13.549,0,0,0-1.19,1.4h4.833a12.244,12.244,0,0,1,1.016,1.312h-6.725a13.129,13.129,0,0,0-.673,1.314h8.164a11.222,11.222,0,0,1,.567,1.272H110.06a12.691,12.691,0,0,0-.366,1.394h9.967c.1.456.173.878.224,1.307H109.5c-.043.434-.066.874-.066,1.318h10.529a11.573,11.573,0,0,1-.08,1.318H109.5q.067.67.2,1.318h9.951c-.1.427-.221.856-.37,1.3H110.03a12.789,12.789,0,0,0,.5,1.315h8.183a12,12,0,0,1-.767,1.312h-6.748a12.82,12.82,0,0,0,.879,1.323l4.854.072a12.826,12.826,0,0,1-1.428,1.231c.026.021-.773,0-2.348-.028a13.173,13.173,0,1,0,9.458-22.34Z" transform="translate(-93.616)"/>
+>>>>>>> 27284318d3a4c5f59ecf7f5346aaf817ddbe19ac
       </g>
     </g>
   </g>
