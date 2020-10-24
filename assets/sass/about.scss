@@ -1,5 +1,116 @@
-#content {
+#content.about {
+    margin-top: calc(68px + var(--space-40));
     .float-image {
+        .bispo {
+            max-width: 700px;
+            max-height: 700px;
+        }
+        header {
+            div {
+                h3 {
+                    font-size: 32px;
+                    &.sweet{
+                        font-style: italic;
+                    }
+                }
+            }
+            form {
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                .label {
+                    background-color: var(--white);
+                    flex-direction: column;
+                    width: 130px;
+                    @include account-input;  
+                    &.texarea-label {
+                        height: 120px;
+                        div {
+                            textarea {
+                                width: 100%;
+                                height: 112px;
+                                border: 0;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                    div {
+                        select {
+                            width: 100%;
+                            border: none;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+                .labels {
+                    flex-direction: column;
+                }
+                .actions {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    .captcha {
+                        width: 261px;
+                        height: 68px;
+                    }
+                    > div {
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: var(--space-20);
+                        a {
+                            border-radius: 5px;
+                            margin-right: 10px;
+                            width: 55px;
+                            height: 45px;
+                            background-color: var(--aqua-green);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            svg {
+                                width: 16px;
+                                height: 13px;
+                            }
+                        }
+                        button[type="submit"] {
+                            width: 230px;
+                            height: 45px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: var(--blue);
+                            color: var(--white);
+                            text-transform: uppercase;
+                            font-size: 20px;
+                            border: 0;
+                            outline: 0;
+                            border-radius: 5px;
+                            transition: all .3s ease-in-out;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: var(--blue-1);
+                            }
+                            &:active {
+                                background-color: var(--blue);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .paragraph-wrap {
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 100%;
+            p {
+                text-align: initial;
+                font-size: 20px;
+            }
+        }
+
         footer {
             .description {
                 font-size: 19px;
@@ -10,11 +121,28 @@
 }
 
 @media (min-width: 800px) {
-    #content {
+    #content.about {
         .float-image {
             footer {
                 .description {
-                    font-size: 32px;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    #content.about {
+        .float-image { 
+            header {
+                form {
+                    .labels {
+                        flex-direction: row;
+                        .label + .label {
+                            margin-left: var(--space-10);
+                        }
+                    }
                 }
             }
         }
