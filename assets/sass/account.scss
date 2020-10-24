@@ -179,6 +179,7 @@ header {
             align-items: center;
             position: relative;
             z-index: 2;
+            max-width: inherit;
             p {
                 font-size: 18px;
                 font-weight: bold;

@@ -65,21 +65,25 @@ header {
             width: 280px;
         }
         .button {
-            width: 100%;
+            width: 280px;
             a {
                 @include back-button;
                 img {
-                    height: 13px;
+                    height: 25px;
                 }
             }
             button {
                 @include next-button;
+                height: 45px;
             }
         }
         .alert {
             width: 281px;
             &.success {
                 @include alert-success;
+            }
+            &.danger {
+                @include alert-danger;
             }
         }
         a {
